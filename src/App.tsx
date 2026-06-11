@@ -1,15 +1,16 @@
 import { Routes, Route, useLocation } from 'react-router';
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { BookingProvider } from '@/components/layout/BookingModal';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { HomePage } from '@/pages/HomePage';
-import { AIPage } from '@/pages/AIPage';
-import { TalentPage } from '@/pages/TalentPage';
-import { StudioPage } from '@/pages/StudioPage';
-import { SoftphoneCaseStudyPage } from '@/pages/SoftphoneCaseStudyPage';
-import { AIAgentDashboardsCaseStudyPage } from '@/pages/AIAgentDashboardsCaseStudyPage';
-import { NotFoundPage } from '@/pages/NotFoundPage';
+
+const HomePage = lazy(() => import('@/pages/HomePage').then(m => ({ default: m.HomePage })));
+const AIPage = lazy(() => import('@/pages/AIPage').then(m => ({ default: m.AIPage })));
+const TalentPage = lazy(() => import('@/pages/TalentPage').then(m => ({ default: m.TalentPage })));
+const StudioPage = lazy(() => import('@/pages/StudioPage').then(m => ({ default: m.StudioPage })));
+const SoftphoneCaseStudyPage = lazy(() => import('@/pages/SoftphoneCaseStudyPage').then(m => ({ default: m.SoftphoneCaseStudyPage })));
+const AIAgentDashboardsCaseStudyPage = lazy(() => import('@/pages/AIAgentDashboardsCaseStudyPage').then(m => ({ default: m.AIAgentDashboardsCaseStudyPage })));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,20 +20,30 @@ function ScrollToTop() {
   return null;
 }
 
+function PageLoader() {
+  return (
+    <div className="min-h-screen bg-navy flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-[rgba(100,255,218,0.2)] border-t-[#64FFDA] rounded-full animate-spin" />
+    </div>
+  );
+}
+
 function App() {
   return (
     <BookingProvider>
       <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/ai" element={<AIPage />} />
-        <Route path="/teams" element={<TalentPage />} />
-        <Route path="/studio" element={<StudioPage />} />
-        <Route path="/case-studies/softphone" element={<SoftphoneCaseStudyPage />} />
-        <Route path="/case-studies/ai-agent-dashboards" element={<AIAgentDashboardsCaseStudyPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/ai" element={<AIPage />} />
+          <Route path="/teams" element={<TalentPage />} />
+          <Route path="/studio" element={<StudioPage />} />
+          <Route path="/case-studies/softphone" element={<SoftphoneCaseStudyPage />} />
+          <Route path="/case-studies/ai-agent-dashboards" element={<AIAgentDashboardsCaseStudyPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </BookingProvider>
   );
