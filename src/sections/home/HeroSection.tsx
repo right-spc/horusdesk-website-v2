@@ -127,7 +127,7 @@ export function HeroSection() {
                   </div>
                   <div className="flex">
                     <div className="bg-[rgba(102,255,218,0.1)] border border-[rgba(102,255,218,0.2)] rounded-lg rounded-tl-none px-4 py-3 max-w-[80%]">
-                      <p className="text-sm text-white">Perfect! I see you have a 10am slot available. Shall I book that?</p>
+                      <p className="text-sm text-white">Perfect! I see we have a 10am slot available. Shall I book that?</p>
                     </div>
                   </div>
                 </div>
