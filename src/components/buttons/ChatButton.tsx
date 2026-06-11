@@ -1,5 +1,6 @@
 import { MessageCircle } from 'lucide-react';
 import { useState } from 'react';
+import { openChatWidget } from '@/lib/chat';
 
 interface ChatButtonProps {
   children: React.ReactNode;
@@ -13,10 +14,8 @@ export function ChatButton({ children, className = '', size = 'default' }: ChatB
   const paddingClass = size === 'large' ? 'px-8 py-4' : 'px-6 py-3';
 
   const handleClick = () => {
-    const hd = (window as any).horusDesk;
-    if (hd?.open) {
-      hd.open();
-    } else {
+    const opened = openChatWidget();
+    if (!opened) {
       setShowTooltip(true);
       setTimeout(() => setShowTooltip(false), 3000);
     }

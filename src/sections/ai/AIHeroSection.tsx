@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { PrimarySolidButton } from '@/components/buttons/PrimarySolidButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
+import { openChatWidget } from '@/lib/chat';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -57,7 +58,7 @@ export function AIHeroSection() {
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-              <PrimarySolidButton>Start with AI Agent</PrimarySolidButton>
+              <PrimarySolidButton onClick={openChatWidget}>Start with AI Agent</PrimarySolidButton>
               <CalendarButton>Book a Setup Call</CalendarButton>
             </motion.div>
           </motion.div>

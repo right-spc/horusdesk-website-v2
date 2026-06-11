@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { PrimarySolidButton } from '@/components/buttons/PrimarySolidButton';
 import { ChatButton } from '@/components/buttons/ChatButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
+import { openChatWidget } from '@/lib/chat';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -98,7 +99,7 @@ function AIPricingCard() {
       </ul>
 
       <div className="flex flex-col gap-3">
-        <PrimarySolidButton>Start with Horus AI</PrimarySolidButton>
+        <PrimarySolidButton onClick={openChatWidget}>Start with Horus AI</PrimarySolidButton>
         <CalendarButton>Book Setup Call</CalendarButton>
       </div>
     </motion.div>

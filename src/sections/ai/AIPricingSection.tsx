@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import { PrimarySolidButton } from '@/components/buttons/PrimarySolidButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
+import { openChatWidget } from '@/lib/chat';
 
 const features = [
   'Website chat widget',
@@ -95,7 +96,7 @@ export function AIPricingSection() {
 
             {/* CTAs */}
             <div className="flex flex-wrap justify-center gap-4 mb-4">
-              <PrimarySolidButton>Start with AI Agent</PrimarySolidButton>
+              <PrimarySolidButton onClick={openChatWidget}>Start with AI Agent</PrimarySolidButton>
               <CalendarButton>Book a Setup Call</CalendarButton>
             </div>
 
