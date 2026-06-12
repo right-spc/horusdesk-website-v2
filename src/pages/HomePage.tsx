@@ -144,9 +144,9 @@ export function HomePage() {
       />
       <main>
         <HeroSection />
-        <ChatBannerSection />
         <ServiceRouterSection />
         <NoRiskSection />
+        <ChatBannerSection />
       </main>
     </>
   );
