@@ -6,7 +6,7 @@ import { PrimarySolidButton } from '@/components/buttons/PrimarySolidButton';
 import { HeroSection } from '@/sections/home/HeroSection';
 import { ChatBannerSection } from '@/sections/home/ChatBannerSection';
 import { ServiceRouterSection } from '@/sections/home/ServiceRouterSection';
-import { HowItWorksSection } from '@/sections/home/HowItWorksSection';
+
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -146,7 +146,6 @@ export function HomePage() {
         <HeroSection />
         <ChatBannerSection />
         <ServiceRouterSection />
-        <HowItWorksSection />
         <NoRiskSection />
       </main>
     </>
