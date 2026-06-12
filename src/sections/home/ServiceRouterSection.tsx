@@ -30,7 +30,7 @@ const services = [
     iconColor: 'text-[#7C4DFF]',
     borderColor: 'border-t-[#7C4DFF]',
     linkColor: 'text-[#7C4DFF]',
-    description: 'Custom web apps, mobile development, and AI integrations. Built from scratch with no third-party tools. We can build anything.',
+    description: 'Custom web apps, mobile development, and AI integrations. Built from scratch with no third-party automation tools. We can build anything.',
     price: 'From $1,800',
     link: '/studio',
   },

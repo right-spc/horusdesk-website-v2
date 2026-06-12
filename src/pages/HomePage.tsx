@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router';
 import { SEOHead } from '@/components/layout/SEOHead';
-import { useBooking } from '@/components/layout/BookingModal';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
-import { PrimarySolidButton } from '@/components/buttons/PrimarySolidButton';
 import { HeroSection } from '@/sections/home/HeroSection';
 import { ChatBannerSection } from '@/sections/home/ChatBannerSection';
 import { ServiceRouterSection } from '@/sections/home/ServiceRouterSection';
@@ -41,18 +40,24 @@ const websiteSchema = {
 const noRiskCards = [
   {
     title: 'Free Setup & Pilot',
-    body: 'Horus AI goes live on your site for a free pilot. See it qualify real leads before you decide.',
+    body: 'We set up Horus AI on your site at no setup cost and run a pilot so you can see it qualify real leads before you commit to the service.',
     borderColor: 'border-t-[#64FFDA]',
+    linkColor: 'text-[#64FFDA]',
+    link: '/ai',
   },
   {
-    title: 'Free 3-Month POC',
-    body: 'Try Horus Talent with a proof-of-concept period. No long-term contract until you are ready.',
+    title: '3-Month Proof of Concept',
+    body: 'Start Horus Talent with a 3-month proof of concept. You pay for the service, but you are not locked into a long-term contract until you are ready.',
     borderColor: 'border-t-[#FFAB40]',
+    linkColor: 'text-[#FFAB40]',
+    link: '/teams',
   },
   {
-    title: 'Free Blueprint & Quote',
-    body: 'For Studio projects, we deliver a full technical blueprint detailing exactly what we will build, the tools we will use, all costs, and ongoing expenses before you spend a dollar.',
+    title: 'Free Blueprint & System Audit',
+    body: 'We audit your current system and deliver a full technical blueprint detailing exactly what we will build, the tools we will use, all costs, and ongoing expenses before you spend a dollar.',
     borderColor: 'border-t-[#7C4DFF]',
+    linkColor: 'text-[#7C4DFF]',
+    link: '/studio',
   },
 ];
 
@@ -74,8 +79,6 @@ const cardVariants = {
 };
 
 function NoRiskSection() {
-  const { open } = useBooking();
-
   return (
     <section className="bg-navy py-24 lg:py-40">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
@@ -110,16 +113,18 @@ function NoRiskSection() {
               `}
             >
               <h3 className="text-xl font-medium text-white mb-3">{card.title}</h3>
-              <p className="text-[#64748B]">{card.body}</p>
+              <p className="text-[#64748B] mb-6">{card.body}</p>
+              <Link
+                to={card.link}
+                className={`${card.linkColor} hover:underline text-sm font-medium`}
+              >
+                Learn more &rarr;
+              </Link>
             </motion.div>
           ))}
         </motion.div>
 
-        <SectionWrapper delay={0.2} className="flex justify-center">
-          <PrimarySolidButton onClick={() => open('Not Sure Yet')}>
-            Get Your Free Blueprint
-          </PrimarySolidButton>
-        </SectionWrapper>
+
       </div>
     </section>
   );
