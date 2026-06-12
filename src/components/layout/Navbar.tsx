@@ -55,8 +55,8 @@ export function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <ChatButton>Chat with Horus</ChatButton>
-            <CalendarButton>Book a Call</CalendarButton>
+            <ChatButton>Ask Horus AI</ChatButton>
+            <CalendarButton>Book a Discovery Call</CalendarButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -65,7 +65,7 @@ export function Navbar() {
             className="lg:hidden text-white p-2"
             aria-label="Toggle mobile menu"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
       </nav>
@@ -110,8 +110,8 @@ export function Navbar() {
                 transition={{ delay: 0.4 }}
                 className="flex flex-col items-center gap-4 mt-8"
               >
-                <ChatButton>Chat with Horus</ChatButton>
-                <CalendarButton>Book a Call</CalendarButton>
+                <ChatButton>Ask Horus AI</ChatButton>
+                <CalendarButton>Book a Discovery Call</CalendarButton>
               </motion.div>
             </div>
           </motion.div>

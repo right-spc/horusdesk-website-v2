@@ -17,7 +17,7 @@ export function StudioPricingSection() {
             Retainers available for ongoing development.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <ChatButton>Discuss via Chat</ChatButton>
+            <ChatButton>Ask Horus AI</ChatButton>
             <CalendarButton>Book a Discovery Call</CalendarButton>
           </div>
         </SectionWrapper>

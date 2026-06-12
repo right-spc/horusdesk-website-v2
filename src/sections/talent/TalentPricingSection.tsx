@@ -30,7 +30,7 @@ export function TalentPricingSection() {
             <ul className="space-y-3 mb-6">
               {features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
-                  <Check size={16} className="text-[#FFAB40] mt-0.5 flex-shrink-0" />
+                  <Check size={16} className="text-[#FFAB40] mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <span className="text-sm text-white">{feature}</span>
                 </li>
               ))}
@@ -45,7 +45,7 @@ export function TalentPricingSection() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <ChatButton>Ask Horus AI</ChatButton>
-              <CalendarButton>Book a Consultation</CalendarButton>
+              <CalendarButton>Book a Discovery Call</CalendarButton>
             </div>
           </div>
         </SectionWrapper>

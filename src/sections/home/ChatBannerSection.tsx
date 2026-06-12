@@ -14,8 +14,8 @@ export function ChatBannerSection() {
             Whether you need an AI receptionist, a managed support and sales team, or custom software built from scratch, we can help you choose the right path.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <ChatButton>Talk to Horus AI</ChatButton>
-            <CalendarButton prefillInterest="Not Sure Yet">Talk to Us</CalendarButton>
+            <ChatButton>Ask Horus AI</ChatButton>
+            <CalendarButton prefillInterest="Not Sure Yet">Book a Discovery Call</CalendarButton>
           </div>
         </SectionWrapper>
       </div>

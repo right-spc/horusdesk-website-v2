@@ -6,23 +6,32 @@ import { CalendarButton } from '@/components/buttons/CalendarButton';
 import { openChatWidget } from '@/lib/chat';
 
 const features = [
-  'Website chat widget',
-  'One inbox integration (Gmail or Outlook)',
-  '7,500 AI responses included',
+  'Dedicated account manager',
   'Smart lead qualification',
   'Calendar booking',
   'Smart escalation',
-  'Dedicated account manager',
+  '7,500 AI responses included',
   'Analytics portal access',
-  'Setup and training included',
+  'Website chat widget',
+  'One inbox integration (Gmail or Outlook)',
+  'Free Setup and training included',
 ];
 
 export function AIPricingSection() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy-light py-24 lg:py-40">
       <div className="max-w-[42rem] mx-auto px-6 lg:px-8">
+        <SectionWrapper className="text-center mb-12">
+          <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
+            PRICING
+          </p>
+          <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2] whitespace-nowrap">
+            One plan. Everything included.
+          </h2>
+        </SectionWrapper>
+
         <SectionWrapper>
           <div className="bg-surface border border-[rgba(226,232,240,0.08)] rounded-2xl p-10 shadow-2xl">
             {/* Label */}
@@ -64,7 +73,7 @@ export function AIPricingSection() {
             <div className="text-center mb-4">
               {isAnnual ? (
                 <>
-                  <span className="text-5xl font-medium text-white">$3,599/yr</span>
+                  <span className="text-5xl font-medium text-white">$3,999/yr</span>
                   <div className="mt-3 inline-block bg-[rgba(102,255,218,0.1)] text-[#64FFDA] border border-[rgba(102,255,218,0.2)] rounded-full px-3 py-1 text-sm font-medium">
                     Save 25%
                   </div>
@@ -83,7 +92,7 @@ export function AIPricingSection() {
             <ul className="space-y-3 mt-8 mb-6">
               {features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
-                  <Check size={16} className="text-[#64FFDA] mt-0.5 flex-shrink-0" />
+                  <Check size={16} className="text-[#64FFDA] mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <span className="text-sm text-white">{feature}</span>
                 </li>
               ))}
@@ -96,8 +105,8 @@ export function AIPricingSection() {
 
             {/* CTAs */}
             <div className="flex flex-wrap justify-center gap-4 mb-4">
-              <PrimarySolidButton onClick={openChatWidget}>Start with AI Agent</PrimarySolidButton>
-              <CalendarButton>Book a Setup Call</CalendarButton>
+              <PrimarySolidButton onClick={openChatWidget}>Ask Horus AI</PrimarySolidButton>
+              <CalendarButton>Book a Discovery Call</CalendarButton>
             </div>
 
             <p className="text-xs text-[#64748B] text-center">

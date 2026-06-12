@@ -57,7 +57,7 @@ export function TalentHeroSection() {
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
             <ChatButton>Ask Horus AI</ChatButton>
-            <CalendarButton>Book a Talent Consultation</CalendarButton>
+            <CalendarButton>Book a Discovery Call</CalendarButton>
           </motion.div>
         </motion.div>
       </div>

@@ -41,7 +41,7 @@ export function SoftphoneCaseStudyPage() {
       <SEOHead
         title="Case Study | Custom Sales & Support Platform Built From Scratch"
         description="How Horus Desk skipped a $500+/month stack of VoIP, CRM, outreach, and automation tools by building one custom platform that costs $150/month."
-        canonical="https://horusdesk.com/case-studies/softphone"
+        canonicalUrl="https://horusdesk.com/case-studies/softphone"
         ogTitle="Case Study | Custom Sales & Support Platform Built From Scratch"
         ogDescription="How Horus Desk skipped a $500+/month stack of VoIP, CRM, outreach, and automation tools by building one custom platform that costs $150/month."
         ogUrl="https://horusdesk.com/case-studies/softphone"
@@ -50,7 +50,7 @@ export function SoftphoneCaseStudyPage() {
         twitterDescription="How Horus Desk built a custom WebRTC softphone + CRM and avoided a $500+/month SaaS stack from day one."
         twitterImage="https://horusdesk.com/og-studio.png"
       />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section
           className="relative min-h-[50vh] flex items-center bg-navy overflow-hidden pt-[100px] pb-16"

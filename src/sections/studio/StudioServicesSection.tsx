@@ -44,7 +44,7 @@ const cardVariants = {
 
 export function StudioServicesSection() {
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#7C4DFF] mb-4">

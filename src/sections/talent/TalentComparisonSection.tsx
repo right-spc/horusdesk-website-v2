@@ -51,13 +51,13 @@ export function TalentComparisonSection() {
                   <td className="py-4 px-4 text-sm text-white font-medium">{row.label}</td>
                   <td className="py-4 px-4 text-sm text-[#64748B]">
                     <span className="inline-flex items-center gap-2">
-                      <X size={14} className="text-red-400 flex-shrink-0" />
+                      <X size={14} className="text-red-400 flex-shrink-0" aria-hidden="true" />
                       {row.inHouse}
                     </span>
                   </td>
                   <td className="py-4 px-4 text-sm text-white">
                     <span className="inline-flex items-center gap-2">
-                      <Check size={14} className="text-[#FFAB40] flex-shrink-0" />
+                      <Check size={14} className="text-[#FFAB40] flex-shrink-0" aria-hidden="true" />
                       {row.managed}
                     </span>
                   </td>
@@ -72,7 +72,7 @@ export function TalentComparisonSection() {
             A 5-person support team costs $450,000+/yr in the US.
           </p>
           <p className="text-lg text-[#FFAB40] font-medium">
-            With us, it&apos;s under $100,000 — fully managed.
+            With us, it&apos;s under $120,000 — fully managed.
           </p>
         </div>
       </div>

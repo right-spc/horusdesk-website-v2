@@ -40,8 +40,8 @@ export function SecurityContentSection() {
         </SectionWrapper>
 
         <SectionWrapper delay={0.4} className="flex flex-wrap justify-center gap-4 mt-16">
-          <ChatButton>Ask Horus</ChatButton>
-          <CalendarButton>Book a Security Review Call</CalendarButton>
+          <ChatButton>Ask Horus AI</ChatButton>
+          <CalendarButton>Book a Discovery Call</CalendarButton>
         </SectionWrapper>
       </div>
     </section>

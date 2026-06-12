@@ -92,15 +92,15 @@ function AIPricingCard() {
       <ul className="space-y-2 mb-8">
         {features.map((f) => (
           <li key={f} className="flex items-start gap-2">
-            <Check size={14} className="text-[#64FFDA] mt-0.5 flex-shrink-0" />
+            <Check size={14} className="text-[#64FFDA] mt-0.5 flex-shrink-0" aria-hidden="true" />
             <span className="text-sm text-white">{f}</span>
           </li>
         ))}
       </ul>
 
       <div className="flex flex-col gap-3">
-        <PrimarySolidButton onClick={openChatWidget}>Start with Horus AI</PrimarySolidButton>
-        <CalendarButton>Book Setup Call</CalendarButton>
+        <PrimarySolidButton onClick={openChatWidget}>Ask Horus AI</PrimarySolidButton>
+        <CalendarButton>Book a Discovery Call</CalendarButton>
       </div>
     </motion.div>
   );
@@ -132,14 +132,14 @@ function TalentPricingCard() {
       <ul className="space-y-2 mb-8">
         {features.map((f) => (
           <li key={f} className="flex items-start gap-2">
-            <Check size={14} className="text-[#FFAB40] mt-0.5 flex-shrink-0" />
+            <Check size={14} className="text-[#FFAB40] mt-0.5 flex-shrink-0" aria-hidden="true" />
             <span className="text-sm text-white">{f}</span>
           </li>
         ))}
       </ul>
       <div className="flex flex-col gap-3">
-        <ChatButton>Chat About Talent</ChatButton>
-        <CalendarButton>Book Consultation</CalendarButton>
+        <ChatButton>Ask Horus AI</ChatButton>
+        <CalendarButton>Book a Discovery Call</CalendarButton>
       </div>
     </motion.div>
   );
@@ -169,14 +169,14 @@ function StudioPricingCard() {
       <ul className="space-y-2 mb-8">
         {features.map((f) => (
           <li key={f} className="flex items-start gap-2">
-            <Check size={14} className="text-[#7C4DFF] mt-0.5 flex-shrink-0" />
+            <Check size={14} className="text-[#7C4DFF] mt-0.5 flex-shrink-0" aria-hidden="true" />
             <span className="text-sm text-white">{f}</span>
           </li>
         ))}
       </ul>
       <div className="flex flex-col gap-3">
-        <ChatButton>Discuss in Chat</ChatButton>
-        <CalendarButton>Book Discovery Call</CalendarButton>
+        <ChatButton>Ask Horus AI</ChatButton>
+        <CalendarButton>Book a Discovery Call</CalendarButton>
       </div>
     </motion.div>
   );

@@ -29,7 +29,7 @@ export function NoThirdPartyBanner() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <ChatButton>Chat About Studio</ChatButton>
+            <ChatButton>Ask Horus AI</ChatButton>
             <CalendarButton>Book a Discovery Call</CalendarButton>
           </div>
         </SectionWrapper>

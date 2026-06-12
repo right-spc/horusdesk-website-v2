@@ -71,20 +71,20 @@ export function PricingPage() {
   return (
     <>
       <SEOHead
-        title="Pricing | Horus Desk AI, Talent & Studio"
-        description="Transparent pricing for Horus Desk services. Horus AI from $499/mo with first 3 months at $299. Horus Talent from $10/hr. Horus Studio from $1,800. No hidden fees."
-        keywords="AI receptionist pricing, chatbot cost, BPO pricing, outsourcing rates, custom development pricing, software development cost, no code alternative"
-        canonical="https://horusdesk.com/pricing"
+        title="Pricing | Horus Desk AI, Teams & Studio"
+        description="Transparent pricing for Horus Desk services. AI Agent from $499/month with first 3 months at $299. Managed Teams from $10/hour. Software Studio from $1,800. No hidden fees. Setup included."
+        keywords="AI receptionist pricing, chatbot cost, BPO pricing, outsourcing rates, custom development pricing, software development cost"
+        canonicalUrl="https://horusdesk.com/pricing"
         ogTitle="Pricing | Horus Desk AI, Talent & Studio"
-        ogDescription="Transparent pricing for Horus AI ($499/mo), Horus Talent ($10/hr), and Horus Studio (from $1,800). No hidden fees."
+        ogDescription="Transparent pricing for Horus Desk services. AI Agent from $499/month with first 3 months at $299. Managed Teams from $10/hour. Software Studio from $1,800. No hidden fees. Setup included."
         ogUrl="https://horusdesk.com/pricing"
         ogImage="https://horusdesk.com/og-pricing.png"
         twitterTitle="Pricing | Horus Desk AI, Talent & Studio"
-        twitterDescription="Transparent pricing for Horus AI ($499/mo), Horus Talent ($10/hr), and Horus Studio (from $1,800). No hidden fees."
+        twitterDescription="Transparent pricing for Horus Desk services. AI Agent from $499/month with first 3 months at $299. Managed Teams from $10/hour. Software Studio from $1,800. No hidden fees. Setup included."
         twitterImage="https://horusdesk.com/og-pricing.png"
         jsonLd={[organizationSchema, itemListSchema]}
       />
-      <main>
+      <main id="main-content">
         <PricingHeroSection />
         <PricingCardsSection />
         <PricingCTASection />

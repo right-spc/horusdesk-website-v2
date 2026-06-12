@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
-import { ChatButton } from '@/components/buttons/ChatButton';
-import { CalendarButton } from '@/components/buttons/CalendarButton';
 
 const steps = [
   {
@@ -55,7 +53,7 @@ const stepVariants = {
 
 export function StudioProcessSection() {
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#7C4DFF] mb-4">
@@ -91,10 +89,7 @@ export function StudioProcessSection() {
           </div>
         </motion.div>
 
-        <SectionWrapper delay={0.3} className="flex flex-wrap justify-center gap-4 mt-16">
-          <ChatButton>Ask Horus AI</ChatButton>
-          <CalendarButton>Book a Discovery Call</CalendarButton>
-        </SectionWrapper>
+
       </div>
     </section>
   );

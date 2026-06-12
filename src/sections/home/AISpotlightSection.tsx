@@ -60,8 +60,8 @@ export function AISpotlightSection() {
         </motion.div>
 
         <SectionWrapper delay={0.2} className="flex flex-wrap justify-center gap-4 mt-12">
-          <ChatButton>Chat with Horus</ChatButton>
-          <CalendarButton>Book a Setup Call</CalendarButton>
+          <ChatButton>Ask Horus AI</ChatButton>
+          <CalendarButton>Book a Discovery Call</CalendarButton>
         </SectionWrapper>
       </div>
     </section>

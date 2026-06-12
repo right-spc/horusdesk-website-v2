@@ -92,7 +92,7 @@ export function TalentProcessSection() {
 
         <SectionWrapper delay={0.3} className="flex flex-wrap justify-center gap-4 mt-16">
           <ChatButton>Ask Horus AI</ChatButton>
-          <CalendarButton>Book a 20-Min Call</CalendarButton>
+          <CalendarButton>Book a Discovery Call</CalendarButton>
         </SectionWrapper>
       </div>
     </section>

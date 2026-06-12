@@ -47,19 +47,19 @@ export function AIHeroSection() {
               variants={itemVariants}
               className="text-5xl lg:text-7xl font-medium text-white leading-[1.1] tracking-tight mb-6"
             >
-              The AI Receptionist That Actually Books Meetings
+              Stop Losing After-Hours Leads to Voicemail and Competitors
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-[#64748B] leading-relaxed mb-8 max-w-xl"
             >
-              Website chat and email. Lead qualification. Calendar booking. 6 languages. All set up by us.
+              Horus AI qualifies every website visitor and books meetings 24/7 in 6 languages. Less than one day of a US hire. Fully managed. Live in 24 hours.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-              <PrimarySolidButton onClick={openChatWidget}>Start with AI Agent</PrimarySolidButton>
-              <CalendarButton>Book a Setup Call</CalendarButton>
+              <PrimarySolidButton onClick={openChatWidget}>Ask Horus AI</PrimarySolidButton>
+              <CalendarButton>Book a Discovery Call</CalendarButton>
             </motion.div>
           </motion.div>
 

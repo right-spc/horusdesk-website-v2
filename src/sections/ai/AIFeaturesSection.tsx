@@ -1,16 +1,12 @@
 import { motion } from 'framer-motion';
+import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import { Globe, Mail, Filter, Calendar, AlertTriangle, UserCheck } from 'lucide-react';
 
 const features = [
   {
-    icon: Globe,
-    title: '6 Languages',
-    description: 'English, Spanish, German, Dutch, French, and Arabic. Your customers speak their native language.',
-  },
-  {
-    icon: Mail,
-    title: 'Inbox Integration',
-    description: 'One inbox connected — either Gmail or Outlook. We monitor and respond to incoming leads.',
+    icon: UserCheck,
+    title: 'Dedicated Account Manager',
+    description: 'A real human account manager handles setup, training, and ongoing tweaks. You never touch a configuration panel. Plus an analytics portal to track every lead and conversation.',
   },
   {
     icon: Filter,
@@ -28,9 +24,14 @@ const features = [
     description: 'Sentiment drops or question too complex? We loop in your team instantly.',
   },
   {
-    icon: UserCheck,
-    title: 'Dedicated Account Manager',
-    description: 'A real human account manager + an analytics portal to track every lead and conversation.',
+    icon: Globe,
+    title: '6 Languages',
+    description: 'English, Spanish, German, Dutch, French, and Arabic. Your customers speak their native language.',
+  },
+  {
+    icon: Mail,
+    title: 'Inbox Integration',
+    description: 'One inbox connected — either Gmail or Outlook. We monitor and respond to incoming leads.',
   },
 ];
 
@@ -55,6 +56,15 @@ export function AIFeaturesSection() {
   return (
     <section className="bg-navy-light py-24 lg:py-40">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
+        <SectionWrapper className="text-center mb-16">
+          <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
+            WHAT&apos;S INCLUDED
+          </p>
+          <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2]">
+            Everything you need. Nothing you configure.
+          </h2>
+        </SectionWrapper>
+
         <motion.div
           variants={containerVariants}
           initial="hidden"

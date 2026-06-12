@@ -60,7 +60,7 @@ export function AIAgentDashboardsCaseStudyPage() {
       <SEOHead
         title="Case Study | Custom Employee & Customer Dashboards Built From Scratch"
         description="How Horus Desk skipped a $300+/month stack of employee portals, customer portals, analytics, and support tools by building custom dashboards that cost under $50/month."
-        canonical="https://horusdesk.com/case-studies/ai-agent-dashboards"
+        canonicalUrl="https://horusdesk.com/case-studies/ai-agent-dashboards"
         ogTitle="Case Study | Custom Employee & Customer Dashboards Built From Scratch"
         ogDescription="How Horus Desk skipped a $300+/month stack of employee portals, customer portals, analytics, and support tools by building custom dashboards that cost under $50/month."
         ogUrl="https://horusdesk.com/case-studies/ai-agent-dashboards"
@@ -69,7 +69,7 @@ export function AIAgentDashboardsCaseStudyPage() {
         twitterDescription="How Horus Desk built custom employee and customer dashboards and avoided a $300+/month SaaS stack from day one."
         twitterImage="https://horusdesk.com/og-studio.png"
       />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section
           className="relative min-h-[50vh] flex items-center bg-navy overflow-hidden pt-[100px] pb-16"

@@ -8,13 +8,13 @@ export function NotFoundPage() {
     <>
       <SEOHead
         title="Page Not Found | Horus Desk"
-        description="The page you are looking for does not exist. Explore Horus Desk AI Agent, managed teams, and custom development services."
-        canonical="https://horusdesk.com/404"
+        description="The page you are looking for does not exist. Explore Horus Desk AI receptionist, managed teams, and custom development services."
+        canonicalUrl="https://horusdesk.com/404"
         robots="noindex, nofollow"
         ogTitle="Page Not Found | Horus Desk"
-        ogDescription="The page you are looking for does not exist."
+        ogDescription="The page you are looking for does not exist. Explore Horus Desk AI receptionist, managed teams, and custom development services."
       />
-      <main
+      <main id="main-content"
         className="min-h-[100dvh] flex flex-col items-center justify-center bg-navy"
         style={{
           backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(102,255,218,0.06) 0%, transparent 60%)',
@@ -30,8 +30,8 @@ export function NotFoundPage() {
           &larr; Back to Home
         </Link>
         <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <ChatButton>Chat with Horus</ChatButton>
-          <CalendarButton>Book a Call</CalendarButton>
+          <ChatButton>Ask Horus AI</ChatButton>
+          <CalendarButton>Book a Discovery Call</CalendarButton>
         </div>
       </main>
     </>

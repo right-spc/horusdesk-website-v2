@@ -11,8 +11,8 @@ export function PricingCTASection() {
             Not sure which fits your business?
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            <ChatButton>Chat with Horus</ChatButton>
-            <CalendarButton>Book a Free Consultation</CalendarButton>
+            <ChatButton>Ask Horus AI</ChatButton>
+            <CalendarButton>Book a Discovery Call</CalendarButton>
           </div>
         </SectionWrapper>
       </div>

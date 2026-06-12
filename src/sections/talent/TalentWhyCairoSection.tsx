@@ -55,7 +55,7 @@ export function TalentWhyCairoSection() {
             WHY CAIRO
           </p>
           <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2]">
-            Built in Cairo. Trusted by US businesses.
+            Built in Cairo. For US businesses.
           </h2>
         </SectionWrapper>
 

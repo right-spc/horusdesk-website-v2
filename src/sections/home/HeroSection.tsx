@@ -62,21 +62,21 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
-              <ChatButton size="large">Start Chatting with Horus</ChatButton>
-              <CalendarButton size="large">Book a 10-Minute Setup Call</CalendarButton>
+              <ChatButton size="large">Ask Horus AI</ChatButton>
+              <CalendarButton size="large">Book a Discovery Call</CalendarButton>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-8">
               <div className="flex items-center gap-2">
-                <Shield size={16} className="text-[#64748B]" />
+                <Shield size={16} className="text-[#64748B]" aria-hidden="true" />
                 <span className="text-sm text-[#64748B]">Enterprise security</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap size={16} className="text-[#64748B]" />
+                <Zap size={16} className="text-[#64748B]" aria-hidden="true" />
                 <span className="text-sm text-[#64748B]">Setup included</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe size={16} className="text-[#64748B]" />
+                <Globe size={16} className="text-[#64748B]" aria-hidden="true" />
                 <span className="text-sm text-[#64748B]">6 Languages Supported</span>
               </div>
             </motion.div>
@@ -93,7 +93,7 @@ export function HeroSection() {
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <div className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl shadow-2xl overflow-hidden relative">
+              <div className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl shadow-2xl overflow-hidden relative" role="img" aria-label="Horus Desk AI chat interface showing lead qualification and calendar booking">
                 {/* Live indicator */}
                 <div className="absolute top-3 right-3 flex items-center gap-1.5 z-10">
                   <span className="relative flex h-2 w-2">

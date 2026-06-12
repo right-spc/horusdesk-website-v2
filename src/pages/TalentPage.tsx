@@ -28,13 +28,13 @@ const organizationSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Managed Teams',
+  name: 'Horus Desk Managed Teams',
   provider: {
     '@type': 'Organization',
     name: 'Horus Desk',
   },
   areaServed: 'US',
-  description: 'Managed customer support and sales teams. Cairo-based talent with dedicated account management. Services include L1/L2 support, SDR/BDR teams, and back office operations.',
+  description: 'Fully managed customer support and sales teams based in Cairo. US account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts.',
   offers: {
     '@type': 'Offer',
     price: '10',
@@ -47,21 +47,21 @@ export function TalentPage() {
   return (
     <>
       <SEOHead
-        title="Managed Teams | US-Managed Support & Sales Teams in Cairo"
-        description="US-managed customer support and sales teams based in Cairo. Fully recruited, trained, and supervised. $10–35/hr per agent. Start in 14 days. Scale monthly. 3-month proof of concept, then annual contract."
-        keywords="outsourced customer support, BPO services, managed sales team, remote customer service, Egypt BPO, virtual sales team, Cairo outsourcing"
-        canonical="https://horusdesk.com/teams"
+        title="Managed Teams | Customer Support & Sales Teams from $10/hour"
+        description="Fully managed customer support and sales teams based in Cairo. US account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts."
+        keywords="outsourced customer support, BPO services, managed sales team, remote customer service, Egypt BPO, virtual sales team, customer support outsourcing"
+        canonicalUrl="https://horusdesk.com/teams"
         ogType="service"
-        ogTitle="Managed Teams | US-Managed Support & Sales Teams in Cairo"
-        ogDescription="Skip the hiring process. Managed Teams provides fully managed customer support and sales teams with dedicated account management. $10–35/hr per agent. Start in 14 days."
+        ogTitle="Managed Teams | Customer Support & Sales Teams from $10/hour"
+        ogDescription="Fully managed customer support and sales teams based in Cairo. US account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts."
         ogUrl="https://horusdesk.com/teams"
         ogImage="https://horusdesk.com/og-talent.png"
-        twitterTitle="Managed Teams | US-Managed Support & Sales Teams in Cairo"
-        twitterDescription="Skip the hiring process. Managed Teams provides fully managed customer support and sales teams with dedicated account management. $10–35/hr per agent. Start in 14 days."
+        twitterTitle="Managed Teams | Customer Support & Sales Teams from $10/hour"
+        twitterDescription="Fully managed customer support and sales teams based in Cairo. US account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts."
         twitterImage="https://horusdesk.com/og-talent.png"
         jsonLd={[organizationSchema, serviceSchema]}
       />
-      <main>
+      <main id="main-content">
         <TalentHeroSection />
         <TalentTrustBar />
         <TalentWhyCairoSection />

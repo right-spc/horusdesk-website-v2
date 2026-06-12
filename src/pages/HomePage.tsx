@@ -39,7 +39,7 @@ const websiteSchema = {
 
 const noRiskCards = [
   {
-    title: 'Free Setup & Pilot',
+    title: 'Free Setup and No contracts',
     body: 'We set up Horus AI on your site at no setup cost and run a pilot so you can see it qualify real leads before you commit to the service.',
     borderColor: 'border-t-[#64FFDA]',
     linkColor: 'text-[#64FFDA]',
@@ -80,7 +80,7 @@ const cardVariants = {
 
 function NoRiskSection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy pt-8 lg:pt-10 pb-0">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
@@ -135,19 +135,19 @@ export function HomePage() {
     <>
       <SEOHead
         title="Horus Desk | AI Receptionist for US Service Businesses"
-        description="Horus Desk is an AI agent that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/mo. No DIY required."
+        description="Horus Desk is an AI receptionist that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/month. No DIY required."
         keywords="AI receptionist, lead qualification, chatbot for business, automated booking, AI customer service, US service businesses, multilingual chatbot"
-        canonical="https://horusdesk.com/"
+        canonicalUrl="https://horusdesk.com/"
         ogTitle="Horus Desk | AI Receptionist for US Service Businesses"
-        ogDescription="Never miss a lead again. Horus Desk AI Agent handles your website chat and email 24/7, qualifies leads, and books meetings automatically in 6 languages. Setup included."
+        ogDescription="Horus Desk is an AI receptionist that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/month. No DIY required."
         ogUrl="https://horusdesk.com/"
         ogImage="https://horusdesk.com/og-home.png"
         twitterTitle="Horus Desk | AI Receptionist for US Service Businesses"
-        twitterDescription="Never miss a lead again. Horus Desk AI Agent handles your website chat and email 24/7, qualifies leads, and books meetings automatically in 6 languages. Setup included."
+        twitterDescription="Horus Desk is an AI receptionist that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/month. No DIY required."
         twitterImage="https://horusdesk.com/og-home.png"
         jsonLd={[organizationSchema, websiteSchema]}
       />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <ServiceRouterSection />
         <NoRiskSection />

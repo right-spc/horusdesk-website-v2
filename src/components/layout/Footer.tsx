@@ -23,10 +23,10 @@ export function Footer() {
   return (
     <footer className="bg-navy border-t border-[rgba(226,232,240,0.08)]">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12">
           {/* Column 1 - Logo & Tagline */}
           <div>
-            <Logo className="mb-4" />
+            <Logo size="large" className="mb-4" />
             <p className="text-sm text-[#64748B]">
               Your business never sleeps. Neither do we.
             </p>

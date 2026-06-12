@@ -47,7 +47,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
           className="flex-shrink-0"
         >
-          <ChevronDown size={20} className="text-[#64748B]" />
+          <ChevronDown size={20} className="text-[#64748B]" aria-hidden="true" />
         </motion.span>
       </button>
       <AnimatePresence>
@@ -101,7 +101,7 @@ export function TalentFAQSection() {
             <h3 className="text-xl font-medium text-white mb-6">Still have questions?</h3>
             <div className="flex flex-wrap justify-center gap-4">
               <ChatButton>Ask Horus AI</ChatButton>
-              <CalendarButton>Book a Call</CalendarButton>
+              <CalendarButton>Book a Discovery Call</CalendarButton>
             </div>
           </div>
         </SectionWrapper>

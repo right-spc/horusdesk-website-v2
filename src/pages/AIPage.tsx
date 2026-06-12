@@ -1,6 +1,7 @@
 import { SEOHead } from '@/components/layout/SEOHead';
 import { AIHeroSection } from '@/sections/ai/AIHeroSection';
 import { AIFeaturesSection } from '@/sections/ai/AIFeaturesSection';
+import { AIComparisonSection } from '@/sections/ai/AIComparisonSection';
 import { AIPricingSection } from '@/sections/ai/AIPricingSection';
 import { AIFAQSection } from '@/sections/ai/AIFAQSection';
 
@@ -43,9 +44,9 @@ export function AIPage() {
     <>
       <SEOHead
         title="AI Agent | Automated Lead Qualification & Booking in 6 Languages"
-        description="AI Agent is an AI receptionist for website chat and email in 6 languages. Smart lead qualification, calendar booking, and 24/7 coverage. 7,500 responses included. Dedicated account manager. Starting at $499/mo."
+        description="Horus Desk AI is an AI receptionist for website chat and email in 6 languages. Smart lead qualification, calendar booking, and 24/7 coverage. 7,500 responses included. Dedicated account manager. Starting at $499/month."
         keywords="AI chatbot, website chat widget, email automation, lead qualification, calendar booking, AI receptionist, customer service automation, multilingual chatbot"
-        canonical="https://horusdesk.com/ai"
+        canonicalUrl="https://horusdesk.com/ai"
         ogType="product"
         ogTitle="AI Agent | Automated Lead Qualification & Booking"
         ogDescription="AI receptionist for website chat and email in 6 languages. Qualifies leads, books meetings, and integrates with Gmail/Outlook and Google Calendar. 7,500 responses included."
@@ -56,9 +57,10 @@ export function AIPage() {
         twitterImage="https://horusdesk.com/og-ai.png"
         jsonLd={[organizationSchema, softwareSchema]}
       />
-      <main>
+      <main id="main-content">
         <AIHeroSection />
         <AIFeaturesSection />
+        <AIComparisonSection />
         <AIPricingSection />
         <AIFAQSection />
       </main>

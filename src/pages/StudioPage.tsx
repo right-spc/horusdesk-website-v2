@@ -6,6 +6,8 @@ import { StudioWhyCustomSection } from '@/sections/studio/StudioWhyCustomSection
 import { StudioCaseStudiesSection } from '@/sections/studio/StudioCaseStudiesSection';
 import { StudioTechStackSection } from '@/sections/studio/StudioTechStackSection';
 import { StudioProcessSection } from '@/sections/studio/StudioProcessSection';
+import { StudioAuditCTASection } from '@/sections/studio/StudioAuditCTASection';
+import { StudioComparisonSection } from '@/sections/studio/StudioComparisonSection';
 import { StudioFAQSection } from '@/sections/studio/StudioFAQSection';
 
 const organizationSchema = {
@@ -43,27 +45,30 @@ export function StudioPage() {
     <>
       <SEOHead
         title="Software Studio | Custom Development Built From Scratch"
-        description="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. No vendor lock-in. Projects from $1,800."
+        description="Custom web apps, mobile development, and AI integrations built entirely from scratch. No Zapier, Salesforce, Airtable, or HubSpot. We build everything with custom code. Projects from $1,800. Free blueprint included."
         keywords="custom software development, web app development, mobile app development, AI integration, React development, Next.js development, no code alternative, custom CRM"
-        canonical="https://horusdesk.com/studio"
+        canonicalUrl="https://horusdesk.com/studio"
         ogType="service"
         ogTitle="Software Studio | Custom Development Built From Scratch"
-        ogDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code. No subscriptions. No vendor lock-in. Projects from $1,800."
+        ogDescription="Custom web apps, mobile development, and AI integrations built entirely from scratch. No Zapier, Salesforce, Airtable, or HubSpot. We build everything with custom code. Projects from $1,800. Free blueprint included."
         ogUrl="https://horusdesk.com/studio"
         ogImage="https://horusdesk.com/og-studio.png"
         twitterTitle="Software Studio | Custom Development Built From Scratch"
-        twitterDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code. No subscriptions. No vendor lock-in. Projects from $1,800."
+        twitterDescription="Custom web apps, mobile development, and AI integrations built entirely from scratch. No Zapier, Salesforce, Airtable, or HubSpot. We build everything with custom code. Projects from $1,800. Free blueprint included."
         twitterImage="https://horusdesk.com/og-studio.png"
         jsonLd={[organizationSchema, serviceSchema]}
       />
-      <main>
+      <main id="main-content">
         <StudioHeroSection />
         <StudioTrustBar />
         <StudioServicesSection />
         <StudioWhyCustomSection />
-        <StudioCaseStudiesSection />
         <StudioTechStackSection />
+        <StudioAuditCTASection />
         <StudioProcessSection />
+        <StudioAuditCTASection />
+        <StudioComparisonSection />
+        <StudioCaseStudiesSection />
         <StudioFAQSection />
       </main>
     </>

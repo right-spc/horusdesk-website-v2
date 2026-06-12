@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title: string;
   description: string;
-  canonical: string;
+  canonicalUrl: string;
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
@@ -20,7 +20,7 @@ interface SEOHeadProps {
 export function SEOHead({
   title,
   description,
-  canonical,
+  canonicalUrl,
   ogTitle,
   ogDescription,
   ogUrl,
@@ -37,13 +37,22 @@ export function SEOHead({
     <Helmet>
       <html lang="en-US" />
       <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#020617" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#0A192F" />
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       {robots && <meta name="robots" content={robots} />}
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={canonicalUrl} />
+
+      {/* Preconnect and preload */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+      {/* Icons */}
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       {/* Open Graph */}
       <meta property="og:site_name" content="Horus Desk" />

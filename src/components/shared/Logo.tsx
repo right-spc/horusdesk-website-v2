@@ -2,12 +2,13 @@ import { Link } from 'react-router';
 
 interface LogoProps {
   className?: string;
+  size?: 'default' | 'large';
 }
 
-export function Logo({ className = '' }: LogoProps) {
+export function Logo({ className = '', size = 'default' }: LogoProps) {
   return (
     <Link to="/" className={`flex items-center gap-3 ${className}`} aria-label="Horus Desk home">
-      <svg width="32" height="32" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width={size === 'large' ? 96 : 32} height={size === 'large' ? 96 : 32} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horus Desk logo geometric eye icon">
         <path d="M20 100 Q100 40 180 100 Q100 160 20 100" stroke="#64FFDA" strokeWidth="4" fill="none" strokeLinecap="round"/>
         <circle cx="100" cy="100" r="28" stroke="#64FFDA" strokeWidth="3" fill="none"/>
         <circle cx="100" cy="100" r="12" fill="#64FFDA"/>
@@ -17,7 +18,7 @@ export function Logo({ className = '' }: LogoProps) {
         <path d="M100 128 L100 155 M82 145 L118 145" stroke="#64FFDA" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
         <path d="M162 100 Q178 100 178 117 Q178 134 162 134 Q150 134 150 122" stroke="#64FFDA" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
       </svg>
-      <span className="text-lg font-medium text-white tracking-tight">Horus Desk</span>
+      <span className={`font-medium text-white tracking-tight ${size === 'large' ? 'text-4xl' : 'text-lg'}`}>Horus Desk</span>
     </Link>
   );
 }

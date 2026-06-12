@@ -16,7 +16,7 @@ const stats = [
   },
   {
     icon: FileCheck,
-    label: 'Projects From $1,800',
+    label: 'Free Audits and Blueprints',
   },
 ];
 
