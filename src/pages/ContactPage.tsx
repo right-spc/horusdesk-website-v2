@@ -88,7 +88,7 @@ export function ContactPage() {
           {/* Page header */}
           <SectionWrapper className="mb-12 lg:mb-16">
             <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
-              Contact
+              Contact Us
             </p>
             <h1 className="text-4xl lg:text-5xl font-medium text-white leading-[1.2] mb-4">
               Let's talk
