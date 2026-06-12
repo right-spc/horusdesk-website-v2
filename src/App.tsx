@@ -11,6 +11,7 @@ const StudioPage = lazy(() => import('@/pages/StudioPage').then(m => ({ default:
 const SoftphoneCaseStudyPage = lazy(() => import('@/pages/SoftphoneCaseStudyPage').then(m => ({ default: m.SoftphoneCaseStudyPage })));
 const AIAgentDashboardsCaseStudyPage = lazy(() => import('@/pages/AIAgentDashboardsCaseStudyPage').then(m => ({ default: m.AIAgentDashboardsCaseStudyPage })));
 const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage').then(m => ({ default: m.PrivacyPolicyPage })));
+const TermsOfServicePage = lazy(() => import('@/pages/TermsOfServicePage').then(m => ({ default: m.TermsOfServicePage })));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 function ScrollToTop() {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/case-studies/softphone" element={<SoftphoneCaseStudyPage />} />
           <Route path="/case-studies/ai-agent-dashboards" element={<AIAgentDashboardsCaseStudyPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

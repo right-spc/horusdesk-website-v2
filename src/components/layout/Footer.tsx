@@ -11,6 +11,7 @@ const productLinks = [
 const companyLinks = [
   { label: 'Contact', path: '/ai' },
   { label: 'Privacy Policy', path: '/privacy-policy' },
+  { label: 'Terms of Service', path: '/terms-of-service' },
 ];
 
 export function Footer() {
