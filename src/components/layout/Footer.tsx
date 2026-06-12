@@ -9,7 +9,7 @@ const productLinks = [
 ];
 
 const companyLinks = [
-  { label: 'Contact', path: '/ai' },
+  { label: 'Contact', path: '/contact' },
   { label: 'Privacy Policy', path: '/privacy-policy' },
   { label: 'Terms of Service', path: '/terms-of-service' },
 ];
