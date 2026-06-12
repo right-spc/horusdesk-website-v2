@@ -55,7 +55,7 @@ const cardVariants = {
 
 export function ServiceRouterSection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy-light py-24 lg:py-40">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
@@ -78,7 +78,7 @@ export function ServiceRouterSection() {
               key={service.title}
               variants={cardVariants}
               className={`
-                bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-2xl p-8
+                bg-navy border border-[rgba(226,232,240,0.08)] rounded-2xl p-8
                 border-t ${service.borderColor}
                 transition-all duration-500 ease-out
                 hover:-translate-y-1 hover:border-[rgba(102,255,218,0.15)] hover:shadow-card-glow
