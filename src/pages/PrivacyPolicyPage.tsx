@@ -130,14 +130,28 @@ export function PrivacyPolicyPage() {
               </ul>
 
               <p><strong>For End-Users (Processed on Your Behalf — AI Agent and Managed Teams):</strong></p>
-              <p>You, the Account Holder, act as the Data Controller for End-User data. We act as your Data Processor. Legal bases include your legitimate business interest in customer service automation and support, End-user consent (when they initiate contact), and contractual necessity (to fulfill the inquiry).</p>
+              <p>You, the Account Holder, act as the Data Controller for End-User data. We act as your Data Processor. Legal bases include:</p>
+              <ul>
+                <li><strong>Legitimate Interest:</strong> Your legitimate business interest in customer service automation and support</li>
+                <li><strong>Consent:</strong> End-user consent when they initiate contact</li>
+                <li><strong>Contractual Necessity:</strong> To fulfill the inquiry</li>
+              </ul>
               <p><strong>Your Obligation:</strong> You must maintain a privacy policy disclosing our role as processor and obtain necessary consents from your customers before their data enters our system.</p>
 
               <p><strong>For Employee Data (Managed Teams):</strong></p>
-              <p>We act as a Data Processor on behalf of the Account Holder for employee data related to managed team operations. Legal bases include contractual necessity (to provide staffing and management services), legitimate interest (to ensure quality, security, and compliance of the workforce), and consent (for background checks and training enrollment).</p>
+              <p>We act as a Data Processor on behalf of the Account Holder for employee data related to managed team operations. Legal bases include:</p>
+              <ul>
+                <li><strong>Contractual Necessity:</strong> To provide staffing and management services</li>
+                <li><strong>Legitimate Interest:</strong> To ensure quality, security, and compliance of the workforce</li>
+                <li><strong>Consent:</strong> For background checks and training enrollment</li>
+              </ul>
 
               <p><strong>For Project Data (Software Studio):</strong></p>
-              <p>We process project data as a Data Processor under a software development agreement. Legal bases include contractual necessity (to build and deliver the custom software) and legitimate interest (to maintain code quality and project security).</p>
+              <p>We process project data as a Data Processor under a software development agreement. Legal bases include:</p>
+              <ul>
+                <li><strong>Contractual Necessity:</strong> To build and deliver the custom software</li>
+                <li><strong>Legitimate Interest:</strong> To maintain code quality and project security</li>
+              </ul>
             </Section>
 
             <Section title="How We Use Information">
@@ -186,7 +200,15 @@ export function PrivacyPolicyPage() {
               </ul>
 
               <p><strong>Automated Decision-Making (AI Agent and Managed Teams):</strong></p>
-              <p>Our systems make automated decisions regarding response appropriateness and content, lead qualification scores, spam detection and filtering, escalation routing, and initial agent assignment (Managed Teams). These decisions do not produce legal effects or significant impacts on end-users without human intervention. Final business decisions remain with you.</p>
+              <p>Our systems make automated decisions regarding:</p>
+              <ul>
+                <li>Response appropriateness and content</li>
+                <li>Lead qualification scores</li>
+                <li>Spam detection and filtering</li>
+                <li>Escalation routing</li>
+                <li>Initial agent assignment (Managed Teams)</li>
+              </ul>
+              <p>These decisions do not produce legal effects or significant impacts on end-users without human intervention. Final business decisions remain with you.</p>
             </Section>
 
             <Section title="Data Sharing & Subprocessors">
@@ -340,17 +362,25 @@ export function PrivacyPolicyPage() {
 
             <Section title="Dispute Resolution & Complaints">
               <p>We are committed to resolving privacy concerns in good faith:</p>
-              <p><strong>Internal Resolution:</strong> Contact our Privacy Officer at privacy@horusdesk.com. We will investigate and respond within 3 business days.</p>
-              <p><strong>Payment-Related Privacy Disputes:</strong> For disputes involving payment data processing, contact support@horusdesk.com. We will attempt resolution within 3 business days. If unsatisfied, you may escalate through PayPal&apos;s Resolution Center.</p>
-              <p><strong>Egyptian Consumer Protection Agency:</strong> If unresolved, file a formal complaint with the Egyptian Consumer Protection Agency (CPA). Website: cpa.gov.eg/en-us/Complaints/Complaint-Filing. Hotline: +2019588. We cooperate fully with the CPA and abide by their resolutions regarding consumer complaints.</p>
-              <p><strong>Judicial Remedies:</strong> If administrative resolution fails, disputes shall be governed by the laws of the Arab Republic of Egypt and subject to the exclusive jurisdiction of competent courts in Egypt, subject to your mandatory local jurisdictional rights where applicable.</p>
-              <p><strong>No Class Actions:</strong> By using our Service, you agree to resolve disputes on an individual basis only.</p>
-              <p><strong>No Third-Party Beneficiaries:</strong> This Privacy Policy creates no enforceable rights in any person not a party to it. Only Account Holders (and their End-Users exercising rights through the Account Holder) may enforce these provisions.</p>
+              <ul>
+                <li><strong>Internal Resolution:</strong> Contact our Privacy Officer at privacy@horusdesk.com. We will investigate and respond within 3 business days.</li>
+                <li><strong>Payment-Related Privacy Disputes:</strong> For disputes involving payment data processing, contact support@horusdesk.com. We will attempt resolution within 3 business days. If unsatisfied, you may escalate through PayPal&apos;s Resolution Center.</li>
+                <li><strong>Egyptian Consumer Protection Agency:</strong> If unresolved, file a formal complaint with the Egyptian Consumer Protection Agency (CPA). Website: cpa.gov.eg/en-us/Complaints/Complaint-Filing. Hotline: +2019588. We cooperate fully with the CPA and abide by their resolutions regarding consumer complaints.</li>
+                <li><strong>Judicial Remedies:</strong> If administrative resolution fails, disputes shall be governed by the laws of the Arab Republic of Egypt and subject to the exclusive jurisdiction of competent courts in Egypt, subject to your mandatory local jurisdictional rights where applicable.</li>
+                <li><strong>No Class Actions:</strong> By using our Service, you agree to resolve disputes on an individual basis only.</li>
+                <li><strong>No Third-Party Beneficiaries:</strong> This Privacy Policy creates no enforceable rights in any person not a party to it. Only Account Holders (and their End-Users exercising rights through the Account Holder) may enforce these provisions.</li>
+              </ul>
             </Section>
 
             <Section title="Compliance With Local Laws">
               <p>We provide services globally but are headquartered in Egypt. We cannot guarantee compliance with every jurisdiction&apos;s specific privacy requirements.</p>
-              <p><strong>Your Responsibility:</strong> You are responsible for ensuring your use of our Service (including collection of End-User data) complies with all applicable local laws, including but not limited to GDPR, CCPA/CPRA, PIPEDA, and local data localization requirements.</p>
+              <p><strong>Your Responsibility:</strong> You are responsible for ensuring your use of our Service (including collection of End-User data) complies with all applicable local laws, including but not limited to:</p>
+              <ul>
+                <li>General Data Protection Regulation (GDPR) if serving EU residents</li>
+                <li>California Consumer Privacy Act (CCPA/CPRA) if serving California residents</li>
+                <li>Personal Information Protection and Electronic Documents Act (PIPEDA) for Canadian users</li>
+                <li>Local data localization requirements</li>
+              </ul>
               <p>If you require specific contractual or technical modifications for local compliance, notify us at legal@horusdesk.com. We will assess feasibility but make no guarantee that all requests can be accommodated.</p>
             </Section>
 
