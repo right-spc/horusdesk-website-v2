@@ -22,7 +22,7 @@ const itemVariants = {
 export function TalentHeroSection() {
   return (
     <section
-      className="relative min-h-[60vh] flex items-center bg-navy overflow-hidden pt-20 pb-16"
+      className="relative min-h-[60vh] flex items-center bg-navy overflow-hidden pt-[100px] pb-16"
       style={{
         backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(255,171,64,0.06) 0%, transparent 60%)',
       }}

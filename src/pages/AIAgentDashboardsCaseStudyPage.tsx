@@ -72,7 +72,7 @@ export function AIAgentDashboardsCaseStudyPage() {
       <main>
         {/* Hero */}
         <section
-          className="relative min-h-[50vh] flex items-center bg-navy overflow-hidden pt-20 pb-16"
+          className="relative min-h-[50vh] flex items-center bg-navy overflow-hidden pt-[100px] pb-16"
           style={{
             backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(124,77,255,0.06) 0%, transparent 60%)',
           }}
