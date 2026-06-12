@@ -23,7 +23,7 @@ const itemVariants = {
 export function HeroSection() {
   return (
     <section
-      className="relative min-h-[calc(100dvh-80px)] flex items-center bg-navy overflow-hidden pt-20 pb-10"
+      className="relative min-h-[60vh] flex items-center bg-navy overflow-hidden pt-20 pb-16"
       style={{
         backgroundImage: `
           radial-gradient(ellipse at 50% 0%, rgba(102,255,218,0.06) 0%, transparent 60%),
