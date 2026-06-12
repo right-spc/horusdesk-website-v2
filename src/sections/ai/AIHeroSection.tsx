@@ -54,7 +54,7 @@ export function AIHeroSection() {
               variants={itemVariants}
               className="text-lg text-[#64748B] leading-relaxed mb-8 max-w-xl"
             >
-              Horus AI qualifies every website visitor and books meetings 24/7 in 6 languages. Less than one day of a US hire. Fully managed. Live in 24 hours.
+              Horus AI qualifies every website visitor and books meetings 24/7 in 6 languages. Fully managed. Live in 24 hours.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
