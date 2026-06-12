@@ -29,7 +29,7 @@ export function AIHeroSection() {
       }}
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 py-24 lg:py-0 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
           {/* Left Column */}
           <motion.div
             variants={containerVariants}
