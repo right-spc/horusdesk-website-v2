@@ -51,14 +51,14 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-5xl lg:text-7xl font-medium text-white leading-[1.1] tracking-tight mb-6"
             >
-              An AI Receptionist That Qualifies Leads and Books Meetings While You Sleep
+              Scale Your Operations Without Adding Headaches
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-[#64748B] leading-relaxed mb-8 max-w-xl"
             >
-              We set it up for you. Fully managed setup. Live on your website and email in 24 hours. Built for US service businesses.
+              AI receptionists, expert teams, and custom software — built for US service businesses. We handle the setup. You focus on growth.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
