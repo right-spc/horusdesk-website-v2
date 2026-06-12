@@ -44,7 +44,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-6"
             >
-              AI RECEPTIONIST FOR US SERVICE BUSINESSES
+              AI + TEAMS + SOFTWARE FOR US SERVICE BUSINESSES
             </motion.p>
 
             <motion.h1
