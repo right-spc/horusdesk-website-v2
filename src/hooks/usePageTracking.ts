@@ -1,0 +1,23 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router';
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+  }
+}
+
+export function usePageTracking() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+}

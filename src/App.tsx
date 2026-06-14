@@ -3,6 +3,7 @@ import { useEffect, Suspense, lazy } from 'react';
 import { BookingProvider } from '@/components/layout/BookingModal';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { usePageTracking } from '@/hooks/usePageTracking';
 
 const HomePage = lazy(() => import('@/pages/HomePage').then(m => ({ default: m.HomePage })));
 const AIPage = lazy(() => import('@/pages/AIPage').then(m => ({ default: m.AIPage })));
@@ -32,6 +33,7 @@ function PageLoader() {
 }
 
 function App() {
+  usePageTracking();
   return (
     <BookingProvider>
       <a
