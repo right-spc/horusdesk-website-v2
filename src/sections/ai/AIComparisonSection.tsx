@@ -71,7 +71,7 @@ function StatusIcon({ status }: { status: 'x' | 'check' }) {
 
 export function AIComparisonSection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
@@ -92,9 +92,9 @@ export function AIComparisonSection() {
           <table className="w-full min-w-[700px]">
             <thead>
               <tr className="border-b border-[rgba(226,232,240,0.08)]">
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">Factor</th>
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">Human Receptionist</th>
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">DIY AI Chatbot</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">Factor</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">Human Receptionist</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">DIY AI Chatbot</th>
                 <th className="text-left py-4 px-4 text-sm font-medium text-[#64FFDA]">Horus AI</th>
               </tr>
             </thead>
@@ -105,13 +105,13 @@ export function AIComparisonSection() {
                   className="border-b border-[rgba(226,232,240,0.04)] hover:bg-[rgba(102,255,218,0.02)] transition-colors"
                 >
                   <td className="py-4 px-4 text-sm text-white font-medium">{row.label}</td>
-                  <td className="py-4 px-4 text-sm text-[#64748B]">
+                  <td className="py-4 px-4 text-sm text-[#94A3B8]">
                     <span className="inline-flex items-center gap-2">
                       <StatusIcon status={row.humanStatus as 'x' | 'check'} />
                       {row.human}
                     </span>
                   </td>
-                  <td className="py-4 px-4 text-sm text-[#64748B]">
+                  <td className="py-4 px-4 text-sm text-[#94A3B8]">
                     <span className="inline-flex items-center gap-2">
                       <StatusIcon status={row.diyStatus as 'x' | 'check'} />
                       {row.diy}

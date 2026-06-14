@@ -50,7 +50,7 @@ export function StudioHeroSection() {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-[#64748B] leading-relaxed mb-8 max-w-xl"
+            className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
           >
             Custom web apps, mobile development, and AI integrations built from scratch. You own the code. You own the data. No subscriptions. No vendor lock-in.
           </motion.p>

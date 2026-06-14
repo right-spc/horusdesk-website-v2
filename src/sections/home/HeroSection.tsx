@@ -56,7 +56,7 @@ export function HeroSection() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg text-[#64748B] leading-relaxed mb-8 max-w-xl"
+              className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
             >
               AI receptionists, expert teams, and custom software — built for US service businesses. We handle the setup. You focus on growth.
             </motion.p>
@@ -68,16 +68,16 @@ export function HeroSection() {
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-8">
               <div className="flex items-center gap-2">
-                <Shield size={16} className="text-[#64748B]" aria-hidden="true" />
-                <span className="text-sm text-[#64748B]">Enterprise security</span>
+                <Shield size={16} className="text-[#94A3B8]" aria-hidden="true" />
+                <span className="text-sm text-[#94A3B8]">Enterprise security</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap size={16} className="text-[#64748B]" aria-hidden="true" />
-                <span className="text-sm text-[#64748B]">Setup included</span>
+                <Zap size={16} className="text-[#94A3B8]" aria-hidden="true" />
+                <span className="text-sm text-[#94A3B8]">Setup included</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe size={16} className="text-[#64748B]" aria-hidden="true" />
-                <span className="text-sm text-[#64748B]">6 Languages Supported</span>
+                <Globe size={16} className="text-[#94A3B8]" aria-hidden="true" />
+                <span className="text-sm text-[#94A3B8]">6 Languages Supported</span>
               </div>
             </motion.div>
           </motion.div>
@@ -110,7 +110,7 @@ export function HeroSection() {
                     <div className="w-2 h-2 rounded-full bg-[#EAB308]" />
                     <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
                   </div>
-                  <span className="text-xs text-[#64748B] font-mono ml-2">horusdesk.com</span>
+                  <span className="text-xs text-[#94A3B8] font-mono ml-2">horusdesk.com</span>
                 </div>
 
                 {/* Chat content */}

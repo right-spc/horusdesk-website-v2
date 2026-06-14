@@ -78,7 +78,7 @@ export function StudioWhyCustomSection() {
             >
               <item.icon className="text-[#7C4DFF] mb-4" size={28} />
               <h3 className="text-xl font-medium text-white mb-3">{item.title}</h3>
-              <p className="text-[#64748B] leading-relaxed">{item.description}</p>
+              <p className="text-[#94A3B8] leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>

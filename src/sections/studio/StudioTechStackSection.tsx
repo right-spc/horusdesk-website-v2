@@ -84,7 +84,7 @@ export function StudioTechStackSection() {
             >
               <feature.icon className="text-[#7C4DFF] mb-4" size={28} />
               <h3 className="text-lg font-medium text-white mb-3">{feature.title}</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

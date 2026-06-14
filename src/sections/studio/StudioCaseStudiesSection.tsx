@@ -37,7 +37,7 @@ export function StudioCaseStudiesSection() {
   const { open } = useBooking();
 
   return (
-    <section className="bg-navy py-16 lg:py-24">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#7C4DFF] mb-4">
@@ -62,7 +62,7 @@ export function StudioCaseStudiesSection() {
               className="bg-navy border border-[rgba(226,232,240,0.08)] rounded-2xl p-8"
             >
               <h3 className="text-xl font-medium text-white mb-4">{study.title}</h3>
-              <p className="text-[#64748B] leading-relaxed mb-6">{study.description}</p>
+              <p className="text-[#94A3B8] leading-relaxed mb-6">{study.description}</p>
               {study.link ? (
                 <Link
                   to={study.link}

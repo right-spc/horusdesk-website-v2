@@ -124,7 +124,7 @@ function BookingModal() {
             <button
               ref={closeButtonRef}
               onClick={close}
-              className="absolute top-4 right-4 text-[#64748B] hover:text-white transition-colors duration-300 z-10"
+              className="absolute top-4 right-4 text-[#94A3B8] hover:text-white transition-colors duration-300 z-10"
               aria-label="Close booking modal"
             >
               <X size={20} />

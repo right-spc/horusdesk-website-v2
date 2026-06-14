@@ -4,7 +4,7 @@ import { CalendarButton } from '@/components/buttons/CalendarButton';
 
 export function PricingCTASection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 text-center">
         <SectionWrapper>
           <h3 className="text-xl font-medium text-white mb-6">

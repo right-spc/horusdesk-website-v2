@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { generateBreadcrumbList } from '@/lib/seo';
 
 interface SEOHeadProps {
   title: string;
@@ -13,8 +14,13 @@ interface SEOHeadProps {
   twitterDescription?: string;
   twitterImage?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  jsonLdLast?: Record<string, unknown> | Record<string, unknown>[];
   robots?: string;
-  keywords?: string;
+}
+
+function formatTitle(title: string) {
+  const brand = 'Horus Desk';
+  return title.includes(brand) ? title : `${title} | ${brand}`;
 }
 
 export function SEOHead({
@@ -30,19 +36,32 @@ export function SEOHead({
   twitterDescription,
   twitterImage,
   jsonLd,
-  robots,
-  keywords,
+  jsonLdLast,
+  robots = 'index, follow',
 }: SEOHeadProps) {
+  const formattedTitle = formatTitle(title);
+  const isNotFound = canonicalUrl === 'https://horusdesk.com/404';
+
+  const schemas: Record<string, unknown>[] = [];
+  if (jsonLd) {
+    schemas.push(...(Array.isArray(jsonLd) ? jsonLd : [jsonLd]));
+  }
+  if (!isNotFound) {
+    schemas.push(generateBreadcrumbList(canonicalUrl));
+  }
+  if (jsonLdLast) {
+    schemas.push(...(Array.isArray(jsonLdLast) ? jsonLdLast : [jsonLdLast]));
+  }
+
   return (
     <Helmet>
       <html lang="en-US" />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#0A192F" />
-      <title>{title}</title>
+      <title>{formattedTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {robots && <meta name="robots" content={robots} />}
+      <meta name="robots" content={robots} />
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Preconnect and preload */}
@@ -58,7 +77,7 @@ export function SEOHead({
       <meta property="og:site_name" content="Horus Desk" />
       <meta property="og:type" content={ogType} />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:title" content={ogTitle || formattedTitle} />
       <meta property="og:description" content={ogDescription || description} />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
       {ogImage && (
@@ -74,16 +93,16 @@ export function SEOHead({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@horusdesk" />
       <meta name="twitter:creator" content="@horusdesk" />
-      <meta name="twitter:title" content={twitterTitle || ogTitle || title} />
+      <meta name="twitter:title" content={twitterTitle || ogTitle || formattedTitle} />
       <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
       {twitterImage && <meta name="twitter:image" content={twitterImage} />}
 
       {/* JSON-LD */}
-      {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+      {schemas.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 }

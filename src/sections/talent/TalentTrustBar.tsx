@@ -35,7 +35,7 @@ export function TalentTrustBar() {
               className="flex items-center gap-3"
             >
               <stat.icon size={18} className="text-[#FFAB40] flex-shrink-0" />
-              <span className="text-sm text-[#64748B]">{stat.label}</span>
+              <span className="text-sm text-[#94A3B8]">{stat.label}</span>
             </motion.div>
           ))}
         </div>

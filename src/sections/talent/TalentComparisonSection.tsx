@@ -16,7 +16,7 @@ const rows = [
 
 export function TalentComparisonSection() {
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#FFAB40] mb-4">
@@ -37,8 +37,8 @@ export function TalentComparisonSection() {
           <table className="w-full min-w-[600px]">
             <thead>
               <tr className="border-b border-[rgba(226,232,240,0.08)]">
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">Factor</th>
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">In-House Hire</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">Factor</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">In-House Hire</th>
                 <th className="text-left py-4 px-4 text-sm font-medium text-[#FFAB40]">Managed Teams</th>
               </tr>
             </thead>
@@ -49,7 +49,7 @@ export function TalentComparisonSection() {
                   className="border-b border-[rgba(226,232,240,0.04)] hover:bg-[rgba(255,171,64,0.02)] transition-colors"
                 >
                   <td className="py-4 px-4 text-sm text-white font-medium">{row.label}</td>
-                  <td className="py-4 px-4 text-sm text-[#64748B]">
+                  <td className="py-4 px-4 text-sm text-[#94A3B8]">
                     <span className="inline-flex items-center gap-2">
                       <X size={14} className="text-red-400 flex-shrink-0" aria-hidden="true" />
                       {row.inHouse}

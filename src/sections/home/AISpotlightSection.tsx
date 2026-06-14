@@ -29,13 +29,13 @@ const statVariants = {
 
 export function AISpotlightSection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-12">
           <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2] mb-6">
             Why AI Agent is different
           </h2>
-          <p className="text-lg text-[#64748B] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-[#94A3B8] leading-relaxed max-w-2xl mx-auto">
             Most chatbots force you to DIY. We do the opposite. A dedicated account manager sets everything up for you. You get an analytics portal to track every lead. 7,500 AI responses included. One inbox connected (Gmail or Outlook). And if you need more responses, add 1,000 credits for $59 that never expire as long as you&apos;re subscribed.
           </p>
         </SectionWrapper>
@@ -54,7 +54,7 @@ export function AISpotlightSection() {
               className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl p-6 text-center"
             >
               <span className="font-mono text-4xl text-[#64FFDA] block">{stat.value}</span>
-              <span className="text-sm text-[#64748B] mt-2 block">{stat.label}</span>
+              <span className="text-sm text-[#94A3B8] mt-2 block">{stat.label}</span>
             </motion.div>
           ))}
         </motion.div>

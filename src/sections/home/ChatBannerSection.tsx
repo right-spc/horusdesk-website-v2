@@ -10,7 +10,7 @@ export function ChatBannerSection() {
           <h3 className="text-xl font-medium text-white mb-4">
             Not sure where to start?
           </h3>
-          <p className="text-[#64748B] mb-8 max-w-lg mx-auto">
+          <p className="text-[#94A3B8] mb-8 max-w-lg mx-auto">
             Whether you need an AI receptionist, a managed support and sales team, or custom software built from scratch, we can help you choose the right path.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -44,7 +44,7 @@ export function Navbar() {
                   text-sm font-medium transition-colors duration-500
                   ${location.pathname === link.path
                     ? 'text-white'
-                    : 'text-[#64748B] hover:text-white'
+                    : 'text-[#94A3B8] hover:text-white'
                   }
                 `}
               >

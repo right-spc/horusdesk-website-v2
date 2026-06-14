@@ -100,7 +100,7 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
 
     const inputClass = `
       w-full bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl
-      text-white placeholder-[#64748B] px-4 py-3
+      text-white placeholder-[#94A3B8] px-4 py-3
       focus:border-[#64FFDA] focus:outline-none
       transition-colors duration-300
     `;
@@ -116,7 +116,7 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
               <Check size={24} className="text-[#64FFDA]" />
             </div>
             <h3 className="text-xl font-medium text-white mb-1">Thanks, {formData.fullName.split(' ')[0]}!</h3>
-            <p className="text-sm text-[#64748B]">
+            <p className="text-sm text-[#94A3B8]">
               Pick a 30-minute slot below and it will be booked directly into the calendar.
             </p>
           </div>

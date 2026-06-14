@@ -23,10 +23,10 @@ export function PrivacyPolicyPage() {
     <>
       <SEOHead
         title="Privacy Policy | Horus Desk"
-        description="Horus Desk privacy policy. Learn how Right Space LLC collects, uses, discloses, and safeguards information across our AI Agent, Managed Teams, and Software Studio services."
+        description="Learn how Right Space LLC collects, uses, discloses, and safeguards your information when you use Horus Desk AI, Teams, and Studio services."
         canonicalUrl="https://horusdesk.com/privacy-policy"
         ogTitle="Privacy Policy | Horus Desk"
-        ogDescription="Horus Desk privacy policy. Learn how Right Space LLC collects, uses, discloses, and safeguards information across our AI Agent, Managed Teams, and Software Studio services."
+        ogDescription="Learn how Right Space LLC collects, uses, discloses, and safeguards your information when you use Horus Desk AI, Teams, and Studio services."
         ogUrl="https://horusdesk.com/privacy-policy"
         ogImage="https://horusdesk.com/og-home.png"
         jsonLd={organizationSchema}
@@ -39,7 +39,7 @@ export function PrivacyPolicyPage() {
           <h1 className="text-4xl lg:text-5xl font-medium text-white leading-[1.2] mb-6">
             Privacy Policy
           </h1>
-          <p className="text-[#64748B] mb-12">
+          <p className="text-[#94A3B8] mb-12">
             Last Updated: June 2026
           </p>
 

@@ -23,10 +23,10 @@ export function TermsOfServicePage() {
     <>
       <SEOHead
         title="Terms of Service | Horus Desk"
-        description="Horus Desk Terms of Service. Read the legally binding agreement governing your use of our AI Agent, Managed Teams, and Software Studio services."
+        description="Read the legally binding agreement for using Horus Desk AI Agent, Managed Teams, and Software Studio services. Updated June 2026."
         canonicalUrl="https://horusdesk.com/terms-of-service"
         ogTitle="Terms of Service | Horus Desk"
-        ogDescription="Horus Desk Terms of Service. Read the legally binding agreement governing your use of our AI Agent, Managed Teams, and Software Studio services."
+        ogDescription="Read the legally binding agreement for using Horus Desk AI Agent, Managed Teams, and Software Studio services. Updated June 2026."
         ogUrl="https://horusdesk.com/terms-of-service"
         ogImage="https://horusdesk.com/og-home.png"
         jsonLd={organizationSchema}
@@ -39,7 +39,7 @@ export function TermsOfServicePage() {
           <h1 className="text-4xl lg:text-5xl font-medium text-white leading-[1.2] mb-6">
             Terms of Service
           </h1>
-          <p className="text-[#64748B] mb-12">
+          <p className="text-[#94A3B8] mb-12">
             Last Updated: June 2026
           </p>
 

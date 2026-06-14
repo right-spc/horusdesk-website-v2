@@ -50,7 +50,7 @@ const stepVariants = {
 export function TalentProcessSection() {
   return (
     <section
-      className="relative py-24 lg:py-40 bg-navy overflow-hidden"
+      className="relative py-16 lg:py-24 bg-navy overflow-hidden"
       style={{
         backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(255,171,64,0.06) 0%, transparent 60%)',
       }}
@@ -84,7 +84,7 @@ export function TalentProcessSection() {
               >
                 <span className="font-mono text-2xl text-[#FFAB40] block mb-3">{step.number}</span>
                 <h3 className="text-xl font-medium text-white mb-2">{step.title}</h3>
-                <p className="text-[#64748B] leading-relaxed">{step.description}</p>
+                <p className="text-[#94A3B8] leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
           </div>

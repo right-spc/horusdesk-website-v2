@@ -54,7 +54,7 @@ const cardVariants = {
 
 export function TalentQualitySection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#FFAB40] mb-4">
@@ -84,7 +84,7 @@ export function TalentQualitySection() {
             >
               <feature.icon className="text-[#FFAB40] mb-4" size={28} />
               <h3 className="text-lg font-medium text-white mb-3">{feature.title}</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-[#94A3B8] text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>

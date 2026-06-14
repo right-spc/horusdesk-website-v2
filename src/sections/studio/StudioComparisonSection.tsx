@@ -15,7 +15,7 @@ const rows = [
 
 export function StudioComparisonSection() {
   return (
-    <section className="bg-navy-light py-16 lg:py-24">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-12">
           <p className="text-xs font-medium tracking-wider uppercase text-[#7C4DFF] mb-4">
@@ -36,8 +36,8 @@ export function StudioComparisonSection() {
           <table className="w-full min-w-[600px]">
             <thead>
               <tr className="border-b border-[rgba(226,232,240,0.08)]">
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">Factor</th>
-                <th className="text-left py-4 px-4 text-sm font-medium text-[#64748B]">SaaS / No-Code Stack</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">Factor</th>
+                <th className="text-left py-4 px-4 text-sm font-medium text-[#94A3B8]">SaaS / No-Code Stack</th>
                 <th className="text-left py-4 px-4 text-sm font-medium text-[#7C4DFF]">Horus Studio</th>
               </tr>
             </thead>
@@ -48,7 +48,7 @@ export function StudioComparisonSection() {
                   className="border-b border-[rgba(226,232,240,0.04)] hover:bg-[rgba(124,77,255,0.02)] transition-colors"
                 >
                   <td className="py-4 px-4 text-sm text-white font-medium">{row.label}</td>
-                  <td className="py-4 px-4 text-sm text-[#64748B]">
+                  <td className="py-4 px-4 text-sm text-[#94A3B8]">
                     <span className="inline-flex items-center gap-2">
                       <X size={14} className="text-red-400 flex-shrink-0" aria-hidden="true" />
                       {row.saas}

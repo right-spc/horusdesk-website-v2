@@ -89,7 +89,7 @@ function NoRiskSection() {
           <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2] mb-6">
             We earn your trust before you pay
           </h2>
-          <p className="text-lg text-[#64748B] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-[#94A3B8] leading-relaxed max-w-2xl mx-auto">
             We know you have options. That is why every conversation starts free. No contracts, no guesswork, no commitment required.
           </p>
         </SectionWrapper>
@@ -113,9 +113,10 @@ function NoRiskSection() {
               `}
             >
               <h3 className="text-xl font-medium text-white mb-3">{card.title}</h3>
-              <p className="text-[#64748B] mb-6">{card.body}</p>
+              <p className="text-[#94A3B8] mb-6">{card.body}</p>
               <Link
                 to={card.link}
+                aria-label={`Learn more about ${card.title}`}
                 className={`${card.linkColor} hover:underline text-sm font-medium`}
               >
                 Learn more &rarr;
@@ -135,15 +136,14 @@ export function HomePage() {
     <>
       <SEOHead
         title="Horus Desk | AI Receptionist for US Service Businesses"
-        description="Horus Desk is an AI receptionist that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/month. No DIY required."
-        keywords="AI receptionist, lead qualification, chatbot for business, automated booking, AI customer service, US service businesses, multilingual chatbot"
+        description="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         canonicalUrl="https://horusdesk.com/"
         ogTitle="Horus Desk | AI Receptionist for US Service Businesses"
-        ogDescription="Horus Desk is an AI receptionist that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/month. No DIY required."
+        ogDescription="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         ogUrl="https://horusdesk.com/"
         ogImage="https://horusdesk.com/og-home.png"
         twitterTitle="Horus Desk | AI Receptionist for US Service Businesses"
-        twitterDescription="Horus Desk is an AI receptionist that qualifies leads and books meetings via website chat and email in 6 languages. We set it up for you. Starting at $499/month. No DIY required."
+        twitterDescription="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         twitterImage="https://horusdesk.com/og-home.png"
         jsonLd={[organizationSchema, websiteSchema]}
       />

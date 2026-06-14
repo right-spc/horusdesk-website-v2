@@ -53,7 +53,7 @@ function AIPricingCard() {
             onClick={() => setIsAnnual(false)}
             className={`
               px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300
-              ${!isAnnual ? 'bg-[#64FFDA] text-navy' : 'bg-transparent text-[#64748B] hover:text-white'}
+              ${!isAnnual ? 'bg-[#64FFDA] text-navy' : 'bg-transparent text-[#94A3B8] hover:text-white'}
             `}
           >
             Monthly
@@ -62,7 +62,7 @@ function AIPricingCard() {
             onClick={() => setIsAnnual(true)}
             className={`
               px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300
-              ${isAnnual ? 'bg-[#64FFDA] text-navy' : 'bg-transparent text-[#64748B] hover:text-white'}
+              ${isAnnual ? 'bg-[#64FFDA] text-navy' : 'bg-transparent text-[#94A3B8] hover:text-white'}
             `}
           >
             Annual
@@ -127,7 +127,7 @@ function TalentPricingCard() {
       <h3 className="text-xl font-medium text-white mb-6">Horus Talent</h3>
       <div className="text-center mb-6">
         <span className="text-4xl font-medium text-white">From $10/hr</span>
-        <span className="text-[#64748B] text-sm ml-2">per agent</span>
+        <span className="text-[#94A3B8] text-sm ml-2">per agent</span>
       </div>
       <ul className="space-y-2 mb-8">
         {features.map((f) => (
@@ -184,7 +184,7 @@ function StudioPricingCard() {
 
 export function PricingCardsSection() {
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <motion.div
           variants={containerVariants}

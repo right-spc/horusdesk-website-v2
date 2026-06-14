@@ -74,7 +74,7 @@ export function StudioServicesSection() {
             >
               <service.icon className="text-[#7C4DFF] mb-4" size={28} />
               <h3 className="text-xl font-medium text-white mb-3">{service.title}</h3>
-              <p className="text-[#64748B] leading-relaxed">{service.description}</p>
+              <p className="text-[#94A3B8] leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

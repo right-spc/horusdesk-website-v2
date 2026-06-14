@@ -86,10 +86,11 @@ export function ServiceRouterSection() {
             >
               <service.icon className={`${service.iconColor} mb-4`} size={28} />
               <h3 className="text-xl font-medium text-white mb-3">{service.title}</h3>
-              <p className="text-[#64748B] mb-6">{service.description}</p>
+              <p className="text-[#94A3B8] mb-6">{service.description}</p>
               <p className="text-white font-medium mb-4">{service.price}</p>
               <Link
                 to={service.link}
+                aria-label={`Learn more about ${service.title}`}
                 className={`${service.linkColor} hover:underline text-sm font-medium`}
               >
                 Learn more &rarr;

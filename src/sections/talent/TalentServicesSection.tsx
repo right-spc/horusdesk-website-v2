@@ -38,7 +38,7 @@ const cardVariants = {
 
 export function TalentServicesSection() {
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -59,7 +59,7 @@ export function TalentServicesSection() {
             >
               <service.icon className="text-[#FFAB40] mb-4" size={28} />
               <h3 className="text-xl font-medium text-white mb-3">{service.title}</h3>
-              <p className="text-[#64748B]">{service.description}</p>
+              <p className="text-[#94A3B8]">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

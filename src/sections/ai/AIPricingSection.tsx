@@ -21,7 +21,7 @@ export function AIPricingSection() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-[42rem] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-12">
           <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
@@ -48,7 +48,7 @@ export function AIPricingSection() {
                     px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
                     ${!isAnnual
                       ? 'bg-[#64FFDA] text-navy'
-                      : 'bg-transparent text-[#64748B] hover:text-white'
+                      : 'bg-transparent text-[#94A3B8] hover:text-white'
                     }
                   `}
                 >
@@ -60,7 +60,7 @@ export function AIPricingSection() {
                     px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
                     ${isAnnual
                       ? 'bg-[#64FFDA] text-navy'
-                      : 'bg-transparent text-[#64748B] hover:text-white'
+                      : 'bg-transparent text-[#94A3B8] hover:text-white'
                     }
                   `}
                 >
@@ -99,7 +99,7 @@ export function AIPricingSection() {
             </ul>
 
             {/* Extra info */}
-            <p className="text-sm text-[#64748B] mb-8 text-center">
+            <p className="text-sm text-[#94A3B8] mb-8 text-center">
               Need more responses? Add 1,000 credits for $59 that never expire as long as you&apos;re subscribed, or contact us for custom packages.
             </p>
 
@@ -109,7 +109,7 @@ export function AIPricingSection() {
               <CalendarButton>Book a Discovery Call</CalendarButton>
             </div>
 
-            <p className="text-xs text-[#64748B] text-center">
+            <p className="text-xs text-[#94A3B8] text-center">
               Setup fee waived. No long-term contracts. Cancel anytime.
             </p>
           </div>

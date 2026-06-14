@@ -29,14 +29,14 @@ export function Footer() {
           {/* Column 1 - Logo & Tagline */}
           <div>
             <Logo size="large" className="mb-4" />
-            <p className="text-sm text-[#64748B]">
+            <p className="text-sm text-[#94A3B8]">
               Your business never sleeps. Neither do we.
             </p>
           </div>
 
           {/* Column 2 - Services Links */}
           <div>
-            <h4 className="text-xs font-medium tracking-wider uppercase text-[#64748B] mb-4">Services</h4>
+            <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Services</h4>
             <ul className="space-y-3">
               {productLinks.map((link) => (
                 <li key={link.path}>
@@ -53,7 +53,7 @@ export function Footer() {
 
           {/* Column 3 - Company Links */}
           <div>
-            <h4 className="text-xs font-medium tracking-wider uppercase text-[#64748B] mb-4">Company</h4>
+            <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.label}>
@@ -70,14 +70,14 @@ export function Footer() {
 
           {/* Column 4 - Newsletter */}
           <div>
-            <h4 className="text-xs font-medium tracking-wider uppercase text-[#64748B] mb-4">Newsletter</h4>
+            <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Newsletter</h4>
             <form onSubmit={handleSubscribe} className="flex gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl text-white placeholder-[#64748B] px-4 py-2.5 text-sm focus:border-[#64FFDA] focus:outline-none transition-colors duration-300"
+                className="flex-1 bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl text-white placeholder-[#94A3B8] px-4 py-2.5 text-sm focus:border-[#64FFDA] focus:outline-none transition-colors duration-300"
               />
               <button
                 type="submit"
@@ -91,7 +91,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-[rgba(226,232,240,0.08)] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#64748B]">
+          <p className="text-xs text-[#94A3B8]">
             &copy; 2026 Horus Desk. A <a href="https://rightspc.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#64FFDA] transition-colors duration-300">Right Space</a> Service.
           </p>
         </div>

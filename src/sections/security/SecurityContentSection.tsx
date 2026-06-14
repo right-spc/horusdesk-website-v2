@@ -19,13 +19,13 @@ const sections = [
 
 export function SecurityContentSection() {
   return (
-    <section className="bg-navy-light py-24 lg:py-40">
+    <section className="bg-navy-light py-16 lg:py-24">
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="space-y-12">
           {sections.map((section, index) => (
             <SectionWrapper key={section.title} delay={index * 0.1}>
               <h3 className="text-xl font-medium text-white mb-4">{section.title}</h3>
-              <p className="text-[#64748B] leading-relaxed">{section.body}</p>
+              <p className="text-[#94A3B8] leading-relaxed">{section.body}</p>
             </SectionWrapper>
           ))}
         </div>

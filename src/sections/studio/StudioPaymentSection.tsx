@@ -27,11 +27,11 @@ const cardVariants = {
 
 export function StudioPaymentSection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
         <SectionWrapper className="mb-8">
           <h3 className="text-xl font-medium text-white mb-4">Flexible payment options</h3>
-          <p className="text-[#64748B]">
+          <p className="text-[#94A3B8]">
             We accept PayPal Business, direct bank account transfers, and Upwork for studio projects. Choose what works best for you.
           </p>
         </SectionWrapper>

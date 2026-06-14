@@ -22,6 +22,19 @@ const organizationSchema = {
   },
 };
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Horus Desk',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Cairo',
+    addressCountry: 'EG',
+  },
+  url: 'https://horusdesk.com/contact',
+  openingHours: 'Su-Th 09:00-17:00',
+};
+
 const contactCards = [
   {
     title: 'Sales & Setup',
@@ -71,16 +84,16 @@ export function ContactPage() {
     <>
       <SEOHead
         title="Contact Us | Horus Desk"
-        description="Get in touch with Horus Desk. Book a discovery call, email sales or support, or visit our Cairo office. We respond within one business day."
+        description="Book a free discovery call, email our sales and support teams, or visit our operations center in Cairo, Egypt. We reply within 24 hours."
         canonicalUrl="https://horusdesk.com/contact"
         ogTitle="Contact Us | Horus Desk"
-        ogDescription="Get in touch with Horus Desk. Book a discovery call, email sales or support, or visit our Cairo office. We respond within one business day."
+        ogDescription="Book a free discovery call, email our sales and support teams, or visit our operations center in Cairo, Egypt. We reply within 24 hours."
         ogUrl="https://horusdesk.com/contact"
         ogImage="https://horusdesk.com/og-home.png"
         twitterTitle="Contact Us | Horus Desk"
-        twitterDescription="Get in touch with Horus Desk. Book a discovery call, email sales or support, or visit our Cairo office. We respond within one business day."
+        twitterDescription="Book a free discovery call, email our sales and support teams, or visit our operations center in Cairo, Egypt. We reply within 24 hours."
         twitterImage="https://horusdesk.com/og-home.png"
-        jsonLd={organizationSchema}
+        jsonLd={[organizationSchema, localBusinessSchema]}
       />
 
       <main id="main-content" className="bg-navy pt-[120px] pb-24">
@@ -93,7 +106,7 @@ export function ContactPage() {
             <h1 className="text-4xl lg:text-5xl font-medium text-white leading-[1.2] mb-4">
               Let's talk
             </h1>
-            <p className="text-lg text-[#64748B] leading-relaxed max-w-2xl">
+            <p className="text-lg text-[#94A3B8] leading-relaxed max-w-2xl">
               Whether you want to book a call or send a message, we will get back to you within one business day.
             </p>
           </SectionWrapper>
@@ -129,7 +142,7 @@ export function ContactPage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <h2 className="text-xl font-medium text-white mb-2">{card.title}</h2>
-                        <p className="text-[#64748B] mb-4">{card.body}</p>
+                        <p className="text-[#94A3B8] mb-4">{card.body}</p>
                         <a
                           href={`mailto:${card.email}`}
                           className="inline-flex items-center gap-2 text-[#64FFDA] hover:underline text-sm font-medium"
@@ -161,13 +174,13 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h2 className="text-xl font-medium text-white mb-2">Office</h2>
-                    <address className="not-italic text-[#64748B] leading-relaxed">
+                    <address className="not-italic text-[#94A3B8] leading-relaxed">
                       Horus Desk / Right Space LLC<br />
                       30B Asmaa Fahmy, Al Golf, Nasr City<br />
                       Cairo Governorate 4451422<br />
                       Arab Republic of Egypt
                     </address>
-                    <div className="flex items-center gap-2 mt-4 text-[#64748B] text-sm">
+                    <div className="flex items-center gap-2 mt-4 text-[#94A3B8] text-sm">
                       <Clock size={16} aria-hidden="true" />
                       <span>Sun – Thu, 9:00 AM – 5:00 PM EET</span>
                     </div>
@@ -183,7 +196,7 @@ export function ContactPage() {
                   <h2 className="text-xl font-medium text-white mb-2">
                     Book a Discovery Call
                   </h2>
-                  <p className="text-sm text-[#64748B] mb-6">
+                  <p className="text-sm text-[#94A3B8] mb-6">
                     Tell us a little about yourself and pick a 30-minute slot on the calendar.
                   </p>
                   <BookingForm />

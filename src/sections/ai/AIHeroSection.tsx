@@ -52,7 +52,7 @@ export function AIHeroSection() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg text-[#64748B] leading-relaxed mb-8 max-w-xl"
+              className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
             >
               Horus AI qualifies every website visitor and books meetings 24/7 in 6 languages. Fully managed. Live in 24 hours.
             </motion.p>
@@ -95,8 +95,8 @@ export function AIHeroSection() {
                   <span className="text-[#64FFDA] text-xs">&#10003;</span>
                 </div>
                 <p className="text-sm text-white font-medium mb-1">Meeting Booked</p>
-                <p className="text-xs text-[#64748B]">Tuesday, 10:00 AM</p>
-                <p className="text-xs text-[#64748B]">Google Calendar</p>
+                <p className="text-xs text-[#94A3B8]">Tuesday, 10:00 AM</p>
+                <p className="text-xs text-[#94A3B8]">Google Calendar</p>
               </div>
             </div>
           </motion.div>

@@ -21,50 +21,45 @@ const organizationSchema = {
   },
 };
 
-const itemListSchema = {
+const aiAgentProduct = {
   '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      item: {
-        '@type': 'Product',
-        name: 'Horus AI',
-        description: 'AI receptionist for website chat and email in 6 languages',
-        offers: {
-          '@type': 'Offer',
-          price: '499',
-          priceCurrency: 'USD',
-          priceValidUntil: '2027-06-11',
-        },
-      },
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      item: {
-        '@type': 'Service',
-        name: 'Horus Talent',
-        description: 'Managed customer support and sales teams',
-        offers: {
-          '@type': 'Offer',
-          price: '10',
-          priceCurrency: 'USD',
-          unitText: 'HOUR',
-        },
-      },
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      item: {
-        '@type': 'Service',
-        name: 'Horus Studio',
-        description: 'Custom development and AI integrations built from scratch',
-      },
-    },
-  ],
+  '@type': 'Product',
+  name: 'Horus AI Agent',
+  description: 'AI receptionist for website chat and email in 6 languages',
+  offers: {
+    '@type': 'Offer',
+    price: '499',
+    priceCurrency: 'USD',
+    billingIncrement: 'P1M',
+    description: 'Monthly subscription',
+  },
+};
+
+const managedTeamsProduct = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Horus Managed Teams',
+  description: 'Managed customer support and sales teams',
+  offers: {
+    '@type': 'Offer',
+    price: '10',
+    priceCurrency: 'USD',
+    unitText: 'per hour',
+    description: 'Hourly rate',
+  },
+};
+
+const softwareStudioProduct = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Horus Software Studio',
+  description: 'Custom development and AI integrations built from scratch',
+  offers: {
+    '@type': 'Offer',
+    price: '1800',
+    priceCurrency: 'USD',
+    description: 'Starting project price',
+  },
 };
 
 export function PricingPage() {
@@ -72,17 +67,16 @@ export function PricingPage() {
     <>
       <SEOHead
         title="Pricing | Horus Desk AI, Teams & Studio"
-        description="Transparent pricing for Horus Desk services. AI Agent from $499/month with first 3 months at $299. Managed Teams from $10/hour. Software Studio from $1,800. No hidden fees. Setup included."
-        keywords="AI receptionist pricing, chatbot cost, BPO pricing, outsourcing rates, custom development pricing, software development cost"
+        description="Transparent pricing for Horus Desk services: AI Agent from $499/mo, Managed Teams from $10/hr, and custom Software Studio projects from $1,800."
         canonicalUrl="https://horusdesk.com/pricing"
         ogTitle="Pricing | Horus Desk AI, Talent & Studio"
-        ogDescription="Transparent pricing for Horus Desk services. AI Agent from $499/month with first 3 months at $299. Managed Teams from $10/hour. Software Studio from $1,800. No hidden fees. Setup included."
+        ogDescription="Transparent pricing for Horus Desk services: AI Agent from $499/mo, Managed Teams from $10/hr, and custom Software Studio projects from $1,800."
         ogUrl="https://horusdesk.com/pricing"
         ogImage="https://horusdesk.com/og-pricing.png"
         twitterTitle="Pricing | Horus Desk AI, Talent & Studio"
-        twitterDescription="Transparent pricing for Horus Desk services. AI Agent from $499/month with first 3 months at $299. Managed Teams from $10/hour. Software Studio from $1,800. No hidden fees. Setup included."
+        twitterDescription="Transparent pricing for Horus Desk services: AI Agent from $499/mo, Managed Teams from $10/hr, and custom Software Studio projects from $1,800."
         twitterImage="https://horusdesk.com/og-pricing.png"
-        jsonLd={[organizationSchema, itemListSchema]}
+        jsonLd={[organizationSchema, aiAgentProduct, managedTeamsProduct, softwareStudioProduct]}
       />
       <main id="main-content">
         <PricingHeroSection />

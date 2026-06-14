@@ -47,7 +47,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
           className="flex-shrink-0"
         >
-          <ChevronDown size={20} className="text-[#64748B]" aria-hidden="true" />
+          <ChevronDown size={20} className="text-[#94A3B8]" aria-hidden="true" />
         </motion.span>
       </button>
       <AnimatePresence>
@@ -59,7 +59,7 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
             transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
             className="overflow-hidden"
           >
-            <p className="text-[#64748B] leading-relaxed pb-5">{answer}</p>
+            <p className="text-[#94A3B8] leading-relaxed pb-5">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -71,7 +71,7 @@ export function AIFAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <SectionWrapper>
           <div>

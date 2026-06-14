@@ -25,11 +25,10 @@ export function SecurityPage() {
     <>
       <SEOHead
         title="Security & Compliance | SOC 2, GDPR & Data Privacy"
-        description="Horus Desk security and compliance. Enterprise-grade infrastructure with SOC 2 Type II via Supabase. GDPR compliance. Transparent data practices. No data used for AI training."
-        keywords="SOC 2 compliance, GDPR compliance, data security, AI data privacy, secure chatbot, data protection"
+        description="Enterprise-grade security with SOC 2 Type II via Supabase, GDPR compliance, and HIPAA-ready infrastructure. Your data is encrypted and never used to train AI models."
         canonicalUrl="https://horusdesk.com/security"
         ogTitle="Security & Compliance | SOC 2, GDPR & Data Privacy"
-        ogDescription="Horus Desk security and compliance. Enterprise-grade infrastructure with SOC 2 Type II via Supabase. GDPR compliance. Transparent data practices. No data used for AI training."
+        ogDescription="Enterprise-grade security with SOC 2 Type II via Supabase, GDPR compliance, and HIPAA-ready infrastructure. Your data is encrypted and never used to train AI models."
         ogUrl="https://horusdesk.com/security"
         ogImage="https://horusdesk.com/og-security.png"
         twitterTitle="Security & Compliance | SOC 2, GDPR & Data Privacy"

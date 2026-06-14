@@ -14,7 +14,7 @@ const features = [
 
 export function TalentPricingSection() {
   return (
-    <section className="bg-navy py-24 lg:py-40">
+    <section className="bg-navy py-16 lg:py-24">
       <div className="max-w-[42rem] mx-auto px-6 lg:px-8">
         <SectionWrapper>
           <div className="bg-surface border border-[rgba(226,232,240,0.08)] rounded-2xl p-10">
@@ -24,7 +24,7 @@ export function TalentPricingSection() {
 
             <div className="text-center mb-8">
               <span className="text-5xl font-medium text-white">$10–35/hr</span>
-              <span className="text-[#64748B] text-lg ml-2">per agent</span>
+              <span className="text-[#94A3B8] text-lg ml-2">per agent</span>
             </div>
 
             <ul className="space-y-3 mb-6">
