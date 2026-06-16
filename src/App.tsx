@@ -14,6 +14,7 @@ const AIAgentDashboardsCaseStudyPage = lazy(() => import('@/pages/AIAgentDashboa
 const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage').then(m => ({ default: m.PrivacyPolicyPage })));
 const TermsOfServicePage = lazy(() => import('@/pages/TermsOfServicePage').then(m => ({ default: m.TermsOfServicePage })));
 const ContactPage = lazy(() => import('@/pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const UnsubscribePage = lazy(() => import('@/pages/UnsubscribePage').then(m => ({ default: m.UnsubscribePage })));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 function ScrollToTop() {
@@ -55,6 +56,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/unsubscribe" element={<UnsubscribePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

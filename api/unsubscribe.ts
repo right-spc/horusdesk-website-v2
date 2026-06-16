@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const campaign = typeof req.query.campaign === 'string' ? req.query.campaign.trim() : undefined;
 
   if (!email || !email.includes('@')) {
-    return res.status(400).send(errorHtml('Invalid email address'));
+    return res.redirect(302, '/unsubscribe?status=invalid');
   }
 
   const target = new URL(UNSUBSCRIBE_TARGET);
@@ -31,40 +31,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const upstream = await fetch(target.toString(), { method: 'GET' });
-    const body = await upstream.text();
 
-    const contentType = upstream.headers.get('content-type') || 'text/html; charset=utf-8';
-    res.setHeader('Content-Type', contentType);
-    return res.status(upstream.status).send(body);
+    if (upstream.ok) {
+      return res.redirect(302, `/unsubscribe?email=${encodeURIComponent(email)}&status=confirmed`);
+    }
+
+    if (upstream.status === 400) {
+      return res.redirect(302, '/unsubscribe?status=invalid');
+    }
+
+    console.error('Unsubscribe upstream error:', upstream.status, await upstream.text());
+    return res.redirect(302, `/unsubscribe?email=${encodeURIComponent(email)}&status=error`);
   } catch (err) {
     console.error('Unsubscribe proxy error:', err);
-    return res.status(500).send(errorHtml('Something went wrong. Please try again.'));
+    return res.redirect(302, `/unsubscribe?email=${encodeURIComponent(email)}&status=error`);
   }
-}
-
-function errorHtml(message: string): string {
-  const safeMessage = message
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-
-  return `<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Unsubscribe</title>
-    <style>
-      body { font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 80px auto; padding: 0 20px; text-align: center; color: #1f2937; }
-      h2 { color: #111827; }
-      p { color: #4b5563; line-height: 1.5; }
-    </style>
-  </head>
-  <body>
-    <h2>Unsubscribe</h2>
-    <p>${safeMessage}</p>
-  </body>
-</html>`;
 }
