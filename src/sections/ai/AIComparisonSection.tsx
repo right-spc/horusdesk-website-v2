@@ -131,7 +131,7 @@ export function AIComparisonSection() {
 
         <div className="mt-12 bg-[rgba(102,255,218,0.05)] border border-[rgba(102,255,218,0.1)] rounded-2xl p-8 text-center">
           <p className="text-lg text-white font-medium mb-2">
-            The average US service business loses 40% of after-hours leads to competitors.
+            The average service business loses 40% of after-hours leads to competitors.
           </p>
           <p className="text-lg text-[#64FFDA] font-medium">
             Horus AI captures them while you sleep.

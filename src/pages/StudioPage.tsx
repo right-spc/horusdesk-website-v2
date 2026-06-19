@@ -38,7 +38,7 @@ const serviceSchema = {
     name: 'Horus Desk',
   },
   description: 'Custom web application development, mobile apps, and AI integrations built entirely from scratch. No third-party or no-code tools used. Project-based and retainer options available.',
-  areaServed: 'US',
+  areaServed: 'Global',
 };
 
 const howToSchema = generateHowToSchema({

@@ -135,14 +135,14 @@ export function HomePage() {
   return (
     <>
       <SEOHead
-        title="Horus Desk | AI Receptionist for US Service Businesses"
+        title="Horus Desk | AI Receptionist for Service Businesses"
         description="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         canonicalUrl="https://horusdesk.com/"
-        ogTitle="Horus Desk | AI Receptionist for US Service Businesses"
+        ogTitle="Horus Desk | AI Receptionist for Service Businesses"
         ogDescription="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         ogUrl="https://horusdesk.com/"
         ogImage="https://horusdesk.com/og-home.png"
-        twitterTitle="Horus Desk | AI Receptionist for US Service Businesses"
+        twitterTitle="Horus Desk | AI Receptionist for Service Businesses"
         twitterDescription="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         twitterImage="https://horusdesk.com/og-home.png"
         jsonLd={[organizationSchema, websiteSchema]}

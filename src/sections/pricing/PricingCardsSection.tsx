@@ -111,7 +111,7 @@ function TalentPricingCard() {
     'Managed recruitment',
     '2-week training',
     'Egypt-based ops manager',
-    'US account director',
+    'Dedicated account director',
     'Scale monthly',
   ];
 

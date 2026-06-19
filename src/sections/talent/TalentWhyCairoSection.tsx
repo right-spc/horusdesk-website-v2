@@ -7,7 +7,7 @@ const advantages = [
     icon: Mic,
     title: 'Clear, Fluent English',
     description:
-      'Egyptian agents speak English that US customers understand effortlessly on the first call. No repetition, no confusion, no frustration.',
+      'Egyptian agents speak English that your customers understand effortlessly on the first call. No repetition, no confusion, no frustration.',
   },
   {
     icon: GraduationCap,
@@ -55,7 +55,7 @@ export function TalentWhyCairoSection() {
             WHY CAIRO
           </p>
           <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2]">
-            Built in Cairo. For US businesses.
+            Built in Cairo. For global businesses.
           </h2>
         </SectionWrapper>
 

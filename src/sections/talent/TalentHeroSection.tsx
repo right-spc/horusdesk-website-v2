@@ -45,14 +45,14 @@ export function TalentHeroSection() {
             variants={itemVariants}
             className="text-5xl lg:text-7xl font-medium text-white leading-[1.1] tracking-tight mb-6"
           >
-            A Full Customer Team for the Price of One US Hire
+            A Full Customer Team for the Price of One Local Hire
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
           >
-            US-managed support and sales teams based in Cairo. Fully recruited, trained, and supervised. Start with 3 agents. Scale at will.
+            Fully managed support and sales teams based in Cairo. Fully recruited, trained, and supervised. Start with 3 agents. Scale at will.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4">

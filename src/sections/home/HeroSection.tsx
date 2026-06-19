@@ -44,7 +44,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-6"
             >
-              AI + TEAMS + SOFTWARE FOR US SERVICE BUSINESSES
+              AI + TEAMS + SOFTWARE FOR SERVICE BUSINESSES
             </motion.p>
 
             <motion.h1
@@ -58,7 +58,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
             >
-              AI receptionists, expert teams, and custom software — built for US service businesses. We handle the setup. You focus on growth.
+              AI receptionists, expert teams, and custom software — built for service businesses. We handle the setup. You focus on growth.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">

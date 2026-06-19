@@ -34,8 +34,8 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'Horus Desk',
   },
-  areaServed: 'US',
-  description: 'Fully managed customer support and sales teams based in Cairo. US account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts.',
+  areaServed: 'Global',
+  description: 'Fully managed customer support and sales teams based in Cairo. Dedicated account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts.',
   offers: {
     '@type': 'Offer',
     price: '10',
