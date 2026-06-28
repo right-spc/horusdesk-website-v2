@@ -60,6 +60,11 @@ export function CommentForm({ postSlug, parentId = null, onSuccess, replyToName 
         setIsSuccess(true);
         setMessage(data.message || 'Your comment has been posted.');
         onSuccess?.();
+      } else if (data.comment?.status === 'pending') {
+        setContent('');
+        setIsSuccess(true);
+        setMessage(data.message || 'Your comment is awaiting moderation.');
+        onSuccess?.();
       } else {
         setIsSuccess(false);
         setMessage(data.message || 'Your comment was not approved.');

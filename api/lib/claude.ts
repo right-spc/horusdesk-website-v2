@@ -1,19 +1,12 @@
 export type ModerationResult = {
-  approved: boolean;
+  status: 'approved' | 'rejected' | 'pending';
   reason: string;
   category: string;
 };
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
-export async function moderateComment(content: string): Promise<ModerationResult> {
-  if (!ANTHROPIC_API_KEY) {
-    // Fail open: if no Claude key, approve but log a warning.
-    console.warn('ANTHROPIC_API_KEY not set; skipping moderation and approving comment.');
-    return { approved: true, reason: 'Moderation bypassed: API key not configured.', category: 'none' };
-  }
-
-  const systemPrompt = `You are a content moderator for a blog comment section.
+const SYSTEM_PROMPT = `You are a content moderator for a blog comment section.
 
 Your job is to review the comment below and decide if it should be approved or rejected.
 
@@ -36,50 +29,84 @@ Respond ONLY with a JSON object in this exact format, with no markdown formattin
   "category": "spam|promotional|harassment|off-topic|hate-speech|profanity|approved"
 }`;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'x-api-key': ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'claude-3-5-haiku-20241022',
-      max_tokens: 256,
-      system: systemPrompt,
-      messages: [
-        {
-          role: 'user',
-          content: `Review this comment and respond with JSON only:\n\n"""\n${content}\n"""`,
-        },
-      ],
-    }),
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text().catch(() => 'Unknown error');
-    console.error('Claude moderation API error:', errorText);
-    // Fail open on API error.
-    return { approved: true, reason: 'Moderation API error; approved by default.', category: 'api-error' };
+export async function moderateComment(content: string): Promise<ModerationResult> {
+  if (!ANTHROPIC_API_KEY) {
+    return {
+      status: 'pending',
+      reason: 'Moderation key not configured; awaiting manual review.',
+      category: 'none',
+    };
   }
 
-  const data = (await response.json()) as {
-    content: Array<{ type: string; text: string }>;
-  };
-
-  const text = data.content?.find((c) => c.type === 'text')?.text ?? '';
-
   try {
-    // Some models may wrap JSON in markdown fences; strip them.
-    const cleaned = text.replace(/^```json\s*|\s*```$/g, '').trim();
-    const parsed = JSON.parse(cleaned) as ModerationResult;
-    return {
-      approved: Boolean(parsed.approved),
-      reason: parsed.reason || '',
-      category: parsed.category || 'unknown',
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'claude-3-haiku-20240307',
+        max_tokens: 256,
+        system: SYSTEM_PROMPT,
+        messages: [
+          {
+            role: 'user',
+            content: `Review this comment and respond with JSON only:\n\n"""\n${content}\n"""`,
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => 'Unknown error');
+      console.error('Claude moderation API error:', response.status, errorText);
+      return {
+        status: 'pending',
+        reason: `Moderation API error (${response.status}); awaiting manual review.`,
+        category: 'api-error',
+      };
+    }
+
+    const data = (await response.json()) as {
+      content: Array<{ type: string; text: string }>;
     };
+
+    const text = data.content?.find((c) => c.type === 'text')?.text ?? '';
+
+    try {
+      // Some models may wrap JSON in markdown fences; strip them.
+      const cleaned = text.replace(/^```json\s*|\s*```$/g, '').trim();
+      const parsed = JSON.parse(cleaned) as { approved?: boolean; reason?: string; category?: string };
+
+      if (parsed.approved) {
+        return {
+          status: 'approved',
+          reason: parsed.reason || '',
+          category: parsed.category || 'approved',
+        };
+      }
+
+      return {
+        status: 'rejected',
+        reason: parsed.reason || '',
+        category: parsed.category || 'rejected',
+      };
+    } catch (err) {
+      console.error('Failed to parse Claude moderation response:', text, err);
+      return {
+        status: 'pending',
+        reason: 'Could not parse moderation response; awaiting manual review.',
+        category: 'parse-error',
+      };
+    }
   } catch (err) {
-    console.error('Failed to parse Claude moderation response:', text, err);
-    return { approved: true, reason: 'Could not parse moderation response; approved by default.', category: 'parse-error' };
+    console.error('Claude moderation exception:', err);
+    return {
+      status: 'pending',
+      reason: 'Moderation check failed; awaiting manual review.',
+      category: 'error',
+    };
   }
 }

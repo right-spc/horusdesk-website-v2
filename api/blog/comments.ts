@@ -110,7 +110,7 @@ async function postComment(body: {
   }
 
   const moderation = await moderateComment(content);
-  const status = moderation.approved ? 'approved' : 'rejected';
+  const status = moderation.status;
 
   const result = await insert<Comment>('/comments', {
     post_slug: postSlug,
@@ -120,7 +120,7 @@ async function postComment(body: {
     content,
     status,
     moderation_reason: moderation.reason || '',
-    moderated_at: moderation.approved ? new Date().toISOString() : null,
+    moderated_at: status === 'approved' ? new Date().toISOString() : null,
   });
 
   const comment = result[0];
@@ -128,9 +128,12 @@ async function postComment(body: {
     throw new Error('Failed to save comment.');
   }
 
-  const message = moderation.approved
-    ? 'Your comment has been posted.'
-    : 'Your comment was not approved. ' + (moderation.reason || '');
+  const message =
+    status === 'approved'
+      ? 'Your comment has been posted.'
+      : status === 'pending'
+      ? 'Your comment is awaiting moderation.'
+      : 'Your comment was not approved. ' + (moderation.reason || '');
 
   return { comment, message };
 }
