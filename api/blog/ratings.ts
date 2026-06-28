@@ -14,18 +14,18 @@ export type Rating = {
 };
 
 async function getRatings(postSlug: string): Promise<RatingSummary> {
-  const result = await select<{ avg: number | null; count: number | string }>(
+  const rows = await select<Rating>(
     '/ratings',
-    `post_slug=eq.${encodeURIComponent(postSlug)}&select=avg(value),count()`
+    `post_slug=eq.${encodeURIComponent(postSlug)}&select=*&order=created_at.desc`
   );
 
-  const row = result[0];
-  if (!row) return { average: 0, count: 0 };
+  const count = rows.length;
+  if (count === 0) return { average: 0, count: 0 };
 
-  return {
-    average: row.avg ? Math.round(Number(row.avg) * 10) / 10 : 0,
-    count: Number(row.count) || 0,
-  };
+  const sum = rows.reduce((acc, row) => acc + Number(row.value), 0);
+  const average = Math.round((sum / count) * 10) / 10;
+
+  return { average, count };
 }
 
 async function postRating(body: {
