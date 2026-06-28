@@ -8,25 +8,17 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 const SYSTEM_PROMPT = `You are a content moderator for a blog comment section.
 
-Your job is to review the comment below and decide if it should be approved or rejected.
+Your only job is to check two things:
+1. Language: reject comments that are harassing, hateful, discriminatory, include personal attacks, or contain excessive profanity.
+2. Clarity: reject comments that are gibberish, nonsense, spam, or promotional noise with no clear meaning.
 
-Reject comments that are:
-- spam or promotional
-- harassing, hateful, or discriminatory
-- off-topic or nonsensical
-- containing excessive profanity
-- including personal attacks
-
-Approve comments that are:
-- relevant to the blog post topic
-- respectful even if critical
-- written in good faith
+Approve any comment that is a clear statement, opinion, or question — even if it is critical, disagreeable, or off-topic. Coherent disagreement is allowed.
 
 Respond ONLY with a JSON object in this exact format, with no markdown formatting or explanation:
 {
   "approved": true|false,
   "reason": "short reason",
-  "category": "spam|promotional|harassment|off-topic|hate-speech|profanity|approved"
+  "category": "approved|gibberish|spam|promotional|harassment|hate-speech|profanity|personal-attack"
 }`;
 
 export async function moderateComment(content: string): Promise<ModerationResult> {
