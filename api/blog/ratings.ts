@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { select, insert } from '../lib/supabase-admin';
+import { select, insert } from '../lib/supabase-admin.js';
 
 export type RatingSummary = {
   average: number;

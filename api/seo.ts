@@ -1,9 +1,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import { siteRoutes, DEFAULT_IMAGE } from '../src/data/siteRoutes';
-import { caseStudies } from '../src/data/caseStudies';
-import { blogPosts } from '../src/data/blogMeta';
+import { siteRoutes, DEFAULT_IMAGE } from '../src/data/siteRoutes.js';
+import { caseStudies } from '../src/data/caseStudies.js';
+import { blogPosts } from '../src/data/blogMeta.js';
 
 interface RouteMeta {
   title: string;

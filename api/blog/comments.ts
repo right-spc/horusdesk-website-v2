@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { select, insert } from '../lib/supabase-admin';
-import { moderateComment } from '../lib/claude';
+import { select, insert } from '../lib/supabase-admin.js';
+import { moderateComment } from '../lib/claude.js';
 
 export type Comment = {
   id: string;
