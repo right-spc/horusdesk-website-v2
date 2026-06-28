@@ -43,12 +43,21 @@ async function postRating(body: {
     throw new Error('Rating must be between 1 and 5.');
   }
 
-  const result = await insert<Rating>('/ratings', {
+  const record = {
     post_slug: postSlug,
     value,
-  });
+  };
 
-  const rating = result[0];
+  let rating: Rating;
+  try {
+    const result = await insert<Rating>('/ratings', record);
+    rating = result[0];
+  } catch (err) {
+    throw new Error(
+      `Insert failed. body=${JSON.stringify(body)} record=${JSON.stringify(record)} err=${err instanceof Error ? err.message : String(err)}`
+    );
+  }
+
   if (!rating) {
     throw new Error('Failed to save rating.');
   }
