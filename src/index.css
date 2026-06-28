@@ -74,3 +74,63 @@
     scrollbar-color: rgba(100, 255, 218, 0.35) #0B1221;
   }
 }
+
+/* Blog post typography */
+@layer components {
+  .blog-post-body {
+    @apply text-[#94A3B8] text-lg leading-[1.8];
+  }
+
+  .blog-post-body > * + * {
+    @apply mt-6;
+  }
+
+  .blog-post-body .lead {
+    @apply text-xl md:text-2xl text-white leading-relaxed font-medium;
+  }
+
+  .blog-post-body h2 {
+    @apply text-2xl md:text-3xl font-medium text-white mt-14 mb-6 leading-tight;
+  }
+
+  .blog-post-body h3 {
+    @apply text-xl md:text-2xl font-medium text-white mt-10 mb-4 leading-tight;
+  }
+
+  .blog-post-body p {
+    @apply text-[#94A3B8] leading-[1.8];
+  }
+
+  .blog-post-body strong {
+    @apply text-white font-medium;
+  }
+
+  .blog-post-body ul,
+  .blog-post-body ol {
+    @apply pl-6 space-y-3;
+  }
+
+  .blog-post-body ul {
+    @apply list-disc;
+  }
+
+  .blog-post-body ol {
+    @apply list-decimal;
+  }
+
+  .blog-post-body li {
+    @apply text-[#94A3B8] leading-relaxed pl-2;
+  }
+
+  .blog-post-body li::marker {
+    @apply text-[#7C4DFF];
+  }
+
+  .blog-post-body a {
+    @apply text-[#7C4DFF] hover:underline;
+  }
+
+  .blog-post-body blockquote {
+    @apply border-l-2 border-[#7C4DFF] pl-6 italic text-white/90 my-8;
+  }
+}

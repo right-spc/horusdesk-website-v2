@@ -11,9 +11,11 @@ interface FormData {
   fullName: string;
   email: string;
   companyName: string;
+  companyWebsite: string;
   phone: string;
   interest: string;
   notes: string;
+  privacyAccepted: boolean;
 }
 
 interface FormErrors {
@@ -30,9 +32,11 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
       fullName: '',
       email: '',
       companyName: '',
+      companyWebsite: '',
       phone: '',
       interest: prefillInterest || '',
       notes: '',
+      privacyAccepted: false,
     });
     const localFirstInputRef = useRef<HTMLInputElement>(null);
     const firstInputRef = (forwardedRef as React.RefObject<HTMLInputElement>) || localFirstInputRef;
@@ -52,6 +56,7 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
         newErrors.email = 'Please enter a valid email';
       }
       if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required';
+      if (!formData.privacyAccepted) newErrors.privacyAccepted = 'You must accept the privacy policy to continue';
       if (!formData.interest) newErrors.interest = 'Please select an interest';
       setErrors(newErrors);
       return Object.keys(newErrors).length === 0;
@@ -87,8 +92,9 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-      const { name, value } = e.target;
-      setFormData(prev => ({ ...prev, [name]: value }));
+      const { name, value, type } = e.target;
+      const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
+      setFormData(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
       if (errors[name]) {
         setErrors(prev => {
           const next = { ...prev };
@@ -183,6 +189,18 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
           </div>
 
           <div>
+            <label className={labelClass}>Company Website (Optional)</label>
+            <input
+              type="url"
+              name="companyWebsite"
+              value={formData.companyWebsite}
+              onChange={handleChange}
+              placeholder="https://company.com"
+              className={inputClass}
+            />
+          </div>
+
+          <div>
             <label className={labelClass}>Phone Number (Optional)</label>
             <input
               type="tel"
@@ -223,6 +241,25 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
             />
           </div>
 
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacyAccepted"
+              name="privacyAccepted"
+              checked={formData.privacyAccepted}
+              onChange={handleChange}
+              className="mt-1 w-4 h-4 rounded border-[rgba(226,232,240,0.08)] bg-navy-light text-[#64FFDA] focus:ring-[#64FFDA] focus:ring-offset-0"
+            />
+            <label htmlFor="privacyAccepted" className="text-sm text-[#94A3B8] leading-relaxed cursor-pointer">
+              I accept Horus Desk's{' '}
+              <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#64FFDA] hover:underline">
+                Privacy Policy
+              </a>
+              . I understand my data will be used to respond to this booking request only and will never be sold.
+            </label>
+          </div>
+          {errors.privacyAccepted && <p className={errorClass}>{errors.privacyAccepted}</p>}
+
           {submitError && (
             <p className="text-red-400 text-sm text-center">
               {submitError}
@@ -230,7 +267,7 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
           )}
 
           <PrimarySolidButton type="submit" fullWidth disabled={isSubmitting}>
-            {isSubmitting ? 'Sending...' : 'Confirm Booking'}
+            {isSubmitting ? 'Sending...' : 'Select an appointment'}
           </PrimarySolidButton>
         </form>
       </>

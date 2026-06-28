@@ -7,7 +7,6 @@ const breadcrumbNameMap: Record<string, string> = {
   ai: 'AI Agent',
   teams: 'Managed Teams',
   studio: 'Software Studio',
-  pricing: 'Pricing',
   security: 'Security & Compliance',
   contact: 'Contact Us',
   'privacy-policy': 'Privacy Policy',
@@ -15,6 +14,8 @@ const breadcrumbNameMap: Record<string, string> = {
   'case-studies': 'Case Studies',
   softphone: 'Custom Softphone + CRM',
   'ai-agent-dashboards': 'Custom Dashboards',
+  blog: 'Blog',
+  'vicidial-trap': 'The VICIdial Trap',
 };
 
 export function generateBreadcrumbList(canonicalUrl: string) {

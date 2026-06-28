@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { Shield, Zap, Globe } from 'lucide-react';
+import { Bot, Users, Code2 } from 'lucide-react';
 import { ChatButton } from '@/components/buttons/ChatButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
+import { OperationsDashboard } from '@/components/shared/OperationsDashboard';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -68,72 +69,24 @@ export function HeroSection() {
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-8">
               <div className="flex items-center gap-2">
-                <Shield size={16} className="text-[#94A3B8]" aria-hidden="true" />
-                <span className="text-sm text-[#94A3B8]">Enterprise security</span>
+                <Bot size={16} className="text-[#94A3B8]" aria-hidden="true" />
+                <span className="text-sm text-[#94A3B8]">AI that qualifies 24/7</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap size={16} className="text-[#94A3B8]" aria-hidden="true" />
-                <span className="text-sm text-[#94A3B8]">Setup included</span>
+                <Users size={16} className="text-[#94A3B8]" aria-hidden="true" />
+                <span className="text-sm text-[#94A3B8]">Expert teams on demand</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe size={16} className="text-[#94A3B8]" aria-hidden="true" />
-                <span className="text-sm text-[#94A3B8]">6 Languages Supported</span>
+                <Code2 size={16} className="text-[#94A3B8]" aria-hidden="true" />
+                <span className="text-sm text-[#94A3B8]">Custom software you own</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Mockup */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
-            className="hidden lg:block"
-          >
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <div className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl shadow-2xl overflow-hidden relative" role="img" aria-label="Horus Desk AI chat interface showing lead qualification and calendar booking">
-                {/* Live indicator */}
-                <div className="absolute top-3 right-3 flex items-center gap-1.5 z-10">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-pulse absolute inline-flex h-full w-full rounded-full bg-[#64FFDA] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#64FFDA]"></span>
-                  </span>
-                  <span className="text-xs font-medium tracking-wider uppercase text-[#64FFDA]">LIVE</span>
-                </div>
-
-                {/* Browser bar */}
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-[rgba(226,232,240,0.08)]">
-                  <div className="flex gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-[#EF4444]" />
-                    <div className="w-2 h-2 rounded-full bg-[#EAB308]" />
-                    <div className="w-2 h-2 rounded-full bg-[#22C55E]" />
-                  </div>
-                  <span className="text-xs text-[#94A3B8] font-mono ml-2">horusdesk.com</span>
-                </div>
-
-                {/* Chat content */}
-                <div className="p-4 space-y-3 min-h-[200px]">
-                  <div className="flex">
-                    <div className="bg-[rgba(102,255,218,0.1)] border border-[rgba(102,255,218,0.2)] rounded-lg rounded-tl-none px-4 py-3 max-w-[80%]">
-                      <p className="text-sm text-white">Hi! I can help schedule your HVAC repair. What day works best?</p>
-                    </div>
-                  </div>
-                  <div className="flex justify-end">
-                    <div className="bg-white/5 rounded-lg rounded-tr-none px-4 py-3 max-w-[80%]">
-                      <p className="text-sm text-white">Tomorrow morning</p>
-                    </div>
-                  </div>
-                  <div className="flex">
-                    <div className="bg-[rgba(102,255,218,0.1)] border border-[rgba(102,255,218,0.2)] rounded-lg rounded-tl-none px-4 py-3 max-w-[80%]">
-                      <p className="text-sm text-white">Perfect! I see we have a 10am slot available. Shall I book that?</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+          {/* Right Column - Operations Dashboard */}
+          <div className="hidden lg:block">
+            <OperationsDashboard />
+          </div>
         </div>
       </div>
     </section>

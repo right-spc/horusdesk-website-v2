@@ -9,6 +9,8 @@ const productLinks = [
 ];
 
 const companyLinks = [
+  { label: 'Blog', path: '/blog' },
+  { label: 'Case Studies', path: '/case-studies' },
   { label: 'Contact Us', path: '/contact' },
   { label: 'Privacy Policy', path: '/privacy-policy' },
   { label: 'Terms of Service', path: '/terms-of-service' },

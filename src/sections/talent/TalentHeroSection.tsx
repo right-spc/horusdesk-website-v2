@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ChatButton } from '@/components/buttons/ChatButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
+import { TeamDashboard } from '@/components/shared/TeamDashboard';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,44 +23,51 @@ const itemVariants = {
 export function TalentHeroSection() {
   return (
     <section
-      className="relative min-h-[60vh] flex items-center bg-navy overflow-hidden pt-[100px] pb-16"
+      className="relative min-h-[80vh] flex items-center bg-navy overflow-hidden pt-[100px] pb-16"
       style={{
         backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(255,171,64,0.06) 0%, transparent 60%)',
       }}
     >
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 py-24 lg:py-0 w-full">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-3xl"
-        >
-          <motion.p
-            variants={itemVariants}
-            className="text-xs font-medium tracking-wider uppercase text-[#FFAB40] mb-6"
+        <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
+          {/* Left Column */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            MANAGED TEAMS
-          </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-xs font-medium tracking-wider uppercase text-[#FFAB40] mb-6"
+            >
+              MANAGED TEAMS
+            </motion.p>
 
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl lg:text-7xl font-medium text-white leading-[1.1] tracking-tight mb-6"
-          >
-            A Full Customer Team for the Price of One Local Hire
-          </motion.h1>
+            <motion.h1
+              variants={itemVariants}
+              className="text-5xl lg:text-7xl font-medium text-white leading-[1.1] tracking-tight mb-6"
+            >
+              A Full Customer Team for the Price of One Local Hire
+            </motion.h1>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
-          >
-            Fully managed support and sales teams based in Cairo. Fully recruited, trained, and supervised. Start with 3 agents. Scale at will.
-          </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
+            >
+              Fully managed support and sales teams based in Cairo. Fully recruited, trained, and supervised. Start with 3 agents. Scale at will.
+            </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-            <ChatButton>Ask Horus AI</ChatButton>
-            <CalendarButton>Book a Discovery Call</CalendarButton>
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+              <ChatButton>Ask Horus AI</ChatButton>
+              <CalendarButton>Book a Discovery Call</CalendarButton>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Column - Team Dashboard */}
+          <div className="hidden lg:block">
+            <TeamDashboard />
+          </div>
+        </div>
       </div>
     </section>
   );

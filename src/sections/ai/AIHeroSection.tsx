@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { PrimarySolidButton } from '@/components/buttons/PrimarySolidButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
 import { openChatWidget } from '@/lib/chat';
+import { ChatMockup } from '@/components/shared/ChatMockup';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -63,42 +64,14 @@ export function AIHeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Split Screen Graphic */}
+          {/* Right Column - Chat Mockup */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
-            className="hidden lg:flex items-center justify-center gap-4"
+            className="hidden lg:block"
           >
-            {/* Chat Interface */}
-            <div className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl p-5 w-56">
-              <div className="space-y-3">
-                <div className="bg-[rgba(102,255,218,0.1)] border border-[rgba(102,255,218,0.2)] rounded-lg rounded-tl-none px-3 py-2">
-                  <p className="text-xs text-white">Hi! How can I help?</p>
-                </div>
-                <div className="bg-white/5 rounded-lg rounded-tr-none px-3 py-2 ml-auto max-w-[80%]">
-                  <p className="text-xs text-white">I need a quote</p>
-                </div>
-                <div className="bg-[rgba(102,255,218,0.1)] border border-[rgba(102,255,218,0.2)] rounded-lg rounded-tl-none px-3 py-2">
-                  <p className="text-xs text-white">Sure! What service do you need?</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Arrow */}
-            <div className="text-[#64FFDA] text-3xl font-light">&rarr;</div>
-
-            {/* Calendar Interface */}
-            <div className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl p-5 w-56">
-              <div className="text-center">
-                <div className="w-8 h-8 rounded-full bg-[rgba(102,255,218,0.1)] border border-[rgba(102,255,218,0.2)] flex items-center justify-center mx-auto mb-3">
-                  <span className="text-[#64FFDA] text-xs">&#10003;</span>
-                </div>
-                <p className="text-sm text-white font-medium mb-1">Meeting Booked</p>
-                <p className="text-xs text-[#94A3B8]">Tuesday, 10:00 AM</p>
-                <p className="text-xs text-[#94A3B8]">Google Calendar</p>
-              </div>
-            </div>
+            <ChatMockup />
           </motion.div>
         </div>
       </div>

@@ -23,10 +23,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const { fullName, email, companyName, phone, interest, notes } = req.body || {};
+    const { fullName, email, companyName, companyWebsite, phone, interest, notes, privacyAccepted } = req.body || {};
 
     if (!fullName || !email) {
       return res.status(400).json({ error: 'Full name and email are required' });
+    }
+
+    if (!privacyAccepted) {
+      return res.status(400).json({ error: 'You must accept the privacy policy' });
     }
 
     const html = `
@@ -46,6 +50,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             <td style="padding: 8px 0;">${companyName ? escapeHtml(companyName) : '—'}</td>
           </tr>
           <tr>
+            <td style="padding: 8px 0; font-weight: 600;">Company Website</td>
+            <td style="padding: 8px 0;">${companyWebsite ? escapeHtml(companyWebsite) : '—'}</td>
+          </tr>
+          <tr>
             <td style="padding: 8px 0; font-weight: 600;">Phone</td>
             <td style="padding: 8px 0;">${phone ? escapeHtml(phone) : '—'}</td>
           </tr>
@@ -55,6 +63,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           </tr>
         </table>
         ${notes ? `<div style="margin-top: 16px;"><strong>Notes:</strong><p style="margin: 8px 0 0; white-space: pre-line;">${escapeHtml(notes)}</p></div>` : ''}
+        <div style="margin-top: 16px; padding: 12px; background: #f1f5f9; border-radius: 8px;">
+          <p style="margin: 0; font-size: 14px; color: #0f172a;">
+            <strong>Privacy consent:</strong> The visitor accepted the Horus Desk Privacy Policy and confirmed their data will not be sold.
+          </p>
+        </div>
         <p style="margin-top: 24px; color: #64748b; font-size: 14px;">
           The visitor will pick a time on Calendly next. This email was sent from the booking form on HorusDesk.com.
         </p>

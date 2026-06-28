@@ -1,5 +1,16 @@
 {
   "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "[Ll]inkedin|[Ff]acebook|[Tt]witter|[Ss]lack|[Dd]iscord|[Ww]hats[Aa]pp|[Tt]elegram|[Gg]ooglebot|[Bb]ingbot|[Aa]pplebot|[Yy]andex|[Bb]aidu|[Cc]rawler|[Ss]pider|[Bb]ot"
+        }
+      ],
+      "destination": "/api/seo?path=/$1"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [

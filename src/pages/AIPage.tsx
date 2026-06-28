@@ -5,6 +5,7 @@ import { AIFeaturesSection } from '@/sections/ai/AIFeaturesSection';
 import { AIComparisonSection } from '@/sections/ai/AIComparisonSection';
 import { AIPricingSection } from '@/sections/ai/AIPricingSection';
 import { AIFAQSection } from '@/sections/ai/AIFAQSection';
+import { AITrustBar } from '@/sections/ai/AITrustBar';
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -84,6 +85,7 @@ export function AIPage() {
       />
       <main id="main-content">
         <AIHeroSection />
+        <AITrustBar />
         <AIFeaturesSection />
         <AIComparisonSection />
         <AIPricingSection />

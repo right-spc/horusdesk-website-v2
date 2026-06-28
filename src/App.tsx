@@ -9,6 +9,10 @@ const HomePage = lazy(() => import('@/pages/HomePage').then(m => ({ default: m.H
 const AIPage = lazy(() => import('@/pages/AIPage').then(m => ({ default: m.AIPage })));
 const TalentPage = lazy(() => import('@/pages/TalentPage').then(m => ({ default: m.TalentPage })));
 const StudioPage = lazy(() => import('@/pages/StudioPage').then(m => ({ default: m.StudioPage })));
+const SecurityPage = lazy(() => import('@/pages/SecurityPage').then(m => ({ default: m.SecurityPage })));
+const CaseStudiesPage = lazy(() => import('@/pages/CaseStudiesPage').then(m => ({ default: m.CaseStudiesPage })));
+const BlogPage = lazy(() => import('@/pages/BlogPage').then(m => ({ default: m.BlogPage })));
+const BlogPostPage = lazy(() => import('@/pages/BlogPostPage').then(m => ({ default: m.BlogPostPage })));
 const SoftphoneCaseStudyPage = lazy(() => import('@/pages/SoftphoneCaseStudyPage').then(m => ({ default: m.SoftphoneCaseStudyPage })));
 const AIAgentDashboardsCaseStudyPage = lazy(() => import('@/pages/AIAgentDashboardsCaseStudyPage').then(m => ({ default: m.AIAgentDashboardsCaseStudyPage })));
 const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage').then(m => ({ default: m.PrivacyPolicyPage })));
@@ -51,6 +55,10 @@ function App() {
           <Route path="/ai" element={<AIPage />} />
           <Route path="/teams" element={<TalentPage />} />
           <Route path="/studio" element={<StudioPage />} />
+          <Route path="/security" element={<SecurityPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/case-studies/softphone" element={<SoftphoneCaseStudyPage />} />
           <Route path="/case-studies/ai-agent-dashboards" element={<AIAgentDashboardsCaseStudyPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
