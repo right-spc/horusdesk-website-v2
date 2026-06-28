@@ -59,16 +59,16 @@ export function SoftphoneCaseStudyPage() {
         ogDescription="See how Horus Desk built a custom WebRTC softphone + CRM platform in React and Supabase, replacing a $500+/mo SaaS stack and saving $15,000/year."
         ogUrl="https://horusdesk.com/case-studies/softphone"
         ogType="article"
-        ogImage="https://horusdesk.com/og-studio.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Case Study | Custom Softphone + CRM Built From Scratch"
         twitterDescription="See how Horus Desk built a custom WebRTC softphone + CRM platform in React and Supabase, replacing a $500+/mo SaaS stack and saving $15,000/year."
-        twitterImage="https://horusdesk.com/og-studio.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[
           organizationSchema,
           generateArticleSchema({
             headline: 'Case Study | Custom Sales & Support Platform Built From Scratch',
             description: 'See how Horus Desk built a custom WebRTC softphone + CRM platform in React and Supabase, replacing a $500+/mo SaaS stack and saving $15,000/year.',
-            image: 'https://horusdesk.com/og-studio.png',
+            image: 'https://horusdesk.com/og-default.png',
             url: 'https://horusdesk.com/case-studies/softphone',
           }),
         ]}

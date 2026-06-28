@@ -90,10 +90,10 @@ export function TalentPage() {
         ogTitle="Managed Teams | Customer Support & Sales Teams from $10/hour"
         ogDescription="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour."
         ogUrl="https://horusdesk.com/teams"
-        ogImage="https://horusdesk.com/og-talent.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Managed Teams | Customer Support & Sales Teams from $10/hour"
         twitterDescription="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour."
-        twitterImage="https://horusdesk.com/og-talent.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, serviceSchema, howToSchema]}
         jsonLdLast={faqPageSchema}
       />

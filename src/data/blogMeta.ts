@@ -31,7 +31,7 @@ export const blogPosts: BlogPostMeta[] = [
       'Contact Center',
     ],
     readTimeMinutes: 9,
-    ogImage: 'https://horusdesk.com/og-studio.png',
+    ogImage: 'https://horusdesk.com/og-default.png',
   },
 ];
 

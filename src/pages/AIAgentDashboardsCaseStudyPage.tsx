@@ -78,16 +78,16 @@ export function AIAgentDashboardsCaseStudyPage() {
         ogDescription="See how Horus Desk built custom employee and customer dashboards in React and Supabase for under $50/month, replacing a $300+/mo SaaS stack."
         ogUrl="https://horusdesk.com/case-studies/ai-agent-dashboards"
         ogType="article"
-        ogImage="https://horusdesk.com/og-studio.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Case Study | Custom Employee & Customer Dashboards Built From Scratch"
         twitterDescription="See how Horus Desk built custom employee and customer dashboards in React and Supabase for under $50/month, replacing a $300+/mo SaaS stack."
-        twitterImage="https://horusdesk.com/og-studio.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[
           organizationSchema,
           generateArticleSchema({
             headline: 'Case Study | Custom Employee & Customer Dashboards Built From Scratch',
             description: 'See how Horus Desk built custom employee and customer dashboards in React and Supabase for under $50/month, replacing a $300+/mo SaaS stack.',
-            image: 'https://horusdesk.com/og-studio.png',
+            image: 'https://horusdesk.com/og-default.png',
             url: 'https://horusdesk.com/case-studies/ai-agent-dashboards',
           }),
         ]}

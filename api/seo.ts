@@ -46,7 +46,7 @@ function buildRouteMeta(): Record<string, RouteMeta> {
     const path = `/case-studies/${study.slug}`;
     const url = `https://horusdesk.com${path}`;
     const title = `Case Study | ${study.title}`;
-    const ogImage = study.ogImage || 'https://horusdesk.com/og-studio.png';
+    const ogImage = study.ogImage || 'https://horusdesk.com/og-default.png';
 
     meta[path] = {
       title,
@@ -67,7 +67,7 @@ function buildRouteMeta(): Record<string, RouteMeta> {
     const path = `/blog/${post.slug}`;
     const url = `https://horusdesk.com${path}`;
     const title = `${post.title} | Horus Desk Blog`;
-    const ogImage = post.ogImage || 'https://horusdesk.com/og-studio.png';
+    const ogImage = post.ogImage || 'https://horusdesk.com/og-default.png';
 
     meta[path] = {
       title,

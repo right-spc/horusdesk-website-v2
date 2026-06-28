@@ -40,16 +40,16 @@ export function BlogPostPage() {
         ogTitle={post.title}
         ogDescription={post.description}
         ogUrl={canonicalUrl}
-        ogImage="https://horusdesk.com/og-studio.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle={post.title}
         twitterDescription={post.description}
-        twitterImage="https://horusdesk.com/og-studio.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[
           organizationSchema,
           generateArticleSchema({
             headline: post.title,
             description: post.description,
-            image: 'https://horusdesk.com/og-studio.png',
+            image: 'https://horusdesk.com/og-default.png',
             url: canonicalUrl,
             datePublished: post.publishedAt,
             dateModified: post.updatedAt || post.publishedAt,

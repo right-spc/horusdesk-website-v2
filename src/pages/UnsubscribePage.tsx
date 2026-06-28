@@ -36,7 +36,7 @@ export function UnsubscribePage() {
         ogTitle="Unsubscribe | Horus Desk"
         ogDescription="Manage your Horus Desk email preferences."
         ogUrl="https://horusdesk.com/unsubscribe"
-        ogImage="https://horusdesk.com/og-home.png"
+        ogImage="https://horusdesk.com/og-default.png"
         robots="noindex, nofollow"
       />
 

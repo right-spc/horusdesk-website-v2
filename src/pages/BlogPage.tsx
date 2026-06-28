@@ -54,10 +54,10 @@ export function BlogPage() {
         ogTitle="Blog | Insights for BPOs & Custom Software"
         ogDescription="Insights for sales teams, call centers, and BPOs building custom software and operations that actually scale."
         ogUrl="https://horusdesk.com/blog"
-        ogImage="https://horusdesk.com/og-studio.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Blog | Insights for BPOs & Custom Software"
         twitterDescription="Insights for sales teams, call centers, and BPOs building custom software and operations that actually scale."
-        twitterImage="https://horusdesk.com/og-studio.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, collectionPageSchema]}
       />
       <main id="main-content">

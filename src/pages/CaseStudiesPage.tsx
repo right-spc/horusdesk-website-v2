@@ -58,10 +58,10 @@ export function CaseStudiesPage() {
         ogTitle="Case Studies | Custom Software Built From Scratch"
         ogDescription="Explore real custom software projects built by Horus Desk — from softphone + CRM platforms to employee and customer dashboards."
         ogUrl="https://horusdesk.com/case-studies"
-        ogImage="https://horusdesk.com/og-studio.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Case Studies | Custom Software Built From Scratch"
         twitterDescription="Explore real custom software projects built by Horus Desk — from softphone + CRM platforms to employee and customer dashboards."
-        twitterImage="https://horusdesk.com/og-studio.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, collectionPageSchema]}
       />
       <main id="main-content">

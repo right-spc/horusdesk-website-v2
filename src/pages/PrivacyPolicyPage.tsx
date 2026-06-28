@@ -28,7 +28,7 @@ export function PrivacyPolicyPage() {
         ogTitle="Privacy Policy | Horus Desk"
         ogDescription="Learn how Right Space LLC collects, uses, discloses, and safeguards your information when you use Horus Desk AI, Teams, and Studio services."
         ogUrl="https://horusdesk.com/privacy-policy"
-        ogImage="https://horusdesk.com/og-home.png"
+        ogImage="https://horusdesk.com/og-default.png"
         jsonLd={organizationSchema}
       />
       <main id="main-content" className="bg-navy pt-[120px] pb-24">

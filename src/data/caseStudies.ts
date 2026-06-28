@@ -17,7 +17,7 @@ export const caseStudies: CaseStudyMeta[] = [
       'A complete voice, CRM, outreach, and automation platform built from scratch. Avoided a $500+/month SaaS stack by building a custom platform that costs $150/month for our 3-agent team.',
     tags: ['React', 'Supabase', 'Telnyx', 'WebRTC'],
     iconName: 'Phone',
-    ogImage: 'https://horusdesk.com/og-studio.png',
+    ogImage: 'https://horusdesk.com/og-default.png',
     publishedAt: '2026-06-12',
   },
   {
@@ -27,7 +27,7 @@ export const caseStudies: CaseStudyMeta[] = [
       'A matching pair of internal and client-facing dashboards built from scratch. Avoided a $300+/month stack of employee portals, customer portals, analytics, and support tools — and now runs for under $50/month.',
     tags: ['React', 'Supabase', 'shadcn/ui', 'Recharts'],
     iconName: 'BarChart3',
-    ogImage: 'https://horusdesk.com/og-studio.png',
+    ogImage: 'https://horusdesk.com/og-default.png',
     publishedAt: '2026-06-12',
   },
 ];

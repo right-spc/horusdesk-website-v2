@@ -28,7 +28,7 @@ export function TermsOfServicePage() {
         ogTitle="Terms of Service | Horus Desk"
         ogDescription="Read the legally binding agreement for using Horus Desk AI Agent, Managed Teams, and Software Studio services. Updated June 2026."
         ogUrl="https://horusdesk.com/terms-of-service"
-        ogImage="https://horusdesk.com/og-home.png"
+        ogImage="https://horusdesk.com/og-default.png"
         jsonLd={organizationSchema}
       />
       <main id="main-content" className="bg-navy pt-[120px] pb-24">

@@ -84,10 +84,10 @@ export function StudioPage() {
         ogTitle="Software Studio | Custom Development Built From Scratch"
         ogDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800."
         ogUrl="https://horusdesk.com/studio"
-        ogImage="https://horusdesk.com/og-studio.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Software Studio | Custom Development Built From Scratch"
         twitterDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800."
-        twitterImage="https://horusdesk.com/og-studio.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, serviceSchema, howToSchema]}
         jsonLdLast={faqPageSchema}
       />

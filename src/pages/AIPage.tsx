@@ -76,10 +76,10 @@ export function AIPage() {
         ogTitle="AI Agent | Automated Lead Qualification & Booking"
         ogDescription="AI receptionist for website chat and email. Qualifies leads, books meetings, and escalates in 6 languages. 7,500 responses included. Starting at $499/mo with free setup."
         ogUrl="https://horusdesk.com/ai"
-        ogImage="https://horusdesk.com/og-ai.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="AI Agent | Automated Lead Qualification & Booking"
         twitterDescription="AI receptionist for website chat and email. Qualifies leads, books meetings, and escalates in 6 languages. 7,500 responses included. Starting at $499/mo with free setup."
-        twitterImage="https://horusdesk.com/og-ai.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, softwareSchema]}
         jsonLdLast={faqPageSchema}
       />

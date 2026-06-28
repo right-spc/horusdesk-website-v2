@@ -30,10 +30,10 @@ export function SecurityPage() {
         ogTitle="Security & Compliance | SOC 2, GDPR & Data Privacy"
         ogDescription="Enterprise-grade security with SOC 2 Type II via Supabase, GDPR compliance, and HIPAA-ready infrastructure. Your data is encrypted and never used to train AI models."
         ogUrl="https://horusdesk.com/security"
-        ogImage="https://horusdesk.com/og-security.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Security & Compliance | SOC 2, GDPR & Data Privacy"
         twitterDescription="Horus Desk security and compliance. Enterprise-grade infrastructure with SOC 2 Type II via Supabase. GDPR compliance. Transparent data practices. No data used for AI training."
-        twitterImage="https://horusdesk.com/og-security.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={organizationSchema}
       />
       <main id="main-content">

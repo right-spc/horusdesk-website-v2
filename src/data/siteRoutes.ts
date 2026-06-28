@@ -16,7 +16,7 @@ export interface RouteMeta {
   lastmod?: string;
 }
 
-export const DEFAULT_IMAGE = 'https://horusdesk.com/og-home.png';
+export const DEFAULT_IMAGE = 'https://horusdesk.com/og-default.png';
 
 export const siteRoutes: RouteMeta[] = [
   {
@@ -27,11 +27,11 @@ export const siteRoutes: RouteMeta[] = [
     ogTitle: 'Horus Desk | AI Receptionist for Service Businesses',
     ogDescription:
       'AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo.',
-    ogImage: 'https://horusdesk.com/og-home.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Horus Desk | AI Receptionist for Service Businesses',
     twitterDescription:
       'AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo.',
-    twitterImage: 'https://horusdesk.com/og-home.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/',
     priority: 1.0,
     changefreq: 'weekly',
@@ -46,11 +46,11 @@ export const siteRoutes: RouteMeta[] = [
     ogDescription:
       'AI receptionist for website chat and email. Qualifies leads, books meetings, and escalates in 6 languages. 7,500 responses included. Starting at $499/mo with free setup.',
     ogType: 'product',
-    ogImage: 'https://horusdesk.com/og-ai.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'AI Agent | Automated Lead Qualification & Booking',
     twitterDescription:
       'AI receptionist for website chat and email. Qualifies leads, books meetings, and escalates in 6 languages. 7,500 responses included. Starting at $499/mo with free setup.',
-    twitterImage: 'https://horusdesk.com/og-ai.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/ai',
     priority: 0.8,
     changefreq: 'monthly',
@@ -65,11 +65,11 @@ export const siteRoutes: RouteMeta[] = [
     ogDescription:
       'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour.',
     ogType: 'product',
-    ogImage: 'https://horusdesk.com/og-talent.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Managed Teams | Customer Support & Sales Teams from $10/hour',
     twitterDescription:
       'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour.',
-    twitterImage: 'https://horusdesk.com/og-talent.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/teams',
     priority: 0.7,
     changefreq: 'monthly',
@@ -84,11 +84,11 @@ export const siteRoutes: RouteMeta[] = [
     ogDescription:
       'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800.',
     ogType: 'product',
-    ogImage: 'https://horusdesk.com/og-studio.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Software Studio | Custom Development Built From Scratch',
     twitterDescription:
       'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800.',
-    twitterImage: 'https://horusdesk.com/og-studio.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/studio',
     priority: 0.7,
     changefreq: 'monthly',
@@ -102,11 +102,11 @@ export const siteRoutes: RouteMeta[] = [
     ogTitle: 'Security & Compliance | SOC 2, GDPR & Data Privacy',
     ogDescription:
       'Enterprise-grade security with SOC 2 Type II via Supabase, GDPR compliance, and HIPAA-ready infrastructure. Your data is encrypted and never used to train AI models.',
-    ogImage: 'https://horusdesk.com/og-security.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Security & Compliance | SOC 2, GDPR & Data Privacy',
     twitterDescription:
       'Horus Desk security and compliance. Enterprise-grade infrastructure with SOC 2 Type II via Supabase. GDPR compliance. Transparent data practices. No data used for AI training.',
-    twitterImage: 'https://horusdesk.com/og-security.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/security',
     priority: 0.6,
     changefreq: 'monthly',
@@ -139,11 +139,11 @@ export const siteRoutes: RouteMeta[] = [
     ogDescription:
       'Insights for sales teams, call centers, and BPOs building custom software and operations that actually scale.',
     ogType: 'website',
-    ogImage: 'https://horusdesk.com/og-studio.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Blog | Insights for BPOs & Custom Software',
     twitterDescription:
       'Insights for sales teams, call centers, and BPOs building custom software and operations that actually scale.',
-    twitterImage: 'https://horusdesk.com/og-studio.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/blog',
     priority: 0.7,
     changefreq: 'weekly',
@@ -158,11 +158,11 @@ export const siteRoutes: RouteMeta[] = [
     ogDescription:
       'Explore real custom software projects built by Horus Desk — from softphone + CRM platforms to employee and customer dashboards.',
     ogType: 'website',
-    ogImage: 'https://horusdesk.com/og-studio.png',
+    ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Case Studies | Custom Software Built From Scratch',
     twitterDescription:
       'Explore real custom software projects built by Horus Desk — from softphone + CRM platforms to employee and customer dashboards.',
-    twitterImage: 'https://horusdesk.com/og-studio.png',
+    twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/case-studies',
     priority: 0.6,
     changefreq: 'monthly',

@@ -141,10 +141,10 @@ export function HomePage() {
         ogTitle="Horus Desk | AI Receptionist for Service Businesses"
         ogDescription="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
         ogUrl="https://horusdesk.com/"
-        ogImage="https://horusdesk.com/og-home.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Horus Desk | AI Receptionist for Service Businesses"
         twitterDescription="AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo."
-        twitterImage="https://horusdesk.com/og-home.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, websiteSchema]}
       />
       <main id="main-content">

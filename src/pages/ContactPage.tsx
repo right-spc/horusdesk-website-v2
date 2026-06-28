@@ -89,10 +89,10 @@ export function ContactPage() {
         ogTitle="Contact Us | Horus Desk"
         ogDescription="Book a free discovery call, email our sales and support teams, or visit our operations center in Cairo, Egypt. We reply within 24 hours."
         ogUrl="https://horusdesk.com/contact"
-        ogImage="https://horusdesk.com/og-home.png"
+        ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Contact Us | Horus Desk"
         twitterDescription="Book a free discovery call, email our sales and support teams, or visit our operations center in Cairo, Egypt. We reply within 24 hours."
-        twitterImage="https://horusdesk.com/og-home.png"
+        twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, localBusinessSchema]}
       />
 
