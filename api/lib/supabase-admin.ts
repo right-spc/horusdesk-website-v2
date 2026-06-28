@@ -1,22 +1,29 @@
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+function getConfig() {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  throw new Error(
-    'SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in environment variables.'
-  );
+  if (!url || !key) {
+    throw new Error(
+      'SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in environment variables.'
+    );
+  }
+
+  return { url, key };
 }
 
 async function request<T>(
   path: string,
   options?: RequestInit
 ): Promise<{ data: T | null; error: { message: string } | null }> {
-  const url = `${SUPABASE_URL}/rest/v1${path}`;
-  const response = await fetch(url, {
+  const { url, key } = getConfig();
+  const baseUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+  const requestUrl = `${baseUrl}/rest/v1${path}`;
+
+  const response = await fetch(requestUrl, {
     ...options,
     headers: {
-      apikey: SUPABASE_SERVICE_ROLE_KEY,
-      Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+      apikey: key,
+      Authorization: `Bearer ${key}`,
       'Content-Type': 'application/json',
       Prefer: 'return=representation',
       ...options?.headers,
