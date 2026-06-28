@@ -62,6 +62,27 @@ export async function insert<T>(path: string, record: Record<string, unknown>): 
   return data ?? [];
 }
 
+export async function deleteAll(path: string, filter = 'id=not.is.null'): Promise<void> {
+  const { url, key } = getConfig();
+  const baseUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+  const requestUrl = `${baseUrl}/rest/v1${path}?${filter}`;
+
+  const response = await fetch(requestUrl, {
+    method: 'DELETE',
+    headers: {
+      apikey: key,
+      Authorization: `Bearer ${key}`,
+      'Content-Profile': SCHEMA,
+      Prefer: 'return=minimal',
+    },
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text().catch(() => 'Unknown error');
+    throw new Error(`Delete failed: ${response.status} ${errorText}`);
+  }
+}
+
 export function escapeLiteral(value: string | null | undefined): string {
   if (value == null) return 'NULL';
   return "'" + value.replace(/'/g, "''").replace(/\\/g, '\\\\') + "'";
