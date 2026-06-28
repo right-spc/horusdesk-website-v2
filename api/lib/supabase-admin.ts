@@ -11,6 +11,8 @@ function getConfig() {
   return { url, key };
 }
 
+const SCHEMA = 'website';
+
 async function request<T>(
   path: string,
   options?: RequestInit
@@ -25,6 +27,8 @@ async function request<T>(
       apikey: key,
       Authorization: `Bearer ${key}`,
       'Content-Type': 'application/json',
+      'Accept-Profile': SCHEMA,
+      'Content-Profile': SCHEMA,
       Prefer: 'return=representation',
       ...options?.headers,
     },

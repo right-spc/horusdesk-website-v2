@@ -14,8 +14,8 @@ export type Rating = {
 };
 
 async function getRatings(postSlug: string): Promise<RatingSummary> {
-  const result = await select<{ average: number; count: number }>(
-    '/website/ratings',
+  const result = await select<{ avg: number | null; count: number | string }>(
+    '/ratings',
     `post_slug=eq.${encodeURIComponent(postSlug)}&select=avg(value),count()`
   );
 
@@ -23,7 +23,7 @@ async function getRatings(postSlug: string): Promise<RatingSummary> {
   if (!row) return { average: 0, count: 0 };
 
   return {
-    average: row.average ? Math.round(Number(row.average) * 10) / 10 : 0,
+    average: row.avg ? Math.round(Number(row.avg) * 10) / 10 : 0,
     count: Number(row.count) || 0,
   };
 }
@@ -43,7 +43,7 @@ async function postRating(body: {
     throw new Error('Rating must be between 1 and 5.');
   }
 
-  const result = await insert<Rating>('/website/ratings', {
+  const result = await insert<Rating>('/ratings', {
     post_slug: postSlug,
     value,
   });

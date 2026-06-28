@@ -72,7 +72,7 @@ function buildThreadedComments(flatComments: Comment[]): Comment[] {
 
 async function getComments(postSlug: string): Promise<Comment[]> {
   const flatComments = await select<Comment>(
-    '/website/comments',
+    '/comments',
     `post_slug=eq.${encodeURIComponent(postSlug)}&status=eq.approved&order=created_at.desc`
   );
   return buildThreadedComments(flatComments);
@@ -112,7 +112,7 @@ async function postComment(body: {
   const moderation = await moderateComment(content);
   const status = moderation.approved ? 'approved' : 'rejected';
 
-  const result = await insert<Comment>('/website/comments', {
+  const result = await insert<Comment>('/comments', {
     post_slug: postSlug,
     parent_id: parentId,
     author_name: authorName,
