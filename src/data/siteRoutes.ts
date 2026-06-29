@@ -79,15 +79,15 @@ export const siteRoutes: RouteMeta[] = [
     path: '/studio',
     title: 'Software Studio | Custom Development Built From Scratch',
     description:
-      'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800.',
+      'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope.',
     ogTitle: 'Software Studio | Custom Development Built From Scratch',
     ogDescription:
-      'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800.',
+      'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope.',
     ogType: 'product',
     ogImage: DEFAULT_IMAGE,
     twitterTitle: 'Software Studio | Custom Development Built From Scratch',
     twitterDescription:
-      'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800.',
+      'Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope.',
     twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/studio',
     priority: 0.7,

@@ -146,7 +146,7 @@ function generateHeadBlock(meta: RouteMeta): string {
     name: SITE_NAME,
     url: 'https://horusdesk.com',
     logo: 'https://horusdesk.com/logo.png',
-    sameAs: ['https://twitter.com/horusdesk', 'https://linkedin.com/company/horusdesk'],
+    sameAs: ['https://www.linkedin.com/company/right-space-llc', 'https://www.facebook.com/horusdesk'],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',

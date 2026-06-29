@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { useState } from 'react';
+import { Linkedin, Facebook } from 'lucide-react';
 import { Logo } from '@/components/shared/Logo';
 
 const productLinks = [
@@ -73,7 +74,7 @@ export function Footer() {
           {/* Column 4 - Newsletter */}
           <div>
             <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Newsletter</h4>
-            <form onSubmit={handleSubscribe} className="flex gap-2">
+            <form onSubmit={handleSubscribe} className="flex gap-2 mb-4">
               <input
                 type="email"
                 value={email}
@@ -88,6 +89,26 @@ export function Footer() {
                 Subscribe
               </button>
             </form>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/company/right-space-llc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-[#94A3B8] hover:text-[#64FFDA] transition-colors duration-300"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/horusdesk"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-[#94A3B8] hover:text-[#64FFDA] transition-colors duration-300"
+              >
+                <Facebook size={20} />
+              </a>
+            </div>
           </div>
         </div>
 

@@ -18,9 +18,9 @@ const organizationSchema = {
   url: 'https://horusdesk.com',
   logo: 'https://horusdesk.com/logo.png',
   sameAs: [
-    'https://twitter.com/horusdesk',
-    'https://linkedin.com/company/horusdesk',
-  ],
+  'https://www.linkedin.com/company/right-space-llc',
+  'https://www.facebook.com/horusdesk',
+],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
@@ -78,15 +78,15 @@ export function StudioPage() {
     <>
       <SEOHead
         title="Software Studio | Custom Development Built From Scratch"
-        description="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800."
+        description="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope."
         canonicalUrl="https://horusdesk.com/studio"
         ogType="product"
         ogTitle="Software Studio | Custom Development Built From Scratch"
-        ogDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800."
+        ogDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope."
         ogUrl="https://horusdesk.com/studio"
         ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Software Studio | Custom Development Built From Scratch"
-        twitterDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Projects from $1,800."
+        twitterDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope."
         twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, serviceSchema, howToSchema]}
         jsonLdLast={faqPageSchema}

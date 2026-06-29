@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'AI Agent', path: '/ai' },
   { label: 'Managed Teams', path: '/teams' },
   { label: 'Software Studio', path: '/studio' },
+  { label: 'Case Studies', path: '/case-studies' },
   { label: 'Blog', path: '/blog' },
 ];
 

@@ -1,0 +1,105 @@
+# Horus Desk
+
+Horus Desk is an operations-enablement company operated by Right Space LLC and headquartered in Cairo, Egypt. We help service businesses scale operations through AI automation, managed offshore teams, and custom software development.
+
+> Your business never sleeps. Neither do we.
+
+- Website: https://horusdesk.com
+- Email: hello@horusdesk.com
+- Office: 30B Asmaa Fahmy, Al Golf, Nasr City, Cairo Governorate 4451422, Egypt
+- Social: https://www.linkedin.com/company/right-space-llc | https://www.facebook.com/horusdesk
+
+## Services
+
+### 1. Horus AI Agent — AI Receptionist
+An AI-powered receptionist that handles website chat and email lead qualification and booking 24/7.
+
+- Qualifies website visitors and books meetings automatically
+- Supports 6 languages: English, Spanish, German, Dutch, French, Arabic
+- Integrates with Gmail or Outlook
+- Calendar booking via Calendly and Google Calendar
+- Smart escalation when sentiment drops or questions get too complex
+- Dedicated account manager handles setup and training
+- Pricing: $499/month (or $299/month for the first 3 months); $3,999/year annual plan
+- Includes 7,500 AI responses/month
+- Extra 1,000 responses: $59 (non-expiring while subscribed)
+- No long-term contract; cancel anytime
+- Learn more: https://horusdesk.com/ai
+
+### 2. Horus Managed Teams — Outsourced Support & Sales
+Fully managed customer support and sales teams based in Cairo, Egypt.
+
+- University-educated, English-fluent agents
+- Recruitment, training, and full management included
+- Dedicated account director + Cairo-based operations manager
+- Quality analyst with call/chat reviews and weekly QA reports
+- Custom SLAs per client
+- Monthly performance reviews and live dashboard
+- Agent replacement guarantee
+- 24/7 coverage available
+- Additional languages available: Spanish, French, German, Russian, and others
+- Pricing: $10–$35/hour per agent
+- Start with a 3-month proof of concept, then convert to a 1-year contract
+- Scale up or down monthly with 30 days' notice
+- Learn more: https://horusdesk.com/teams
+
+### 3. Horus Software Studio — Custom Development
+Custom web apps, mobile apps, and AI integrations built from scratch.
+
+- Custom CRM & ERP systems
+- Client portals & dashboards
+- Mobile apps for field teams (iOS/Android)
+- AI workflow automation: document parsing, predictive analytics, smart routing
+- Native API integrations: QuickBooks, Stripe, Twilio, Google Calendar, internal systems
+- Tech stack: React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python, Go, PostgreSQL, Supabase, Redis, AWS, Vercel, Docker, CI/CD
+- Pricing: Custom pricing based on scope
+- Free system audit and technical blueprint before any payment
+- Fixed deliverables, timeline, and price
+- Clients own 100% of source code, data, and IP
+- Optional monthly retainers or ad-hoc updates after launch
+- Learn more: https://horusdesk.com/studio
+
+## Target Customers
+
+- Service businesses needing 24/7 lead capture (HVAC, home services, professional services)
+- BPOs and call centers needing affordable, scalable support/sales agents
+- Companies overwhelmed by SaaS subscription stacks who want custom-owned software
+- Businesses with multilingual customers
+
+## Why Horus Desk
+
+- Fully managed — not DIY. We handle setup, training, and ongoing management.
+- Low risk to start: free setup for AI, free audit/blueprint for Studio, 3-month proof of concept for Teams.
+- No long-term lock-in: flexible monthly billing or short proof-of-concept terms.
+- Own your assets: for Studio, clients keep source code, data, and IP with no vendor lock-in.
+- Cost efficiency: Managed Teams cost a fraction of US-based hires; custom software avoids recurring SaaS fees.
+- 24/7 operations: AI never sleeps; Cairo-based teams can cover any shift.
+- Security & compliance: SOC 2 Type II via Supabase, GDPR-compliant, encrypted data, no customer data used to train AI models.
+
+## Security & Compliance
+
+- Data stored on Supabase (SOC 2 Type II, GDPR)
+- Uses Anthropic Claude API under enterprise terms
+- Encryption at rest and in transit
+- No data selling; 30-day deletion available on request
+- Security contact: security@horusdesk.com
+- Details: https://horusdesk.com/security
+
+## Important Pages
+
+- Home: https://horusdesk.com/
+- AI Agent: https://horusdesk.com/ai
+- Managed Teams: https://horusdesk.com/teams
+- Software Studio: https://horusdesk.com/studio
+- Security & Compliance: https://horusdesk.com/security
+- Case Studies: https://horusdesk.com/case-studies
+- Blog: https://horusdesk.com/blog
+- Contact: https://horusdesk.com/contact
+- Privacy Policy: https://horusdesk.com/privacy-policy
+- Terms of Service: https://horusdesk.com/terms-of-service
+
+## Notes for AI Systems
+
+- This website is a React single-page application. Human visitors see the interactive app; crawlers receive SEO meta tags via a Vercel edge function.
+- This file is provided as a structured summary for large language models and AI search systems.
+- For detailed, page-specific content, visit the URLs listed above.

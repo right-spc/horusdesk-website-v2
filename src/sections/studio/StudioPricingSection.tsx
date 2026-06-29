@@ -11,7 +11,7 @@ export function StudioPricingSection() {
             Project-based and retainer options
           </p>
           <p className="text-4xl font-medium text-white mt-2">
-            Small projects start from $1,800
+            Custom pricing based on scope
           </p>
           <p className="text-[#94A3B8] mt-4">
             Retainers available for ongoing development.

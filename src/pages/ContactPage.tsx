@@ -1,4 +1,4 @@
-import { Briefcase, Headphones, ShieldCheck, MapPin, Mail, Clock } from 'lucide-react';
+import { Briefcase, Headphones, ShieldCheck, MapPin, Mail, Clock, Linkedin, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SEOHead } from '@/components/layout/SEOHead';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
@@ -11,8 +11,8 @@ const organizationSchema = {
   url: 'https://horusdesk.com',
   logo: 'https://horusdesk.com/logo.png',
   sameAs: [
-    'https://twitter.com/horusdesk',
-    'https://linkedin.com/company/horusdesk',
+    'https://www.linkedin.com/company/right-space-llc',
+    'https://www.facebook.com/horusdesk',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -185,6 +185,40 @@ export function ContactPage() {
                       <span>Sun – Thu, 9:00 AM – 5:00 PM EET</span>
                     </div>
                   </div>
+                </div>
+              </motion.div>
+
+              {/* Social links */}
+              <motion.div
+                variants={cardVariants}
+                className="
+                  bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-2xl p-8
+                  transition-all duration-500 ease-out
+                  hover:-translate-y-1 hover:border-[rgba(102,255,218,0.15)] hover:shadow-card-glow
+                "
+              >
+                <h2 className="text-xl font-medium text-white mb-4">Follow us</h2>
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.linkedin.com/company/right-space-llc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="inline-flex items-center gap-2 text-[#94A3B8] hover:text-[#64FFDA] transition-colors duration-300"
+                  >
+                    <Linkedin size={20} />
+                    <span className="text-sm">LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/horusdesk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="inline-flex items-center gap-2 text-[#94A3B8] hover:text-[#64FFDA] transition-colors duration-300"
+                  >
+                    <Facebook size={20} />
+                    <span className="text-sm">Facebook</span>
+                  </a>
                 </div>
               </motion.div>
             </motion.div>
