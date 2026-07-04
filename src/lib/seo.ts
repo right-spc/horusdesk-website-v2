@@ -8,6 +8,8 @@ const breadcrumbNameMap: Record<string, string> = {
   teams: 'Managed Teams',
   studio: 'Software Studio',
   security: 'Security & Compliance',
+  thothline: 'Thoth Line',
+  'sales-command-center': 'Sales Command Center',
   contact: 'Contact Us',
   'privacy-policy': 'Privacy Policy',
   'terms-of-service': 'Terms of Service',

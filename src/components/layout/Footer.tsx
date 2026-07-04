@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { Linkedin, Facebook } from 'lucide-react';
 import { Logo } from '@/components/shared/Logo';
 
-const productLinks = [
+const serviceLinks = [
   { label: 'AI Agent', path: '/ai' },
   { label: 'Managed Teams', path: '/teams' },
   { label: 'Software Studio', path: '/studio' },
+  { label: 'Sales Command Center', path: '/sales-command-center' },
 ];
 
 const companyLinks = [
@@ -39,9 +40,9 @@ export function Footer() {
 
           {/* Column 2 - Services Links */}
           <div>
-            <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Services</h4>
+            <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Our Services</h4>
             <ul className="space-y-3">
-              {productLinks.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}

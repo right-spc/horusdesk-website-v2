@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/thothline", "destination": "/sales-command-center", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

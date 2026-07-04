@@ -1,16 +1,26 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Logo } from '@/components/shared/Logo';
 import { ChatButton } from '@/components/buttons/ChatButton';
 import { CalendarButton } from '@/components/buttons/CalendarButton';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
-const navLinks = [
+const serviceLinks = [
   { label: 'AI Agent', path: '/ai' },
   { label: 'Managed Teams', path: '/teams' },
   { label: 'Software Studio', path: '/studio' },
+  { label: 'Sales Command Center', path: '/sales-command-center' },
+];
+
+const topLinks = [
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Blog', path: '/blog' },
 ];
@@ -19,6 +29,8 @@ export function Navbar() {
   const { isScrolled } = useScrollPosition();
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+
+  const isServiceActive = serviceLinks.some((link) => location.pathname === link.path);
 
   return (
     <>
@@ -38,7 +50,51 @@ export function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`
+                    group text-sm font-medium transition-colors duration-500
+                    flex items-center gap-1 outline-none
+                    ${isServiceActive ? 'text-white' : 'text-[#94A3B8] hover:text-white'}
+                  `}
+                >
+                  Our Services
+                  <ChevronDown
+                    size={16}
+                    className="transition-transform duration-300 group-data-[state=open]:rotate-180"
+                    aria-hidden="true"
+                  />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="start"
+                sideOffset={8}
+                className="bg-navy/95 backdrop-blur-xl border border-[rgba(226,232,240,0.08)] rounded-xl p-2 min-w-[200px] shadow-lg"
+              >
+                {serviceLinks.map((link) => (
+                  <DropdownMenuItem key={link.path} asChild>
+                    <Link
+                      to={link.path}
+                      className={`
+                        block text-sm font-medium rounded-lg px-3 py-2
+                        transition-colors duration-200 cursor-pointer
+                        focus:bg-white/5 focus:text-white outline-none
+                        ${location.pathname === link.path
+                          ? 'text-[#64FFDA]'
+                          : 'text-[#94A3B8] hover:text-white hover:bg-white/5'
+                        }
+                      `}
+                    >
+                      {link.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {topLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -82,13 +138,41 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-navy/95 backdrop-blur-xl lg:hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full gap-8">
-              {navLinks.map((link, index) => (
+            <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
+              {/* Services Group */}
+              <div className="flex flex-col items-center gap-4">
+                <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA]">Our Services</p>
+                {serviceLinks.map((link, index) => (
+                  <motion.div
+                    key={link.path}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Link
+                      to={link.path}
+                      onClick={() => setMobileOpen(false)}
+                      className={`
+                        text-2xl font-medium transition-colors duration-500
+                        ${location.pathname === link.path
+                          ? 'text-[#64FFDA]'
+                          : 'text-white hover:text-[#64FFDA]'
+                        }
+                      `}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Top-level Links */}
+              {topLinks.map((link, index) => (
                 <motion.div
                   key={link.path}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: (serviceLinks.length + index) * 0.1 }}
                 >
                   <Link
                     to={link.path}

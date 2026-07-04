@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
-import { MessageSquare, Headphones, Code } from 'lucide-react';
+import { MessageSquare, Headphones, Code, BarChart3 } from 'lucide-react';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 
 const services = [
@@ -10,6 +10,7 @@ const services = [
     iconColor: 'text-[#64FFDA]',
     borderColor: 'border-t-[#64FFDA]',
     linkColor: 'text-[#64FFDA]',
+    hoverClass: 'hover:border-[rgba(100,255,218,0.15)] hover:shadow-[0_0_40px_rgba(100,255,218,0.08)]',
     description: 'Automate your website chat and email with an AI that qualifies leads and books meetings. We handle all setup.',
     price: 'From $499/mo',
     link: '/ai',
@@ -20,6 +21,7 @@ const services = [
     iconColor: 'text-[#FFAB40]',
     borderColor: 'border-t-[#FFAB40]',
     linkColor: 'text-[#FFAB40]',
+    hoverClass: 'hover:border-[rgba(255,171,64,0.15)] hover:shadow-[0_0_40px_rgba(255,171,64,0.08)]',
     description: 'Managed customer support and sales teams. Fully managed. No candidate screening required.',
     price: '$10–35/hr',
     link: '/teams',
@@ -30,9 +32,21 @@ const services = [
     iconColor: 'text-[#7C4DFF]',
     borderColor: 'border-t-[#7C4DFF]',
     linkColor: 'text-[#7C4DFF]',
+    hoverClass: 'hover:border-[rgba(124,77,255,0.15)] hover:shadow-[0_0_40px_rgba(124,77,255,0.08)]',
     description: 'Custom web apps, mobile development, and AI integrations. Built from scratch with no third-party automation tools. We can build anything.',
     price: 'Custom pricing',
     link: '/studio',
+  },
+  {
+    title: 'Thoth Line',
+    icon: BarChart3,
+    iconColor: 'text-[#FF5252]',
+    borderColor: 'border-t-[#FF5252]',
+    linkColor: 'text-[#FF5252]',
+    hoverClass: 'hover:border-[rgba(255,82,82,0.15)] hover:shadow-[0_0_40px_rgba(255,82,82,0.08)]',
+    description: 'A private Sales Operating System where your entire workflow — voice, email, leads, compliance, and reporting — runs in one custom-built platform.',
+    price: 'From $300/mo + usage',
+    link: '/sales-command-center',
   },
 ];
 
@@ -59,7 +73,7 @@ export function ServiceRouterSection() {
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
-            ONE PARTNER, THREE WAYS TO SCALE
+            ONE PARTNER, FOUR WAYS TO SCALE
           </p>
           <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2]">
             Choose how you want to grow
@@ -71,7 +85,7 @@ export function ServiceRouterSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {services.map((service) => (
             <motion.div
@@ -81,7 +95,7 @@ export function ServiceRouterSection() {
                 bg-navy border border-[rgba(226,232,240,0.08)] rounded-2xl p-8
                 border-t ${service.borderColor}
                 transition-all duration-500 ease-out
-                hover:-translate-y-1 hover:border-[rgba(102,255,218,0.15)] hover:shadow-card-glow
+                hover:-translate-y-1 ${service.hoverClass}
               `}
             >
               <service.icon className={`${service.iconColor} mb-4`} size={28} />

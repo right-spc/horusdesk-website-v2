@@ -95,6 +95,25 @@ export const siteRoutes: RouteMeta[] = [
     lastmod: '2026-06-12',
   },
   {
+    path: '/sales-command-center',
+    title: 'Thoth Line — Sales Operating System | Plans & Pricing | Horus Desk',
+    description:
+      'Thoth Line replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system.',
+    ogTitle: 'Thoth Line — Sales Operating System | Plans & Pricing',
+    ogDescription:
+      'Thoth Line replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system.',
+    ogType: 'product',
+    ogImage: DEFAULT_IMAGE,
+    twitterTitle: 'Thoth Line — Sales Operating System | Plans & Pricing',
+    twitterDescription:
+      'Thoth Line replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system.',
+    twitterImage: DEFAULT_IMAGE,
+    canonicalUrl: 'https://horusdesk.com/sales-command-center',
+    priority: 0.7,
+    changefreq: 'monthly',
+    lastmod: '2026-07-03',
+  },
+  {
     path: '/security',
     title: 'Security & Compliance | SOC 2, GDPR & Data Privacy',
     description:

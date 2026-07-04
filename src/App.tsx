@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router';
+import { Routes, Route, Navigate, useLocation } from 'react-router';
 import { useEffect, Suspense, lazy } from 'react';
 import { BookingProvider } from '@/components/layout/BookingModal';
 import { Navbar } from '@/components/layout/Navbar';
@@ -10,6 +10,7 @@ const AIPage = lazy(() => import('@/pages/AIPage').then(m => ({ default: m.AIPag
 const TalentPage = lazy(() => import('@/pages/TalentPage').then(m => ({ default: m.TalentPage })));
 const StudioPage = lazy(() => import('@/pages/StudioPage').then(m => ({ default: m.StudioPage })));
 const SecurityPage = lazy(() => import('@/pages/SecurityPage').then(m => ({ default: m.SecurityPage })));
+const ThothLinePage = lazy(() => import('@/pages/ThothLinePage').then(m => ({ default: m.ThothLinePage })));
 const CaseStudiesPage = lazy(() => import('@/pages/CaseStudiesPage').then(m => ({ default: m.CaseStudiesPage })));
 const BlogPage = lazy(() => import('@/pages/BlogPage').then(m => ({ default: m.BlogPage })));
 const BlogPostPage = lazy(() => import('@/pages/BlogPostPage').then(m => ({ default: m.BlogPostPage })));
@@ -56,6 +57,8 @@ function App() {
           <Route path="/teams" element={<TalentPage />} />
           <Route path="/studio" element={<StudioPage />} />
           <Route path="/security" element={<SecurityPage />} />
+          <Route path="/sales-command-center" element={<ThothLinePage />} />
+          <Route path="/thothline" element={<Navigate to="/sales-command-center" replace />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
