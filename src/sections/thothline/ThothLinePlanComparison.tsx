@@ -19,7 +19,7 @@ const rows: ComparisonRow[] = [
   { label: 'Email campaigns', base: 'no', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Individual SMS texting', base: 'no', command: 'soon', control: 'soon', enterprise: 'soon' },
   { label: 'API access & webhooks', base: 'no', command: 'no', control: 'soon', enterprise: 'soon' },
-  { label: 'Advanced workflow routing', base: 'no', command: 'no', control: 'soon', enterprise: 'soon' },
+  { label: 'Advanced workflow routing', base: 'no', command: 'no', control: 'yes', enterprise: 'yes' },
   { label: 'SMS campaigns', base: 'no', command: 'no', control: 'soon', enterprise: 'soon' },
   { label: 'Custom integrations', base: 'no', command: 'no', control: 'custom', enterprise: 'custom' },
   { label: 'White-label', base: 'no', command: 'no', control: 'no', enterprise: 'yes' },

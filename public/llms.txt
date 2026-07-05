@@ -148,7 +148,7 @@ We take your existing sales process — stages, scripts, compliance rules, routi
 | Email campaigns | no | yes | yes | yes |
 | Individual SMS texting | soon | soon | soon | soon |
 | API access & webhooks | no | no | soon | soon |
-| Advanced workflow routing | no | no | soon | soon |
+| Advanced workflow routing | no | no | yes | yes |
 | SMS campaigns | no | no | soon | soon |
 | Custom integrations | no | no | custom | custom |
 | White-label | no | no | no | yes |
