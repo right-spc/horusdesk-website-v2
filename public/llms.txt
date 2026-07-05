@@ -44,6 +44,9 @@ An AI-powered receptionist that handles website chat and email lead qualificatio
 - Smart escalation when sentiment drops or questions get too complex
 - Dedicated account manager handles setup and training
 
+**Integrations note**
+The standard AI Agent plan includes one Gmail or Outlook inbox and Calendly/Google Calendar booking out of the box. Additional custom integrations (e.g., CRMs, internal systems) are available at an additional cost.
+
 **Pricing**
 - $499/month (or $299/month for the first 3 months)
 - $3,999/year annual plan
