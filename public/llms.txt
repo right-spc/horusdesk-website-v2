@@ -1,35 +1,69 @@
-# Horus Desk
+# Horus Desk — llms.txt
 
 Horus Desk is an operations-enablement company operated by Right Space LLC and headquartered in Cairo, Egypt. We help service businesses scale operations through AI automation, managed offshore teams, and custom software development.
 
 > Your business never sleeps. Neither do we.
 
 - Website: https://horusdesk.com
-- Email: hello@horusdesk.com
+- Sales & setup: hello@horusdesk.com
+- Support: support@horusdesk.com
+- Legal: legal@horusdesk.com
+- Privacy: privacy@horusdesk.com
+- Security: security@horusdesk.com
 - Office: 30B Asmaa Fahmy, Al Golf, Nasr City, Cairo Governorate 4451422, Egypt
 - Social: https://www.linkedin.com/company/right-space-llc | https://www.facebook.com/horusdesk
+- Parent company: Right Space LLC — https://rightspc.com
+
+This file contains the full text of Horus Desk services, case studies, and blog posts for AI systems that need deeper context.
+
+---
+
+## Home
+
+- Headline: "Scale Your Operations Without Adding Headaches"
+- Sub-line: "AI receptionists, expert teams, and custom software — built for service businesses. We handle the setup. You focus on growth."
+- Service router framing: "One partner, four ways to scale" — AI Agent, Managed Teams, Software Studio, and Sales Command Center (also called Thoth Line).
+- No-risk entry points:
+  - AI Agent: Free setup and no contracts; run a pilot before committing.
+  - Managed Teams: 3-month proof of concept before a long-term contract.
+  - Software Studio: Free system audit and technical blueprint before any payment.
+
+---
 
 ## Services
 
 ### 1. Horus AI Agent — AI Receptionist
+
 An AI-powered receptionist that handles website chat and email lead qualification and booking 24/7.
 
+**Capabilities**
 - Qualifies website visitors and books meetings automatically
 - Supports 6 languages: English, Spanish, German, Dutch, French, Arabic
 - Integrates with Gmail or Outlook
 - Calendar booking via Calendly and Google Calendar
 - Smart escalation when sentiment drops or questions get too complex
 - Dedicated account manager handles setup and training
-- Pricing: $499/month (or $299/month for the first 3 months); $3,999/year annual plan
+
+**Pricing**
+- $499/month (or $299/month for the first 3 months)
+- $3,999/year annual plan
 - Includes 7,500 AI responses/month
 - Extra 1,000 responses: $59 (non-expiring while subscribed)
 - No long-term contract; cancel anytime
-- Learn more: https://horusdesk.com/ai
+
+**How it works**
+1. You share your FAQs, pricing, and how you talk to customers.
+2. We train Horus AI on your knowledge and install the chat widget/email integration.
+3. Go live in as little as 24 hours; we handle tweaks and optimization for the first 30 days.
+
+**Learn more:** https://horusdesk.com/ai
 
 ### 2. Horus Managed Teams — Outsourced Support & Sales
+
 Fully managed customer support and sales teams based in Cairo, Egypt.
 
-- University-educated, English-fluent agents
+**What is included**
+- University-educated, fluent in the language you need agents
 - Recruitment, training, and full management included
 - Dedicated account director + Cairo-based operations manager
 - Quality analyst with call/chat reviews and weekly QA reports
@@ -38,36 +72,109 @@ Fully managed customer support and sales teams based in Cairo, Egypt.
 - Agent replacement guarantee
 - 24/7 coverage available
 - Additional languages available: Spanish, French, German, Russian, and others
-- Pricing: $10–$35/hour per agent
+
+**Pricing**
+- $10–$35/hour per agent
 - Start with a 3-month proof of concept, then convert to a 1-year contract
 - Scale up or down monthly with 30 days' notice
-- Learn more: https://horusdesk.com/teams
+
+**How it works**
+1. Recruit — We source university-educated candidates matched to your industry. You review final candidates before we hire.
+2. Train — Full-time immersion in your product, tone, tools, and escalation rules. As quick as 3 days for simple setups.
+3. Manage — Your account director sets strategy; our Cairo operations manager handles daily supervision, scheduling, and coaching.
+4. Scale — Add or reduce agents with 30 days' notice. No layoffs, no legal risk, no drama.
+
+**Learn more:** https://horusdesk.com/teams
 
 ### 3. Horus Software Studio — Custom Development
+
 Custom web apps, mobile apps, and AI integrations built from scratch.
 
+**What we build**
 - Custom CRM & ERP systems
 - Client portals & dashboards
 - Mobile apps for field teams (iOS/Android)
 - AI workflow automation: document parsing, predictive analytics, smart routing
 - Native API integrations: QuickBooks, Stripe, Twilio, Google Calendar, internal systems
-- Tech stack: React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python, Go, PostgreSQL, Supabase, Redis, AWS, Vercel, Docker, CI/CD
-- Pricing: Custom pricing based on scope
+
+**Tech stack**
+React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python, Go, PostgreSQL, Supabase, Redis, AWS, Vercel, Docker, CI/CD.
+
+**Pricing**
+- Projects priced based on scope and requirements
 - Free system audit and technical blueprint before any payment
 - Fixed deliverables, timeline, and price
 - Clients own 100% of source code, data, and IP
 - Optional monthly retainers or ad-hoc updates after launch
-- Learn more: https://horusdesk.com/studio
+
+**How it works**
+1. Discovery — We interview your team, map your workflows, and identify the real bottlenecks.
+2. Scope — Fixed deliverables, timeline, and price before any code is written.
+3. Sprint — Weekly demos so you see working software every 7 days.
+4. Launch — We handle deployment, SSL, DNS, monitoring, and backups.
+5. Handoff — Full documentation, source-code access, and team training. You own everything.
+
+**Learn more:** https://horusdesk.com/studio
 
 ### 4. Horus Sales Command Center — Sales Operating System
-A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. (Previously called Thoth Line.)
 
-- Voice, email, lead management, compliance, and reporting in one system
-- Plans: Base, Command, Control, and Enterprise
-- Usage-based pricing for voice minutes, call recording, phone numbers, email sends, and B2B leads
-- Volume discounts from 5% up to 30%
-- Custom integrations and white-label options available
-- Learn more: https://horusdesk.com/sales-command-center
+A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. Also called Thoth Line.
+
+**Problem it solves**
+The average sales team juggles 6 to 12 tools, leading to data silos, context switching, compliance as an afterthought, integration fragility, and paying five vendors for one workflow.
+
+**Solution**
+We take your existing sales process — stages, scripts, compliance rules, routing logic — and program it into a private system. Voice, email, calendar, leads, and reporting unified in one interface. Because we built it, we can change it.
+
+**Capabilities**
+- Voice calling with timezone display, call recording, call logs, custom IVR, queues, voicemail, after-hours routing, click-to-call, local presence dialing, and number rotation
+- Lead database with custom fields, stages, deduplication, bulk import, distribution, routing, and in-app B2B lead generation
+- Email campaigns, campaign management, and callback scheduling
+- Individual SMS texting and SMS campaigns (coming soon)
+- Agent extensions, custom dispositions and statuses, real-time dashboard, live wallboard, roles and permissions, calendar booking
+- Native DNC management, timezone-aware calling, call recording governance, encrypted storage, data ownership, and SLA guarantees
+- API access, advanced workflow routing, custom integrations, and white-label options
+
+**Plan comparison**
+
+| Feature | Base | Command | Control | Enterprise |
+|---|---|---|---|---|
+| Platform fee | $300/mo | $400/mo | $500/mo | Custom |
+| Per active seat | $10 | $18 | $22 | Custom |
+| Voice, leads, core workflow | yes | yes | yes | yes |
+| Email campaigns | no | yes | yes | yes |
+| Individual SMS texting | soon | soon | soon | soon |
+| API access & webhooks | no | no | soon | soon |
+| Advanced workflow routing | no | no | soon | soon |
+| SMS campaigns | no | no | soon | soon |
+| Custom integrations | no | no | custom | custom |
+| White-label | no | no | no | yes |
+
+**Plan details**
+- Base (live) — Voice & calling, lead database & core workflow, native compliance tools, dedicated account manager.
+- Command (live) — Everything in Base plus email campaigns, campaign management, and individual SMS texting (coming soon).
+- Control (coming soon) — Everything in Command plus API access, advanced workflow routing, and SMS campaigns.
+- Enterprise (custom) — 100+ users, white-label options, custom integrations, SLA guarantee.
+
+**Usage rates (US)**
+- Voice minutes: $0.015/min (volume discounts 5%–30%)
+- Call recording: $0.005/min (volume discounts 5%–30%)
+- Phone numbers: $1/number/mo
+- Email sends: $0.002/email (Command+; volume discounts 5%–30%)
+- B2B leads: $1.50/lead (volume discounts 5%–30%)
+
+**How it works**
+1. Discovery — You tell us your workflow: stages, routing rules, compliance needs, campaigns.
+2. Programming — We build your exact process into Sales Command Center: IVR, lead distribution, dispositions, email sequences — all hard-coded.
+3. Deployment — Your team logs in. One URL. One system. As fast as 3 days depending on complexity.
+
+**Notes**
+- Platform fee is waived at 50 active seats.
+- The `/thothline` URL redirects (301) to `/sales-command-center`.
+
+**Learn more:** https://horusdesk.com/sales-command-center
+
+---
 
 ## Target Customers
 
@@ -75,25 +182,247 @@ A private Sales Operating System that replaces the typical 6-12 tool sales stack
 - BPOs and call centers needing affordable, scalable support/sales agents
 - Companies overwhelmed by SaaS subscription stacks who want custom-owned software
 - Businesses with multilingual customers
+- Sales teams and BPOs that need a private, unified Sales Operating System
 
 ## Why Horus Desk
 
 - Fully managed — not DIY. We handle setup, training, and ongoing management.
-- Low risk to start: free setup for AI, free audit/blueprint for Studio, 3-month proof of concept for Teams.
+- Low risk to start: free setup for AI, free audit/blueprint for Studio, 3-month proof of concept for Teams, custom setup quote for Sales Command Center.
 - No long-term lock-in: flexible monthly billing or short proof-of-concept terms.
 - Own your assets: for Studio, clients keep source code, data, and IP with no vendor lock-in.
 - Cost efficiency: Managed Teams cost a fraction of US-based hires; custom software avoids recurring SaaS fees.
 - 24/7 operations: AI never sleeps; Cairo-based teams can cover any shift.
 - Security & compliance: SOC 2 Type II via Supabase, GDPR-compliant, encrypted data, no customer data used to train AI models.
 
+---
+
 ## Security & Compliance
 
 - Data stored on Supabase (SOC 2 Type II, GDPR)
 - Uses Anthropic Claude API under enterprise terms
 - Encryption at rest and in transit
+- HIPAA-ready infrastructure
 - No data selling; 30-day deletion available on request
 - Security contact: security@horusdesk.com
 - Details: https://horusdesk.com/security
+
+---
+
+## Case Studies
+
+### Case Study 1: Custom Softphone + CRM Platform
+
+**URL:** https://horusdesk.com/case-studies/softphone
+
+**Headline:** We Skipped the $500+/Month Sales Tool Stack
+
+**Summary:** We built our own WebRTC softphone + CRM platform in React, TypeScript, Supabase, and Telnyx, replacing a typical $500+/month SaaS stack and saving roughly $4,200–15,000 per year.
+
+**The problem we saw**
+Most sales and support teams buy a stack of subscriptions: a VoIP dialer, a CRM, an outreach tool, an integration layer, and a call-recording app for QA. Each tool charges per user. None of them talk to each other cleanly. Agents jump between tabs. Supervisors export CSVs to figure out what happened. And every new hire adds another $200–500 to the monthly bill. For a 3-agent team, that stack quickly reaches $500–1,400+/month for software that still doesn't fit the workflow — and the business doesn't own any of it.
+
+**Our solution**
+We built one platform from the start that covers the entire workflow: a WebRTC softphone, a full CRM, lead management, outbound campaigns, call recordings, and automated workflows — all using React, TypeScript, Supabase, and Telnyx.
+
+Agents make and receive calls, listen to voicemails, update pipelines, log dispositions, and view the full lead record in one screen. Supervisors monitor live status, review recordings, and coach the team without opening a second app.
+
+Because we own the code, there are no per-seat licenses. We pay roughly $150/month total for Supabase plus Telnyx voice usage at about 0.5¢ per minute — even as the team grows.
+
+**Features built**
+- Browser-based WebRTC calling
+- Voicemail inbox with playback
+- Live supervisor dashboard
+- Call logs, recordings & dispositions
+- Integrated CRM & lead management
+- Role-based access & audit trail
+
+**Tech stack:** React, TypeScript, Tailwind CSS, Supabase, Telnyx.
+
+**The impact**
+- One screen for dialer, CRM, and lead history
+- Call notes and dispositions auto-attach to the lead record
+- Supervisors see live status without asking for updates
+- New hires train faster because the workflow is unified
+- No integration glue or copy-pasting between systems
+
+**Cost comparison for a 3-agent team**
+- Horus Desk (custom): ~$150/mo — Supabase + Telnyx voice usage
+- VoIP / softphone: $75–195/mo — Aircall, RingCentral, or CloudTalk for 3 users
+- CRM: $60–270/mo — HubSpot Starter/Pro, Salesforce, or Pipedrive for 3 users
+- Outreach / sequences: $37–300/mo — Instantly, Outreach.io, or Salesloft
+- Automation / integrations: $20–70/mo — Zapier, Make.com, or N8N for workflows
+- Call recording & QA: $300–600+/mo — Gong, Chorus, or similar for 3 users
+
+A typical off-the-shelf sales stack costs $500–1,400+ per month for a 3-agent team. The custom platform costs ~$150 per month. That's roughly $4,200–15,000 per year that never left the business — and the software is built exactly for our workflow.
+
+**Full control**
+Because the platform is our own code, adding a feature means reading our own codebase, not Zapier's docs or a vendor's API guide. When an agent reports an issue, we don't file a support ticket and wait for another company's queue. We follow the code, find the source, and fix it — usually within minutes.
+
+- Simple feature requests ship the same day
+- No vendor support queues or escalation delays
+- Issues debugged by following our own code
+- No black-box integrations to work around
+
+---
+
+### Case Study 2: Custom Employee & Customer Dashboards
+
+**URL:** https://horusdesk.com/case-studies/ai-agent-dashboards
+
+**Headline:** We Built Our Own Employee & Customer Dashboards — For Under $50/Month
+
+**Summary:** We built two connected dashboards from scratch, replacing a typical $300+/month stack of employee portals, customer portals, analytics, and support tools. Ongoing cost is under $50/month for the Supabase database.
+
+**The problem we saw**
+Running an AI-agent service means two audiences need software: your internal team needs to onboard customers and configure the AI, and your customers need a place to view analytics, manage settings, pay bills, and open support tickets.
+
+Most companies solve this with a patchwork of SaaS tools: an employee portal, a customer membership platform, an analytics dashboard, a helpdesk, and a billing system. Each has per-seat pricing, separate logins, and rigid data models that don't talk to each other. For a growing team, that stack quickly reaches $300–1,000+/month — and you still don't own the experience your employees and customers see every day.
+
+**Our solution**
+We built two connected dashboards from scratch. The Employee Dashboard handles org onboarding, AI configuration, widget settings, payments, and team management. The Customer Dashboard gives clients conversations, lead pipelines, analytics, billing, support tickets, and team permissions.
+
+Both share the same Supabase backend and data model, so employees and customers see the same truth in real time. The employee side is built with Vite and vanilla JS for speed; the customer side is built with React, TypeScript, Tailwind CSS, and shadcn/ui for a polished, interactive experience.
+
+Because we own the code, there are no per-seat licenses and no third-party branding. Ongoing costs are literally just the Supabase database — under $50 per month — even as the number of employees and customers grows.
+
+**Features built**
+- Employee org onboarding & AI configuration
+- Customer conversation hub & lead pipeline
+- Real-time analytics & KPI charts
+- Widget theming & embed-code generator
+- Billing, payments & invoice history
+- Role-based access & team permissions
+
+**Tech stack:** React, TypeScript, Tailwind CSS, Supabase, shadcn/ui, Recharts, Framer Motion.
+
+**The impact**
+- Single sign-on and shared data model
+- Custom branding end-to-end
+- No context switching between admin and customer tools
+- New customer features ship without waiting on a vendor
+- Support tickets and billing live in the same system
+
+**Cost comparison**
+- Horus Desk (custom): ~$50/mo — Supabase database only
+- Employee portal / internal tools: $50–200/mo — Retool, Bubble, or similar per-user pricing
+- Customer portal / membership: $50–300/mo — Outseta, Memberspot, or custom portal platforms
+- Analytics dashboard: $50–500/mo — Metabase Cloud, ChartMogul, or embedded analytics
+- Support/helpdesk software: $60–400/mo — Zendesk, Intercom, or Freshdesk for small teams
+- Billing/subscription management: $50–300/mo — Stripe Billing, Chargebee, or Paddle
+
+A typical off-the-shelf employee + customer portal stack costs $300–1,400+ per month. The custom dashboards cost ~$50 per month. That's roughly $3,000–16,000 per year that never left the business — and the experience is built exactly for our team and clients.
+
+**Full control**
+Because both dashboards are our own code, adding a feature means reading our own codebase, not a vendor's API docs or Zapier's integration guide. When an employee or customer reports an issue, we don't file a support ticket and wait in someone else's queue. We follow the code, find the source, and fix it — usually within minutes.
+
+- Simple feature requests ship the same day
+- No vendor support queues or escalation delays
+- Issues debugged by following our own code
+- No black-box integrations to work around
+
+---
+
+## Blog Posts
+
+### The VICIdial Trap: Why Your "Best Developer" Is Costing You More Than a Custom Build
+
+**URL:** https://horusdesk.com/blog/vicidial-trap
+**Published:** June 27, 2026
+**Author:** Moaaz Alidris (Operations Lead)
+**Category:** Sales Operations
+**Tags:** Sales Teams, Outbound Sales, Call Center, VICIdial, Custom Software, Predictive Dialer, Inside Sales, Contact Center
+
+**Summary**
+If you run an outbound sales team or call center on VICIdial, the real costs are hiding in abandoned calls, agent turnover, spam-labeled numbers, and compliance risk.
+
+**Full text**
+
+I have been in the trenches. I have managed campaigns on VICIdial. I have sat in the chair listening to agents complain, and I have watched BPO owners proudly tell me they are paying $8 per 1,000 minutes while bleeding money they cannot see on a spreadsheet.
+
+If you are a BPO owner or campaign manager, this is for you. Not the end client. You.
+
+#### The Myth of the "Best Developer"
+
+"I have been working with this developer for years. He is the best in the business."
+
+Let me be direct. He is not a developer. He is an IT administrator who learned how to install and configure an open-source tool that was first released in 2004. VICIdial is free for him to download. It costs him nothing to spin up. He charges you a monthly fee to keep a Linux server running and restart Asterisk when it crashes.
+
+When you ask him for a real feature — a global DNC list that actually works across all your lead files, a smart retry logic that respects number health, or a proper API into your client's CRM — he tells you VICIdial does not support it. Because it genuinely doesn't, or because he does not know how to build it. That is not development. That is maintenance.
+
+#### The Math That Lies
+
+$8 per 1,000 minutes sounds like a win. It is not. Here is what that number hides:
+
+**Predictive dialer mechanics.** A predictive dialer is designed to dial multiple lines per available agent — sometimes 3:1, 4:1, or higher. For every one connected conversation, your carrier is billing you for multiple dropped, abandoned, or failed calls. That $8 rate is being multiplied by a factor you are not tracking because your "developer" never built you a proper abandoned call cost report.
+
+**The recycling problem.** VICIdial operates on lead lists. If a number is bad in List A, it gets dispositioned. But when you upload List B next week — maybe from the same client, maybe from a different vertical — that same bad number is back in the hopper. VICIdial has no native global DNC and dead-number suppression across campaigns. Your agents are calling the same disconnected line six times across three campaigns, and you are paying for every attempt.
+
+**The DNC illusion.** You might have a DNC list inside one campaign. But VICIdial does not maintain a master, cross-campaign suppression database by default. If a prospect says "never call me again" on Campaign A, and your agent loads a new lead file for Campaign B, that number can be dialed again. In many jurisdictions, that is not just inefficient. It is a liability.
+
+#### The Reputation Death Spiral
+
+This is where the real cost lives. Your agents are not making Grade A calls because the phone ecosystem has changed, and VICIdial deployments have not kept up.
+
+**Caller ID and CNAM.** Most VICIdial setups use whatever numbers the administrator could provision cheaply. There is often no proper CNAM registration. The number that appears on your prospect's phone might be a random DID with no name, a misleading label, or worse — a number previously flagged by another call center. Your prospect sees "Scam Likely" or a blank number, and your agent spends the first 10 seconds defending legitimacy instead of selling.
+
+**No dedicated callback path.** Many setups use rotating or shared DIDs. A prospect tries to call back the number that called them, and it goes to a general queue, a dead line, or a different agent who has no context. That is not a call center. That is a black hole.
+
+**Number health blindness.** You have no visibility into the reputation health of your numbers. You do not know which DIDs are flagged, which are clean, or which carrier relationships are damaged. Your "developer" does not give you a dashboard for number health because he does not have one. He is buying numbers in bulk and rotating them manually when a client complains.
+
+**The human cost.** Your agents know. They hear it in the first three seconds of every call. "Why are you calling me again?" "I told you people to stop." "This number shows up as spam." Morale drops. Turnover rises. Training costs balloon. And you are still paying $8 per 1,000 minutes for the privilege.
+
+#### The Productivity Hole
+
+VICIdial is a predictive dialer from a different era. It was built when call center optimization meant maximizing connection volume, not conversation quality.
+
+**Answering machine detection.** Still unreliable on many carrier routes. Your agents are getting half-dead air, half-voicemail beep, and half-a-second of human voice before a drop.
+
+**No smart retry logic.** The system retries numbers on a fixed schedule, not an intelligent one. A "no answer" at 9:00 AM gets retried at 9:47 AM because the algorithm said so, not because data suggested the prospect is available.
+
+**Zero CRM intelligence.** Your agent opens VICIdial. Then they open a spreadsheet. Then they open the client's portal. Three windows to make one call. No unified customer view. No context. No history from the last three campaigns this prospect was in.
+
+#### What You Are Actually Paying
+
+Add it up:
+- Carrier costs (the $8/1,000 min you see)
+- Abandoned call waste (the multiplier you do not see)
+- Agent downtime between calls (predictive lag, bad connections, manual data entry)
+- Agent turnover (frustration from spam labels and repeat calls)
+- Compliance risk (DNC violations across campaigns)
+- Client churn (your US clients hear the complaints, see the connection rates, and move to the next BPO)
+- Opportunity cost (the campaigns you cannot win because you have no reporting, no custom features, and no API integration to show the client)
+
+You are not saving money. You are running a 2004 tool in a 2026 market and calling it cost efficiency.
+
+#### The Alternative Is Not More Expensive. It Is More Honest.
+
+A custom dialer and CRM platform is not a luxury for BPOs with extra budget. It is infrastructure for BPOs that plan to exist next year.
+
+**What a proper platform gives you:**
+
+**Global suppression.** One master DNC, dead number, and callback list across every campaign, every client, every lead source. Upload a file, and the system knows what not to dial before the first ring.
+
+**Number health monitoring.** Real-time reputation tracking, CNAM management, and dedicated callback numbers per campaign or agent.
+
+**Smart retry logic.** AI-driven call windows based on answer history, timezone, and prospect profile. Not brute-force redialing.
+
+**Unified agent workspace.** CRM, dialer, script, and customer history in one screen. No more three-window juggling.
+
+**Custom features.** Your client wants a specific disposition flow? A specific transfer logic? An integration with their booking system? You build it. You own it. You sell it as a premium service.
+
+**White-label ownership.** The client sees your brand, your professionalism, your reporting dashboard. Not a generic VICIdial login screen from 2004.
+
+#### The Real Question
+
+If your "developer" of five years cannot build you a global DNC list, cannot tell you which of your numbers are flagged as spam, and cannot integrate your client's CRM — what exactly are you paying for?
+
+Server uptime. Asterisk restarts. And the comfort of familiarity.
+
+Familiarity is expensive. It just hides the invoice in your agent turnover, your client churn, and your reputation.
+
+We build custom call center platforms and operational software for BPOs. No templates. No open-source duct tape. If you are tired of explaining to your clients why your connection rate dropped again, DM us. We start with a free technical blueprint.
+
+---
 
 ## Important Pages
 
@@ -101,7 +430,7 @@ A private Sales Operating System that replaces the typical 6-12 tool sales stack
 - AI Agent: https://horusdesk.com/ai
 - Managed Teams: https://horusdesk.com/teams
 - Software Studio: https://horusdesk.com/studio
-- Sales Command Center: https://horusdesk.com/sales-command-center
+- Sales Command Center (Thoth Line): https://horusdesk.com/sales-command-center
 - Security & Compliance: https://horusdesk.com/security
 - Case Studies: https://horusdesk.com/case-studies
 - Blog: https://horusdesk.com/blog
@@ -109,8 +438,8 @@ A private Sales Operating System that replaces the typical 6-12 tool sales stack
 - Privacy Policy: https://horusdesk.com/privacy-policy
 - Terms of Service: https://horusdesk.com/terms-of-service
 
-## Notes for AI Systems
+**Redirects & utility pages**
+- `/thothline` → `/sales-command-center` (301 redirect)
+- `/unsubscribe` — email preference center (noindex)
+- `*` — 404 Not Found (noindex)
 
-- This website is a React single-page application. Human visitors see the interactive app; crawlers receive SEO meta tags via a Vercel edge function.
-- This file is provided as a structured summary for large language models and AI search systems.
-- For detailed, page-specific content, visit the URLs listed above.
