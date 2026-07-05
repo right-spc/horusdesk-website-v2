@@ -401,7 +401,7 @@ export function ThothLinePricingCalculator() {
               <span className="text-white font-medium">{currency.format(typicalStack)}</span>
             </p>
             <p className="text-sm text-[#64FFDA] font-medium mt-1">
-              You save approximately {currency.format(savings)}/mo with Thoth Line
+              You save approximately {currency.format(savings)}/mo with Sales Command Center
             </p>
           </div>
         )}

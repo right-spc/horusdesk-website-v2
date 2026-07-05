@@ -59,6 +59,16 @@ Custom web apps, mobile apps, and AI integrations built from scratch.
 - Optional monthly retainers or ad-hoc updates after launch
 - Learn more: https://horusdesk.com/studio
 
+### 4. Horus Sales Command Center — Sales Operating System
+A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. (Previously called Thoth Line.)
+
+- Voice, email, lead management, compliance, and reporting in one system
+- Plans: Base, Command, Control, and Enterprise
+- Usage-based pricing for voice minutes, call recording, phone numbers, email sends, and B2B leads
+- Volume discounts from 5% up to 30%
+- Custom integrations and white-label options available
+- Learn more: https://horusdesk.com/sales-command-center
+
 ## Target Customers
 
 - Service businesses needing 24/7 lead capture (HVAC, home services, professional services)
@@ -91,6 +101,7 @@ Custom web apps, mobile apps, and AI integrations built from scratch.
 - AI Agent: https://horusdesk.com/ai
 - Managed Teams: https://horusdesk.com/teams
 - Software Studio: https://horusdesk.com/studio
+- Sales Command Center: https://horusdesk.com/sales-command-center
 - Security & Compliance: https://horusdesk.com/security
 - Case Studies: https://horusdesk.com/case-studies
 - Blog: https://horusdesk.com/blog

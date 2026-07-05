@@ -31,23 +31,23 @@ const organizationSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Thoth Line',
+  name: 'Sales Command Center',
   provider: {
     '@type': 'Organization',
     name: 'Horus Desk',
   },
   description:
-    'Thoth Line is a private, custom-programmed Sales Operating System that replaces the typical 6-12 tool sales stack with one unified platform.',
+    'Sales Command Center is a private, custom-programmed Sales Operating System that replaces the typical 6-12 tool sales stack with one unified platform.',
   areaServed: 'Global',
 };
 
 const howToSchema = generateHowToSchema({
-  name: 'How Thoth Line setup works',
+  name: 'How Sales Command Center setup works',
   description: 'A 3-step process from discovery to deployment for your custom Sales Operating System.',
   url: 'https://horusdesk.com/sales-command-center',
   steps: [
     { name: 'Discovery', text: 'You tell us your workflow: stages, routing rules, compliance needs, campaigns.', anchor: 'discovery' },
-    { name: 'Programming', text: 'We build your exact process into Thoth Line: IVR, lead distribution, dispositions, email sequences — all hard-coded.', anchor: 'programming' },
+    { name: 'Programming', text: 'We build your exact process into Sales Command Center: IVR, lead distribution, dispositions, email sequences — all hard-coded.', anchor: 'programming' },
     { name: 'Deployment', text: 'Your team logs in. One URL. One system. As fast as 3 days depending on complexity.', anchor: 'deployment' },
   ],
 });
@@ -83,16 +83,16 @@ export function ThothLinePage() {
   return (
     <>
       <SEOHead
-        title="Thoth Line — Sales Operating System | Plans & Pricing | Horus Desk"
-        description="Thoth Line replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system."
+        title="Sales Command Center — Sales Operating System | Plans & Pricing | Horus Desk"
+        description="Sales Command Center replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system."
         canonicalUrl="https://horusdesk.com/sales-command-center"
         ogType="product"
-        ogTitle="Thoth Line | Private Sales Operating System"
-        ogDescription="Thoth Line replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system."
+        ogTitle="Sales Command Center | Private Sales Operating System"
+        ogDescription="Sales Command Center replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system."
         ogUrl="https://horusdesk.com/sales-command-center"
         ogImage="https://horusdesk.com/og-default.png"
-        twitterTitle="Thoth Line | Private Sales Operating System"
-        twitterDescription="Thoth Line replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system."
+        twitterTitle="Sales Command Center | Private Sales Operating System"
+        twitterDescription="Sales Command Center replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system."
         twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, serviceSchema, howToSchema]}
         jsonLdLast={faqPageSchema}

@@ -38,7 +38,7 @@ const services = [
     link: '/studio',
   },
   {
-    title: 'Thoth Line',
+    title: 'Sales Command Center',
     icon: BarChart3,
     iconColor: 'text-[#FF5252]',
     borderColor: 'border-t-[#FF5252]',

@@ -81,6 +81,34 @@ React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python
 
 **Learn more:** https://horusdesk.com/studio
 
+### 4. Horus Sales Command Center — Sales Operating System
+
+A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. (Previously called Thoth Line.)
+
+**Capabilities**
+- Voice calling with timezone display, call recording, call logs, custom IVR, queues, voicemail, after-hours routing, click-to-call, local presence dialing, and number rotation
+- Lead database with custom fields, stages, deduplication, bulk import, distribution, routing, and in-app B2B lead generation
+- Email campaigns, campaign management, and callback scheduling
+- Individual SMS texting and SMS campaigns (coming soon)
+- Agent extensions, custom dispositions and statuses, real-time dashboard, live wallboard, roles and permissions, calendar booking
+- Native DNC management, timezone-aware calling, call recording governance, encrypted storage, data ownership, and SLA guarantees
+- API access, advanced workflow routing, custom integrations, and white-label options
+
+**Plans**
+- Base: $300/mo platform + $10/active seat; setup from $500
+- Command: $400/mo platform + $18/active seat; setup from $1,500
+- Control: $500/mo platform + $22/active seat; setup from $2,500 (coming soon)
+- Enterprise: Custom pricing for 100+ users, white-label, SLA, and custom integrations
+
+**Usage rates (US)**
+- Voice minutes: $0.015/min (volume discounts 5%–30%)
+- Call recording: $0.005/min (volume discounts 5%–30%)
+- Phone numbers: $1/number/mo
+- Email sends: $0.002/email (Command+; volume discounts 5%–30%)
+- B2B leads: $1.50/lead (volume discounts 5%–30%)
+
+**Learn more:** https://horusdesk.com/sales-command-center
+
 ---
 
 ## Target Customers
