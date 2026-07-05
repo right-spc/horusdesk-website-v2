@@ -118,7 +118,7 @@ React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python
 
 ### 4. Horus Sales Command Center — Sales Operating System
 
-A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. Also called Thoth Line.
+A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. Also called Thoth Line. Currently in beta.
 
 **Problem it solves**
 The average sales team juggles 6 to 12 tools, leading to data silos, context switching, compliance as an afterthought, integration fragility, and paying five vendors for one workflow.
