@@ -8,11 +8,15 @@ import { CalendarButton } from '@/components/buttons/CalendarButton';
 const faqs = [
   {
     question: 'Do I own the source code?',
-    answer: 'Yes. Everything we build is yours. We deliver the full source code repository, documentation, and deployment credentials at handoff. You can modify it, host it elsewhere, or hire another team — no restrictions.',
+    answer: 'Yes. With our Build & Own option, everything we build is yours. We deliver the full source code repository, documentation, and deployment credentials at handoff. With our Managed Platform option, you can buy the code at any time.',
+  },
+  {
+    question: 'What is the difference between Build & Own and Managed Platform?',
+    answer: 'Build & Own is a one-time custom build. You own 100% of the source code, data, and IP, with an optional maintenance retainer after launch. Managed Platform is a low setup fee plus a fixed monthly subscription. We build it, host it, maintain it, and secure it. You get full access and can buy the code at any time.',
   },
   {
     question: 'What if I need changes after launch?',
-    answer: 'We offer monthly retainers for ongoing development, or you can hire us ad-hoc for specific updates. Alternatively, your in-house team can take over since you own the full codebase and documentation.',
+    answer: 'For Build & Own projects, we offer monthly retainers for ongoing development, or you can hire us ad-hoc for specific updates. Alternatively, your in-house team can take over since you own the full codebase and documentation. For Managed Platform clients, maintenance, hosting, security updates, and support are included.',
   },
   {
     question: 'What technologies do you use?',
@@ -93,7 +97,7 @@ export function StudioFAQSection() {
         </SectionWrapper>
 
         <SectionWrapper delay={0.2} className="mt-16">
-          <div className="bg-navy border border-[rgba(226,232,240,0.08)] rounded-2xl p-8 text-center">
+          <div className="bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-2xl p-8 text-center">
             <h3 className="text-xl font-medium text-white mb-6">Still have questions?</h3>
             <div className="flex flex-wrap justify-center gap-4">
               <ChatButton>Ask Horus AI</ChatButton>

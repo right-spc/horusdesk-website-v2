@@ -1,36 +1,79 @@
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 
-const steps = [
+const buildOwnSteps = [
   {
+    id: 'discovery',
     number: '01',
     title: 'Discovery',
     description:
       'We interview your team, map your workflows, and identify the real bottlenecks. Not surface-level requirements — we find the root problem.',
   },
   {
+    id: 'scope',
     number: '02',
     title: 'Scope',
     description:
       'Fixed deliverables, fixed timeline, fixed price. No scope creep surprises. You know exactly what you\'re getting before we write a single line of code.',
   },
   {
+    id: 'sprint',
     number: '03',
     title: 'Sprint',
     description:
       'Weekly demos, not monthly reports. You see working software every 7 days and can pivot immediately if priorities change.',
   },
   {
+    id: 'launch',
     number: '04',
     title: 'Launch',
     description:
       'We handle deployment, SSL, DNS, monitoring, and backups. Your tool goes live without you touching a server.',
   },
   {
+    id: 'handoff',
     number: '05',
     title: 'Handoff',
     description:
       'Full documentation, source code repository access, and team training. You can maintain it in-house or keep us on retainer.',
+  },
+];
+
+const managedSteps = [
+  {
+    id: 'discovery-managed',
+    number: '01',
+    title: 'Discovery',
+    description:
+      'We interview your team, map your workflows, and identify bottlenecks.',
+  },
+  {
+    id: 'scope-managed',
+    number: '02',
+    title: 'Scope',
+    description:
+      'Fixed deliverables, fixed timeline, fixed monthly price. No surprises.',
+  },
+  {
+    id: 'sprint-managed',
+    number: '03',
+    title: 'Sprint',
+    description:
+      'Weekly demos. You see working software every 7 days.',
+  },
+  {
+    id: 'launch-managed',
+    number: '04',
+    title: 'Launch',
+    description:
+      'We handle deployment, SSL, DNS, monitoring, and backups. Your tool goes live.',
+  },
+  {
+    id: 'ongoing-management',
+    number: '05',
+    title: 'Ongoing Management',
+    description:
+      'We handle hosting, security patches, updates, and support. You focus on your business. Scale up or down monthly.',
   },
 ];
 
@@ -51,6 +94,36 @@ const stepVariants = {
   },
 };
 
+function Timeline({ steps }: { steps: typeof buildOwnSteps }) {
+  return (
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-100px' }}
+      className="relative"
+    >
+      {/* Gradient line */}
+      <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#7C4DFF] to-transparent" />
+
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 relative">
+        {steps.map((step) => (
+          <motion.div
+            key={step.number}
+            id={step.id}
+            variants={stepVariants}
+            className="text-center lg:text-left scroll-mt-28"
+          >
+            <span className="font-mono text-2xl text-[#7C4DFF] block mb-3">{step.number}</span>
+            <h3 className="text-lg font-medium text-white mb-2">{step.title}</h3>
+            <p className="text-sm text-[#94A3B8] leading-relaxed">{step.description}</p>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
 export function StudioProcessSection() {
   return (
     <section className="bg-navy py-16 lg:py-24">
@@ -64,32 +137,21 @@ export function StudioProcessSection() {
           </h2>
         </SectionWrapper>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className="relative"
-        >
-          {/* Gradient line */}
-          <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#7C4DFF] to-transparent" />
-
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 relative">
-            {steps.map((step) => (
-              <motion.div
-                key={step.number}
-                variants={stepVariants}
-                className="text-center lg:text-left"
-              >
-                <span className="font-mono text-2xl text-[#7C4DFF] block mb-3">{step.number}</span>
-                <h3 className="text-lg font-medium text-white mb-2">{step.title}</h3>
-                <p className="text-sm text-[#94A3B8] leading-relaxed">{step.description}</p>
-              </motion.div>
-            ))}
+        <div className="space-y-16">
+          <div>
+            <h3 className="text-xl font-medium text-white mb-8 text-center lg:text-left">
+              Build & Own Path
+            </h3>
+            <Timeline steps={buildOwnSteps} />
           </div>
-        </motion.div>
 
-
+          <div>
+            <h3 className="text-xl font-medium text-white mb-8 text-center lg:text-left">
+              Managed Platform Path
+            </h3>
+            <Timeline steps={managedSteps} />
+          </div>
+        </div>
       </div>
     </section>
   );

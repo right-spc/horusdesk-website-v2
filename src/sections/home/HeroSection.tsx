@@ -45,7 +45,7 @@ export function HeroSection() {
               variants={itemVariants}
               className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-6"
             >
-              AI + TEAMS + SOFTWARE FOR SERVICE BUSINESSES
+              Operations Run by Software. Or by People. Or Both.
             </motion.p>
 
             <motion.h1
@@ -78,7 +78,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Code2 size={16} className="text-[#94A3B8]" aria-hidden="true" />
-                <span className="text-sm text-[#94A3B8]">Custom software you own</span>
+                <span className="text-sm text-[#94A3B8]">Custom software</span>
               </div>
             </motion.div>
           </motion.div>

@@ -20,10 +20,42 @@ const companyLinks = [
 
 export function Footer() {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    setEmail('');
+    setSubmitError(null);
+
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setSubmitError('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/send-newsletter-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to subscribe');
+      }
+
+      setSubmitted(true);
+      setEmail('');
+    } catch (err) {
+      console.error('Newsletter submission error:', err);
+      setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,21 +107,33 @@ export function Footer() {
           {/* Column 4 - Newsletter */}
           <div>
             <h4 className="text-xs font-medium tracking-wider uppercase text-[#94A3B8] mb-4">Newsletter</h4>
-            <form onSubmit={handleSubscribe} className="flex gap-2 mb-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl text-white placeholder-[#94A3B8] px-4 py-2.5 text-sm focus:border-[#64FFDA] focus:outline-none transition-colors duration-300"
-              />
-              <button
-                type="submit"
-                className="bg-[#64FFDA] text-navy rounded-xl px-4 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
+            {submitted ? (
+              <p className="text-sm text-[#64FFDA] mb-4">Thanks for subscribing!</p>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-2 mb-4">
+                <div className="flex gap-2">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (submitError) setSubmitError(null);
+                    }}
+                    placeholder="Enter your email"
+                    disabled={isSubmitting}
+                    className="flex-1 bg-navy-light border border-[rgba(226,232,240,0.08)] rounded-xl text-white placeholder-[#94A3B8] px-4 py-2.5 text-sm focus:border-[#64FFDA] focus:outline-none transition-colors duration-300 disabled:opacity-60"
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-[#64FFDA] text-navy rounded-xl px-4 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? '...' : 'Subscribe'}
+                  </button>
+                </div>
+                {submitError && <p className="text-red-400 text-xs">{submitError}</p>}
+              </form>
+            )}
             <div className="flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/company/right-space-llc"

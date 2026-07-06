@@ -4,6 +4,7 @@ import { resolve } from 'path';
 import { siteRoutes, DEFAULT_IMAGE } from '../src/data/siteRoutes.js';
 import { caseStudies } from '../src/data/caseStudies.js';
 import { blogPosts } from '../src/data/blogMeta.js';
+import { generateBreadcrumbList, generateHowToSchema, generateFAQPageSchema } from '../src/lib/seo.js';
 
 interface RouteMeta {
   title: string;
@@ -175,6 +176,14 @@ function generateHeadBlock(meta: RouteMeta): string {
     jsonLdScripts.push(
       `<script type="application/ld+json">\n${JSON.stringify(websiteSchema, null, 2)}\n    </script>`
     );
+    jsonLdScripts.push(
+      `<script type="application/ld+json">\n${JSON.stringify(generateBreadcrumbList(canonicalUrl), null, 2)}\n    </script>`
+    );
+    getPageSchemas(normalizePath(canonicalUrl)).forEach((schema) => {
+      jsonLdScripts.push(
+        `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>`
+      );
+    });
   }
 
   return `    <title>${title}</title>
@@ -205,6 +214,74 @@ function generateHeadBlock(meta: RouteMeta): string {
     <!-- JSON-LD -->
     ${jsonLdScripts.join('\n    ')}
 `;
+}
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Software Studio',
+  provider: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+  },
+  description: 'Custom web application development, mobile apps, and AI integrations built entirely from scratch. Two options: Build & Own, or a managed platform with low setup fee and monthly subscription.',
+  areaServed: 'Global',
+};
+
+const buildOwnHowToSchema = generateHowToSchema({
+  name: 'How Horus Desk Build & Own custom software works',
+  description: 'A 5-step process from discovery to handoff for custom software development.',
+  url: 'https://horusdesk.com/studio',
+  steps: [
+    { name: 'Discovery', text: 'We interview your team, map your workflows, and identify the real bottlenecks. Not surface-level requirements — we find the root problem.', anchor: 'discovery' },
+    { name: 'Scope', text: 'Fixed deliverables, fixed timeline, fixed price. No scope creep surprises. You know exactly what you\'re getting before we write a single line of code.', anchor: 'scope' },
+    { name: 'Sprint', text: 'Weekly demos, not monthly reports. You see working software every 7 days and can pivot immediately if priorities change.', anchor: 'sprint' },
+    { name: 'Launch', text: 'We handle deployment, SSL, DNS, monitoring, and backups. Your tool goes live without you touching a server.', anchor: 'launch' },
+    { name: 'Handoff', text: 'Full documentation, source code repository access, and team training. You can maintain it in-house or keep us on retainer.', anchor: 'handoff' },
+  ],
+});
+
+const managedPlatformHowToSchema = generateHowToSchema({
+  name: 'How Horus Desk Managed Custom Platform works',
+  description: 'A 5-step process from discovery to ongoing management for a managed custom platform.',
+  url: 'https://horusdesk.com/studio',
+  steps: [
+    { name: 'Discovery', text: 'We interview your team, map your workflows, and identify bottlenecks.', anchor: 'discovery-managed' },
+    { name: 'Scope', text: 'Fixed deliverables, fixed timeline, fixed monthly price. No surprises.', anchor: 'scope-managed' },
+    { name: 'Sprint', text: 'Weekly demos. You see working software every 7 days.', anchor: 'sprint-managed' },
+    { name: 'Launch', text: 'We handle deployment, SSL, DNS, monitoring, and backups. Your tool goes live.', anchor: 'launch-managed' },
+    { name: 'Ongoing Management', text: 'We handle hosting, security patches, updates, and support. You focus on your business. Scale up or down monthly.', anchor: 'ongoing-management' },
+  ],
+});
+
+const studioFAQSchema = generateFAQPageSchema([
+  {
+    question: 'Do I own the source code?',
+    answer: 'Yes. With our Build & Own option, everything we build is yours. We deliver the full source code repository, documentation, and deployment credentials at handoff. With our Managed Platform option, you can buy the code at any time.',
+  },
+  {
+    question: 'What is the difference between Build & Own and Managed Platform?',
+    answer: 'Build & Own is a one-time custom build. You own 100% of the source code, data, and IP, with an optional maintenance retainer after launch. Managed Platform is a low setup fee plus a fixed monthly subscription. We build it, host it, maintain it, and secure it. You get full access and can buy the code at any time.',
+  },
+  {
+    question: 'What if I need changes after launch?',
+    answer: 'For Build & Own projects, we offer monthly retainers for ongoing development, or you can hire us ad-hoc for specific updates. Alternatively, your in-house team can take over since you own the full codebase and documentation. For Managed Platform clients, maintenance, hosting, security updates, and support are included.',
+  },
+  {
+    question: 'What technologies do you use?',
+    answer: 'React, Next.js, TypeScript for web. React Native or Flutter for mobile. Node.js, Python, or Go for backends. PostgreSQL or Supabase for databases. We pick the stack that fits your project, not our comfort zone.',
+  },
+  {
+    question: 'Can you integrate with our existing tools?',
+    answer: 'Yes. We build native API integrations with whatever you already use — QuickBooks, Stripe, Twilio, Google Calendar, or internal systems. No Zapier workarounds. Real, robust integrations.',
+  },
+]);
+
+function getPageSchemas(path: string): Record<string, unknown>[] {
+  if (path === '/studio') {
+    return [serviceSchema, buildOwnHowToSchema, managedPlatformHowToSchema, studioFAQSchema];
+  }
+  return [];
 }
 
 function readIndexHtml(): string {

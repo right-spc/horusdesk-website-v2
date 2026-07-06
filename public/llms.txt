@@ -91,7 +91,20 @@ Fully managed customer support and sales teams based in Cairo, Egypt.
 
 ### 3. Horus Software Studio — Custom Development
 
-Custom web apps, mobile apps, and AI integrations built from scratch.
+Custom web apps, mobile apps, and AI integrations built from scratch. Two ways to get custom software:
+
+**Option A: Build & Own**
+- One-time custom build
+- You own 100% of the source code, data, and IP
+- No recurring licensing fees
+- Optional maintenance retainer after launch
+
+**Option B: Managed Custom Platform**
+- Low setup fee plus fixed monthly subscription
+- We build it, host it, maintain it, and secure it
+- You get full access and a dedicated dashboard
+- Buyout available at any time
+- Cancel with 30 days' notice
 
 **What we build**
 - Custom CRM & ERP systems
@@ -107,15 +120,21 @@ React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python
 - Projects priced based on scope and requirements
 - Free system audit and technical blueprint before any payment
 - Fixed deliverables, timeline, and price
-- Clients own 100% of source code, data, and IP
-- Optional monthly retainers or ad-hoc updates after launch
+- No hourly billing or surprise invoices
 
-**How it works**
+**How it works — Build & Own path**
 1. Discovery — We interview your team, map your workflows, and identify the real bottlenecks.
 2. Scope — Fixed deliverables, timeline, and price before any code is written.
 3. Sprint — Weekly demos so you see working software every 7 days.
 4. Launch — We handle deployment, SSL, DNS, monitoring, and backups.
 5. Handoff — Full documentation, source-code access, and team training. You own everything.
+
+**How it works — Managed Platform path**
+1. Discovery — We interview your team and map workflows.
+2. Scope — Fixed deliverables, timeline, and monthly price.
+3. Sprint — Weekly demos so you see working software every 7 days.
+4. Launch — We handle deployment, SSL, DNS, monitoring, and backups.
+5. Ongoing Management — We handle hosting, security patches, updates, and support.
 
 **Learn more:** https://horusdesk.com/studio
 

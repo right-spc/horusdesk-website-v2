@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { ChatButton } from '@/components/buttons/ChatButton';
-import { CalendarButton } from '@/components/buttons/CalendarButton';
 import { StudioBlueprint } from '@/components/shared/StudioBlueprint';
+import { CalendarButton } from '@/components/buttons/CalendarButton';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -54,11 +53,10 @@ export function StudioHeroSection() {
               variants={itemVariants}
               className="text-lg text-[#94A3B8] leading-relaxed mb-8 max-w-xl"
             >
-              Custom web apps, mobile development, and AI integrations built from scratch. You own the code. You own the data. No subscriptions. No vendor lock-in.
+              Custom web apps, mobile development, and AI integrations built from scratch. Buy it outright and own everything. Or subscribe to a managed platform we build and host for you. Either way, it fits your exact workflow — not a generic template.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-              <ChatButton>Ask Horus AI</ChatButton>
+            <motion.div variants={itemVariants}>
               <CalendarButton>Book a Discovery Call</CalendarButton>
             </motion.div>
           </motion.div>

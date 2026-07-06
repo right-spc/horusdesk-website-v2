@@ -22,11 +22,30 @@ const ContactPage = lazy(() => import('@/pages/ContactPage').then(m => ({ defaul
 const UnsubscribePage = lazy(() => import('@/pages/UnsubscribePage').then(m => ({ default: m.UnsubscribePage })));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
+function ScrollToHashOrTop() {
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '');
+      const scrollToElement = () => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      // Try immediately in case the element is already rendered.
+      scrollToElement();
+
+      // Fallback for lazy-loaded routes.
+      const timer = setTimeout(scrollToElement, 150);
+      return () => clearTimeout(timer);
+    }
+
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
+
   return null;
 }
 
@@ -48,7 +67,7 @@ function App() {
       >
         Skip to main content
       </a>
-      <ScrollToTop />
+      <ScrollToHashOrTop />
       <Navbar />
       <Suspense fallback={<PageLoader />}>
         <Routes>

@@ -4,9 +4,11 @@ import { StudioHeroSection } from '@/sections/studio/StudioHeroSection';
 import { StudioTrustBar } from '@/sections/studio/StudioTrustBar';
 import { StudioServicesSection } from '@/sections/studio/StudioServicesSection';
 import { StudioWhyCustomSection } from '@/sections/studio/StudioWhyCustomSection';
+import { StudioValuePropositionSection } from '@/sections/studio/StudioValuePropositionSection';
 import { StudioCaseStudiesSection } from '@/sections/studio/StudioCaseStudiesSection';
 import { StudioTechStackSection } from '@/sections/studio/StudioTechStackSection';
 import { StudioProcessSection } from '@/sections/studio/StudioProcessSection';
+import { StudioChooseModelSection } from '@/sections/studio/StudioChooseModelSection';
 import { StudioAuditCTASection } from '@/sections/studio/StudioAuditCTASection';
 import { StudioComparisonSection } from '@/sections/studio/StudioComparisonSection';
 import { StudioFAQSection } from '@/sections/studio/StudioFAQSection';
@@ -37,12 +39,12 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'Horus Desk',
   },
-  description: 'Custom web application development, mobile apps, and AI integrations built entirely from scratch. No third-party or no-code tools used. Project-based and retainer options available.',
+  description: 'Custom web application development, mobile apps, and AI integrations built entirely from scratch. Two options: Build & Own, or a managed platform with low setup fee and monthly subscription.',
   areaServed: 'Global',
 };
 
-const howToSchema = generateHowToSchema({
-  name: 'How Horus Desk Software Studio works',
+const buildOwnHowToSchema = generateHowToSchema({
+  name: 'How Horus Desk Build & Own custom software works',
   description: 'A 5-step process from discovery to handoff for custom software development.',
   url: 'https://horusdesk.com/studio',
   steps: [
@@ -54,14 +56,31 @@ const howToSchema = generateHowToSchema({
   ],
 });
 
+const managedPlatformHowToSchema = generateHowToSchema({
+  name: 'How Horus Desk Managed Custom Platform works',
+  description: 'A 5-step process from discovery to ongoing management for a managed custom platform.',
+  url: 'https://horusdesk.com/studio',
+  steps: [
+    { name: 'Discovery', text: 'We interview your team, map your workflows, and identify bottlenecks.', anchor: 'discovery-managed' },
+    { name: 'Scope', text: 'Fixed deliverables, fixed timeline, fixed monthly price. No surprises.', anchor: 'scope-managed' },
+    { name: 'Sprint', text: 'Weekly demos. You see working software every 7 days.', anchor: 'sprint-managed' },
+    { name: 'Launch', text: 'We handle deployment, SSL, DNS, monitoring, and backups. Your tool goes live.', anchor: 'launch-managed' },
+    { name: 'Ongoing Management', text: 'We handle hosting, security patches, updates, and support. You focus on your business. Scale up or down monthly.', anchor: 'ongoing-management' },
+  ],
+});
+
 const faqPageSchema = generateFAQPageSchema([
   {
     question: 'Do I own the source code?',
-    answer: 'Yes. Everything we build is yours. We deliver the full source code repository, documentation, and deployment credentials at handoff. You can modify it, host it elsewhere, or hire another team — no restrictions.',
+    answer: 'Yes. With our Build & Own option, everything we build is yours. We deliver the full source code repository, documentation, and deployment credentials at handoff. With our Managed Platform option, you can buy the code at any time.',
+  },
+  {
+    question: 'What is the difference between Build & Own and Managed Platform?',
+    answer: 'Build & Own is a one-time custom build. You own 100% of the source code, data, and IP, with an optional maintenance retainer after launch. Managed Platform is a low setup fee plus a fixed monthly subscription. We build it, host it, maintain it, and secure it. You get full access and can buy the code at any time.',
   },
   {
     question: 'What if I need changes after launch?',
-    answer: 'We offer monthly retainers for ongoing development, or you can hire us ad-hoc for specific updates. Alternatively, your in-house team can take over since you own the full codebase and documentation.',
+    answer: 'For Build & Own projects, we offer monthly retainers for ongoing development, or you can hire us ad-hoc for specific updates. Alternatively, your in-house team can take over since you own the full codebase and documentation. For Managed Platform clients, maintenance, hosting, security updates, and support are included.',
   },
   {
     question: 'What technologies do you use?',
@@ -78,17 +97,17 @@ export function StudioPage() {
     <>
       <SEOHead
         title="Software Studio | Custom Development Built From Scratch"
-        description="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope."
+        description="Custom web apps, mobile development, and AI integrations built from scratch. Choose Build & Own or a managed platform. Free audit and blueprint before you pay."
         canonicalUrl="https://horusdesk.com/studio"
         ogType="product"
         ogTitle="Software Studio | Custom Development Built From Scratch"
-        ogDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope."
+        ogDescription="Custom web apps, mobile development, and AI integrations built from scratch. Choose Build & Own or a managed platform. Free audit and blueprint before you pay."
         ogUrl="https://horusdesk.com/studio"
         ogImage="https://horusdesk.com/og-default.png"
         twitterTitle="Software Studio | Custom Development Built From Scratch"
-        twitterDescription="Custom web apps, mobile development, and AI integrations built from scratch. You own the code and data. No subscriptions. Custom pricing based on scope."
+        twitterDescription="Custom web apps, mobile development, and AI integrations built from scratch. Choose Build & Own or a managed platform. Free audit and blueprint before you pay."
         twitterImage="https://horusdesk.com/og-default.png"
-        jsonLd={[organizationSchema, serviceSchema, howToSchema]}
+        jsonLd={[organizationSchema, serviceSchema, buildOwnHowToSchema, managedPlatformHowToSchema]}
         jsonLdLast={faqPageSchema}
       />
       <main id="main-content">
@@ -96,10 +115,12 @@ export function StudioPage() {
         <StudioTrustBar />
         <StudioServicesSection />
         <StudioWhyCustomSection />
+        <StudioValuePropositionSection />
         <StudioTechStackSection />
-        <StudioProcessSection />
-        <StudioAuditCTASection />
         <StudioComparisonSection />
+        <StudioProcessSection />
+        <StudioChooseModelSection />
+        <StudioAuditCTASection />
         <StudioCaseStudiesSection />
         <StudioFAQSection />
       </main>

@@ -4,7 +4,7 @@ import { CalendarButton } from '@/components/buttons/CalendarButton';
 
 export function StudioAuditCTASection() {
   return (
-    <section className="bg-navy-light border-y border-[rgba(124,77,255,0.1)]">
+    <section className="bg-navy border-y border-[rgba(124,77,255,0.1)]">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8 py-16 lg:py-24">
         <SectionWrapper className="text-center">
           <p className="text-xs font-medium tracking-wider uppercase text-[#7C4DFF] mb-4">

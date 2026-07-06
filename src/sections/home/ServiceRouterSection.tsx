@@ -22,7 +22,7 @@ const services = [
     borderColor: 'border-t-[#FFAB40]',
     linkColor: 'text-[#FFAB40]',
     hoverClass: 'hover:border-[rgba(255,171,64,0.15)] hover:shadow-[0_0_40px_rgba(255,171,64,0.08)]',
-    description: 'Managed customer support and sales teams. Fully managed. No candidate screening required.',
+    description: 'Remote teams based in Egypt across support, operations, sales, and technical functions. Fully managed — no candidate screening required.',
     price: '$10–35/hr',
     link: '/teams',
   },
