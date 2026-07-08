@@ -15,7 +15,9 @@ interface ComparisonRow {
 const rows: ComparisonRow[] = [
   { label: 'Platform Fee', base: '$300/mo', command: '$400/mo', control: '$500/mo', enterprise: 'Custom' },
   { label: 'Per Active Seat', base: '$10', command: '$18', control: '$22', enterprise: 'Custom' },
-  { label: 'Voice, leads, core workflow', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
+  { label: 'Voice', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
+  { label: 'Leads', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
+  { label: 'Core workflow', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Email campaigns', base: 'no', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Individual SMS texting', base: 'no', command: 'soon', control: 'soon', enterprise: 'soon' },
   { label: 'API access & webhooks', base: 'no', command: 'no', control: 'soon', enterprise: 'soon' },
