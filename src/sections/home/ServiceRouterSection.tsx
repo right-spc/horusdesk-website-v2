@@ -47,6 +47,7 @@ const services = [
     description: 'A private Sales Operating System where your entire workflow — voice, email, leads, compliance, and reporting — runs in one custom-built platform.',
     price: 'From $300/mo + usage',
     link: '/sales-command-center',
+    beta: true,
   },
 ];
 
@@ -99,7 +100,14 @@ export function ServiceRouterSection() {
               `}
             >
               <service.icon className={`${service.iconColor} mb-4`} size={28} />
-              <h3 className="text-xl font-medium text-white mb-3">{service.title}</h3>
+              <div className="flex items-center gap-2 mb-3">
+                <h3 className="text-xl font-medium text-white">{service.title}</h3>
+                {service.beta && (
+                  <span className="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#FF5252]/10 text-[#FF5252] border border-[#FF5252]/20">
+                    Beta
+                  </span>
+                )}
+              </div>
               <p className="text-[#94A3B8] mb-6">{service.description}</p>
               <p className="text-white font-medium mb-4">{service.price}</p>
               <Link

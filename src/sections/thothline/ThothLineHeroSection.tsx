@@ -39,13 +39,20 @@ export function ThothLineHeroSection() {
             initial="hidden"
             animate="visible"
           >
-            <motion.p
+            <motion.div
               variants={itemVariants}
-              className="text-xs font-medium tracking-wider uppercase mb-6"
-              style={{ color: ACCENT }}
+              className="flex items-center gap-3 mb-6"
             >
-              THOTH LINE
-            </motion.p>
+              <span
+                className="text-xs font-medium tracking-wider uppercase"
+                style={{ color: ACCENT }}
+              >
+                THOTH LINE
+              </span>
+              <span className="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#FF5252]/10 text-[#FF5252] border border-[#FF5252]/20">
+                Beta
+              </span>
+            </motion.div>
 
             <motion.h1
               variants={itemVariants}
