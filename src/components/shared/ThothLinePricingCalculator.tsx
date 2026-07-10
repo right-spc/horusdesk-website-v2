@@ -223,7 +223,7 @@ export function ThothLinePricingCalculator() {
       gated: !tier.supportsEmail,
     },
     {
-      label: 'B2B leads',
+      label: 'B2B Leads',
       count: `${leads.toLocaleString()} leads`,
       pre: leads * usageRates.lead,
       final: leadsCost,
@@ -236,7 +236,7 @@ export function ThothLinePricingCalculator() {
   const emailRateLabel = tier.supportsEmail
     ? `${formatUnitRate(emailEffectiveRate)}/email${emailDiscount > 0 ? ` · ${Math.round(emailDiscount * 100)}% off` : ' · Up to 30% volume discount'}`
     : undefined;
-  const leadsRateLabel = `${formatUnitRate(leadsEffectiveRate)}/lead${leadsDiscount > 0 ? ` · ${Math.round(leadsDiscount * 100)}% off` : ' · Up to 30% volume discount'}`;
+  const leadsRateLabel = `${formatUnitRate(leadsEffectiveRate)}/contact${leadsDiscount > 0 ? ` · ${Math.round(leadsDiscount * 100)}% off` : ' · Up to 30% volume discount'}`;
 
   return (
     <div className="bg-surface border border-[rgba(226,232,240,0.08)] rounded-2xl p-6 lg:p-8">
@@ -340,7 +340,7 @@ export function ThothLinePricingCalculator() {
           )}
         </div>
         <SliderField
-          label="B2B leads"
+          label="B2B Leads"
           rate={leadsRateLabel}
           value={leads}
           max={5_000}
