@@ -17,6 +17,7 @@ const rows: ComparisonRow[] = [
   { label: 'Per Active Seat', base: '$10', command: '$18', control: '$22', enterprise: 'Custom' },
   { label: 'Voice & calling (live calls, IVR, queues, recording)', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Lead database (capture, routing, deduplication)', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
+  { label: 'B2B lead generation', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Core workflow (stages, tasks, agent tools)', base: 'yes', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Email campaigns', base: 'no', command: 'yes', control: 'yes', enterprise: 'yes' },
   { label: 'Individual SMS texting', base: 'no', command: 'soon', control: 'soon', enterprise: 'soon' },
