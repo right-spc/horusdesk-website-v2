@@ -1,6 +1,7 @@
 {
   "redirects": [
-    { "source": "/thothline", "destination": "/sales-command-center", "permanent": true }
+    { "source": "/thothline", "destination": "/sales-command-center", "permanent": true },
+    { "source": "/.well-known/llms.txt", "destination": "/llms.txt", "permanent": true }
   ],
   "rewrites": [
     {
@@ -9,7 +10,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "[Ll]inkedin|[Ff]acebook|[Tt]witter|[Ss]lack|[Dd]iscord|[Ww]hats[Aa]pp|[Tt]elegram|[Gg]ooglebot|[Bb]ingbot|[Aa]pplebot|[Yy]andex|[Bb]aidu|[Cc]rawler|[Ss]pider|[Bb]ot"
+          "value": "[Ll]inkedin|[Ff]acebook|[Tt]witter|[Ss]lack|[Dd]iscord|[Ww]hats[Aa]pp|[Tt]elegram|[Gg]ooglebot|[Bb]ingbot|[Aa]pplebot|[Yy]andex|[Bb]aidu|[Cc]rawler|[Ss]pider|[Bb]ot|[Aa]nthropic|[Cc]laude|[Oo]pen[Aa]i|[Gg]pt[Bb]ot|[Cc]hat[Gg]pt|[Pp]erplexity|[Ll]lama|[Mm]istral|[Cc]ohere"
         }
       ],
       "destination": "/api/seo?path=/$1"

@@ -190,6 +190,7 @@ function generateHeadBlock(meta: RouteMeta): string {
     <meta name="description" content="${description}" />
     <meta name="robots" content="${robots}" />
     <link rel="canonical" href="${canonicalUrl}" />
+    <link rel="llms-txt" href="/llms.txt" />
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="${SITE_NAME}" />
@@ -325,6 +326,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     );
 
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('Link', '</llms.txt>; rel="llms-txt"');
     return res.status(status).send(modified);
   } catch (err) {
     console.error('SEO handler error:', err);
