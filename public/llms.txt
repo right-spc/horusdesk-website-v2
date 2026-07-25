@@ -22,7 +22,7 @@ This file contains the full text of Horus Desk services, case studies, and blog 
 
 - Headline: "Scale Your Operations Without Adding Headaches"
 - Sub-line: "AI receptionists, expert teams, and custom software — built for service businesses. We handle the setup. You focus on growth."
-- Service router framing: "One partner, four ways to scale" — AI Agent, Managed Teams, Software Studio, and Sales Command Center (also called Thoth Line).
+- Service router framing: "One partner, three ways to scale" — AI Agent, Managed Teams, and Software Studio.
 - No-risk entry points:
   - AI Agent: Free setup and no contracts; run a pilot before committing.
   - Managed Teams: 3-month proof of concept before a long-term contract.
@@ -138,64 +138,6 @@ React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python
 
 **Learn more:** https://horusdesk.com/studio
 
-### 4. Horus Sales Command Center — Sales Operating System
-
-A private Sales Operating System that replaces the typical 6-12 tool sales stack with one custom-built platform. Also called Thoth Line. Currently in beta.
-
-**Problem it solves**
-The average sales team juggles 6 to 12 tools, leading to data silos, context switching, compliance as an afterthought, integration fragility, and paying five vendors for one workflow.
-
-**Solution**
-We take your existing sales process — stages, scripts, compliance rules, routing logic — and program it into a private system. Voice, email, calendar, leads, and reporting unified in one interface. Because we built it, we can change it.
-
-**Capabilities**
-- Voice calling with timezone display, call recording, call logs, custom IVR, queues, voicemail, after-hours routing, click-to-call, local presence dialing, and number rotation
-- Lead database with custom fields, stages, deduplication, bulk import, distribution, routing, and in-app B2B lead generation
-- Email campaigns, campaign management, and callback scheduling
-- Individual SMS texting and SMS campaigns (coming soon)
-- Agent extensions, custom dispositions and statuses, real-time dashboard, live wallboard, roles and permissions, calendar booking
-- Native DNC management, timezone-aware calling, call recording governance, encrypted storage, data ownership, and SLA guarantees
-- API access, advanced workflow routing, custom integrations, and white-label options
-
-**Plan comparison**
-
-| Feature | Base | Command | Control | Enterprise |
-|---|---|---|---|---|
-| Platform fee | $300/mo | $400/mo | $500/mo | Custom |
-| Per active seat | $10 | $18 | $22 | Custom |
-| Voice, leads, core workflow | yes | yes | yes | yes |
-| Email campaigns | no | yes | yes | yes |
-| Individual SMS texting | soon | soon | soon | soon |
-| API access & webhooks | no | no | soon | soon |
-| Advanced workflow routing | no | no | yes | yes |
-| SMS campaigns | no | no | soon | soon |
-| Custom integrations | no | no | custom | custom |
-| White-label | no | no | no | yes |
-
-**Plan details**
-- Base (live) — Voice & calling, lead database & core workflow, native compliance tools, dedicated account manager.
-- Command (live) — Everything in Base plus email campaigns, campaign management, and individual SMS texting (coming soon).
-- Control (coming soon) — Everything in Command plus API access, advanced workflow routing, and SMS campaigns.
-- Enterprise (custom) — 100+ users, white-label options, custom integrations, SLA guarantee.
-
-**Usage rates (US)**
-- Voice minutes: $0.015/min (volume discounts 5%–30%)
-- Call recording: $0.005/min (volume discounts 5%–30%)
-- Phone numbers: $1/number/mo
-- Email sends: $0.002/email (Command+; volume discounts 5%–30%)
-- B2B leads: $1.50/lead (volume discounts 5%–30%)
-
-**How it works**
-1. Discovery — You tell us your workflow: stages, routing rules, compliance needs, campaigns.
-2. Programming — We build your exact process into Sales Command Center: IVR, lead distribution, dispositions, email sequences — all hard-coded.
-3. Deployment — Your team logs in. One URL. One system. As fast as 3 days depending on complexity.
-
-**Notes**
-- Platform fee is waived at 50 active seats.
-- The `/thothline` URL redirects (301) to `/sales-command-center`.
-
-**Learn more:** https://horusdesk.com/sales-command-center
-
 ---
 
 ## Target Customers
@@ -204,12 +146,11 @@ We take your existing sales process — stages, scripts, compliance rules, routi
 - BPOs and call centers needing affordable, scalable support/sales agents
 - Companies overwhelmed by SaaS subscription stacks who want custom-owned software
 - Businesses with multilingual customers
-- Sales teams and BPOs that need a private, unified Sales Operating System
 
 ## Why Horus Desk
 
 - Fully managed — not DIY. We handle setup, training, and ongoing management.
-- Low risk to start: free setup for AI, free audit/blueprint for Studio, 3-month proof of concept for Teams, custom setup quote for Sales Command Center.
+- Low risk to start: free setup for AI, free audit/blueprint for Studio, 3-month proof of concept for Teams.
 - No long-term lock-in: flexible monthly billing or short proof-of-concept terms.
 - Own your assets: for Studio, clients keep source code, data, and IP with no vendor lock-in.
 - Cost efficiency: Managed Teams cost a fraction of US-based hires; custom software avoids recurring SaaS fees.
@@ -452,7 +393,6 @@ We build custom call center platforms and operational software for BPOs. No temp
 - AI Agent: https://horusdesk.com/ai
 - Managed Teams: https://horusdesk.com/teams
 - Software Studio: https://horusdesk.com/studio
-- Sales Command Center (Thoth Line): https://horusdesk.com/sales-command-center
 - Security & Compliance: https://horusdesk.com/security
 - Case Studies: https://horusdesk.com/case-studies
 - Blog: https://horusdesk.com/blog
@@ -461,7 +401,6 @@ We build custom call center platforms and operational software for BPOs. No temp
 - Terms of Service: https://horusdesk.com/terms-of-service
 
 **Redirects & utility pages**
-- `/thothline` → `/sales-command-center` (301 redirect)
 - `/unsubscribe` — email preference center (noindex)
 - `*` — 404 Not Found (noindex)
 

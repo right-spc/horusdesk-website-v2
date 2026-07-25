@@ -95,25 +95,6 @@ export const siteRoutes: RouteMeta[] = [
     lastmod: '2026-07-06',
   },
   {
-    path: '/sales-command-center',
-    title: 'Sales Command Center — Sales Operating System | Plans & Pricing | Horus Desk',
-    description:
-      'Sales Command Center replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system.',
-    ogTitle: 'Sales Command Center — Sales Operating System | Plans & Pricing',
-    ogDescription:
-      'Sales Command Center replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system.',
-    ogType: 'product',
-    ogImage: DEFAULT_IMAGE,
-    twitterTitle: 'Sales Command Center — Sales Operating System | Plans & Pricing',
-    twitterDescription:
-      'Sales Command Center replaces your 6-12 tool sales stack with one custom-programmed platform. Voice, email, leads, compliance, and reporting in a single system.',
-    twitterImage: DEFAULT_IMAGE,
-    canonicalUrl: 'https://horusdesk.com/sales-command-center',
-    priority: 0.7,
-    changefreq: 'monthly',
-    lastmod: '2026-07-03',
-  },
-  {
     path: '/security',
     title: 'Security & Compliance | SOC 2, GDPR & Data Privacy',
     description:

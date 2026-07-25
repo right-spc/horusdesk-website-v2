@@ -17,7 +17,6 @@ const serviceLinks = [
   { label: 'AI Agent', path: '/ai' },
   { label: 'Managed Teams', path: '/teams' },
   { label: 'Software Studio', path: '/studio' },
-  { label: 'Sales Command Center', path: '/sales-command-center' },
 ];
 
 const topLinks = [

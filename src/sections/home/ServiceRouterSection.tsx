@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
-import { MessageSquare, Headphones, Code, BarChart3 } from 'lucide-react';
+import { MessageSquare, Headphones, Code } from 'lucide-react';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 
 const services = [
@@ -37,18 +37,6 @@ const services = [
     price: 'Custom pricing',
     link: '/studio',
   },
-  {
-    title: 'Sales Command Center',
-    icon: BarChart3,
-    iconColor: 'text-[#FF5252]',
-    borderColor: 'border-t-[#FF5252]',
-    linkColor: 'text-[#FF5252]',
-    hoverClass: 'hover:border-[rgba(255,82,82,0.15)] hover:shadow-[0_0_40px_rgba(255,82,82,0.08)]',
-    description: 'A private Sales Operating System where your entire workflow — voice, email, leads, compliance, and reporting — runs in one custom-built platform.',
-    price: 'From $300/mo + usage',
-    link: '/sales-command-center',
-    beta: true,
-  },
 ];
 
 const containerVariants = {
@@ -74,7 +62,7 @@ export function ServiceRouterSection() {
       <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
         <SectionWrapper className="text-center mb-16">
           <p className="text-xs font-medium tracking-wider uppercase text-[#64FFDA] mb-4">
-            ONE PARTNER, FOUR WAYS TO SCALE
+            ONE PARTNER, THREE WAYS TO SCALE
           </p>
           <h2 className="text-3xl lg:text-5xl font-medium text-white leading-[1.2]">
             Choose how you want to grow
@@ -86,7 +74,7 @@ export function ServiceRouterSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service) => (
             <motion.div
@@ -100,14 +88,7 @@ export function ServiceRouterSection() {
               `}
             >
               <service.icon className={`${service.iconColor} mb-4`} size={28} />
-              <div className="flex items-center gap-2 mb-3">
-                <h3 className="text-xl font-medium text-white">{service.title}</h3>
-                {service.beta && (
-                  <span className="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-full bg-[#FF5252]/10 text-[#FF5252] border border-[#FF5252]/20">
-                    Beta
-                  </span>
-                )}
-              </div>
+              <h3 className="text-xl font-medium text-white mb-3">{service.title}</h3>
               <p className="text-[#94A3B8] mb-6">{service.description}</p>
               <p className="text-white font-medium mb-4">{service.price}</p>
               <Link

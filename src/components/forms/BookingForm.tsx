@@ -224,7 +224,6 @@ export const BookingForm = forwardRef<HTMLInputElement, BookingFormProps>(
               <option value="AI Agent" className="bg-navy-light">AI Agent</option>
               <option value="Managed Teams" className="bg-navy-light">Managed Teams</option>
               <option value="Software Studio" className="bg-navy-light">Software Studio</option>
-              <option value="Sales Command Center" className="bg-navy-light">Sales Command Center</option>
               <option value="Not Sure Yet" className="bg-navy-light">Not Sure Yet</option>
             </select>
             {errors.interest && <p className={errorClass}>{errors.interest}</p>}
