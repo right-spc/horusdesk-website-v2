@@ -24,7 +24,8 @@ const topLinks = [
   { label: 'Blog', path: '/blog' },
 ];
 
-export function Navbar() {
+// bannerOffset is TEMPORARY — remove after Founding Five fills (along with AnnouncementBanner).
+export function Navbar({ bannerOffset = 0 }: { bannerOffset?: number }) {
   const { isScrolled } = useScrollPosition();
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
@@ -34,8 +35,9 @@ export function Navbar() {
   return (
     <>
       <nav
+        style={{ top: bannerOffset }}
         className={`
-          fixed top-0 left-0 right-0 z-50 h-20
+          fixed left-0 right-0 z-50 h-20
           transition-all duration-500 ease-out
           ${isScrolled
             ? 'bg-navy/80 backdrop-blur-xl border-b border-[rgba(226,232,240,0.08)]'

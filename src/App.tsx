@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router';
-import { useEffect, Suspense, lazy } from 'react';
+import { useEffect, useState, useCallback, Suspense, lazy } from 'react';
 import { BookingProvider } from '@/components/layout/BookingModal';
+import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner'; // TEMPORARY — remove after Founding Five fills
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { usePageTracking } from '@/hooks/usePageTracking';
@@ -58,6 +59,9 @@ function PageLoader() {
 
 function App() {
   usePageTracking();
+  // TEMPORARY — remove after Founding Five fills
+  const [bannerHeight, setBannerHeight] = useState(0);
+  const handleBannerHeight = useCallback((height: number) => setBannerHeight(height), []);
   return (
     <BookingProvider>
       <a
@@ -67,7 +71,9 @@ function App() {
         Skip to main content
       </a>
       <ScrollToHashOrTop />
-      <Navbar />
+      {/* TEMPORARY — remove after Founding Five fills */}
+      <AnnouncementBanner onHeightChange={handleBannerHeight} />
+      <Navbar bannerOffset={bannerHeight} />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />

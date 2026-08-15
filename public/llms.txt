@@ -138,6 +138,8 @@ React, Next.js, TypeScript, Tailwind CSS, React Native, Flutter, Node.js, Python
 
 **Learn more:** https://horusdesk.com/studio
 
+Note: The Sales Command Center is now a standalone product, Thoth Line — https://thothline.com
+
 ---
 
 ## Target Customers
