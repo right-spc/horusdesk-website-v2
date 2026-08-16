@@ -23,7 +23,7 @@ export function TalentPricingSection() {
             </h3>
 
             <div className="text-center mb-8">
-              <span className="text-5xl font-medium text-white">$10–35/hr</span>
+              <span className="text-5xl font-medium text-white">$8–35/hr</span>
               <span className="text-[#94A3B8] text-lg ml-2">per agent</span>
             </div>
 

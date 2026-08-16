@@ -58,17 +58,17 @@ export const siteRoutes: RouteMeta[] = [
   },
   {
     path: '/teams',
-    title: 'Managed Teams | Customer Support & Sales Teams from $10/hour',
+    title: 'Managed Teams | Customer Support & Sales Teams from $8/hour',
     description:
-      'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour.',
-    ogTitle: 'Managed Teams | Customer Support & Sales Teams from $10/hour',
+      'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $8/hour.',
+    ogTitle: 'Managed Teams | Customer Support & Sales Teams from $8/hour',
     ogDescription:
-      'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour.',
+      'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $8/hour.',
     ogType: 'product',
     ogImage: DEFAULT_IMAGE,
-    twitterTitle: 'Managed Teams | Customer Support & Sales Teams from $10/hour',
+    twitterTitle: 'Managed Teams | Customer Support & Sales Teams from $8/hour',
     twitterDescription:
-      'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour.',
+      'Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $8/hour.',
     twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/teams',
     priority: 0.7,

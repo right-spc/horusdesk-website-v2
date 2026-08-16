@@ -3,7 +3,7 @@ import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import { X, Check } from 'lucide-react';
 
 const rows = [
-  { label: 'Cost per agent', inHouse: '$45–65/hr fully loaded', managed: '$10–35/hr all-inclusive' },
+  { label: 'Cost per agent', inHouse: '$45–65/hr fully loaded', managed: '$8–35/hr all-inclusive' },
   { label: 'Time to first shift', inHouse: '3–6 months hiring', managed: 'As fast as 7 days' },
   { label: 'Benefits & taxes', inHouse: 'You pay everything', managed: 'Included' },
   { label: 'Equipment & software', inHouse: 'You buy & maintain', managed: 'Custom per client requirements' },

@@ -35,7 +35,7 @@ const serviceSchema = {
     name: 'Horus Desk',
   },
   areaServed: 'Global',
-  description: 'Fully managed customer support and sales teams based in Cairo. Dedicated account management. No hiring required. From $10/hour per agent. 3-month proof of concept with no long-term contracts.',
+  description: 'Fully managed customer support and sales teams based in Cairo. Dedicated account management. No hiring required. From $8/hour per agent. 3-month proof of concept with no long-term contracts.',
   offers: {
     '@type': 'Offer',
     price: '10',
@@ -83,16 +83,16 @@ export function TalentPage() {
   return (
     <>
       <SEOHead
-        title="Managed Teams | Customer Support & Sales Teams from $10/hour"
-        description="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour."
+        title="Managed Teams | Customer Support & Sales Teams from $8/hour"
+        description="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $8/hour."
         canonicalUrl="https://horusdesk.com/teams"
         ogType="product"
-        ogTitle="Managed Teams | Customer Support & Sales Teams from $10/hour"
-        ogDescription="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour."
+        ogTitle="Managed Teams | Customer Support & Sales Teams from $8/hour"
+        ogDescription="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $8/hour."
         ogUrl="https://horusdesk.com/teams"
         ogImage="https://horusdesk.com/og-default.png"
-        twitterTitle="Managed Teams | Customer Support & Sales Teams from $10/hour"
-        twitterDescription="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $10/hour."
+        twitterTitle="Managed Teams | Customer Support & Sales Teams from $8/hour"
+        twitterDescription="Fully managed customer support and sales teams based in Cairo. University-educated agents, 24/7 coverage, no long-term contracts. Scale monthly. From $8/hour."
         twitterImage="https://horusdesk.com/og-default.png"
         jsonLd={[organizationSchema, serviceSchema, howToSchema]}
         jsonLdLast={faqPageSchema}

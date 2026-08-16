@@ -23,7 +23,7 @@ const services = [
     linkColor: 'text-[#FFAB40]',
     hoverClass: 'hover:border-[rgba(255,171,64,0.15)] hover:shadow-[0_0_40px_rgba(255,171,64,0.08)]',
     description: 'Remote teams based in Egypt across support, operations, sales, and technical functions. Fully managed — no candidate screening required.',
-    price: '$10–35/hr',
+    price: '$8–35/hr',
     link: '/teams',
   },
   {
