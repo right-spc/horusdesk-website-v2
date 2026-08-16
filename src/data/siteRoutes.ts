@@ -21,16 +21,16 @@ export const DEFAULT_IMAGE = 'https://horusdesk.com/og-default.png';
 export const siteRoutes: RouteMeta[] = [
   {
     path: '/',
-    title: 'Horus Desk | AI Receptionist for Service Businesses',
+    title: 'Horus Desk | Your Operations, Built & Run For You',
     description:
-      'AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo.',
-    ogTitle: 'Horus Desk | AI Receptionist for Service Businesses',
+      'AI agents. Managed teams. Custom software. One partner that designs, builds, and operates your entire operations stack — so you scale faster with fewer headaches.',
+    ogTitle: 'Horus Desk | Your Operations, Built & Run For You',
     ogDescription:
-      'AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo.',
+      'AI agents. Managed teams. Custom software. One partner that designs, builds, and operates your entire operations stack — so you scale faster with fewer headaches.',
     ogImage: DEFAULT_IMAGE,
-    twitterTitle: 'Horus Desk | AI Receptionist for Service Businesses',
+    twitterTitle: 'Horus Desk | Your Operations, Built & Run For You',
     twitterDescription:
-      'AI receptionist that qualifies leads and books meetings via chat and email in 6 languages. Fully managed, live in 24 hours. Starting at $499/mo.',
+      'AI agents. Managed teams. Custom software. One partner that designs, builds, and operates your entire operations stack — so you scale faster with fewer headaches.',
     twitterImage: DEFAULT_IMAGE,
     canonicalUrl: 'https://horusdesk.com/',
     priority: 1.0,
