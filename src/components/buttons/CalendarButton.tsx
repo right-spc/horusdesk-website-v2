@@ -1,5 +1,5 @@
 import { Calendar } from 'lucide-react';
-import { useBooking } from '@/components/layout/BookingModal';
+import { useBooking } from '@/hooks/useBooking';
 
 interface CalendarButtonProps {
   children: React.ReactNode;

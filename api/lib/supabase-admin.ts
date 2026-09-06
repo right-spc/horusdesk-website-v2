@@ -62,7 +62,3 @@ export async function insert<T>(path: string, record: Record<string, unknown>): 
   return data ?? [];
 }
 
-export function escapeLiteral(value: string | null | undefined): string {
-  if (value == null) return 'NULL';
-  return "'" + value.replace(/'/g, "''").replace(/\\/g, '\\\\') + "'";
-}

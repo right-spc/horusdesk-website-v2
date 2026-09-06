@@ -1,24 +1,8 @@
-import { createContext, useContext, useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookingForm } from '@/components/forms/BookingForm';
-
-interface BookingContextType {
-  isOpen: boolean;
-  prefillInterest?: string;
-  open: (prefillInterest?: string) => void;
-  close: () => void;
-}
-
-const BookingContext = createContext<BookingContextType>({
-  isOpen: false,
-  open: () => {},
-  close: () => {},
-});
-
-export function useBooking() {
-  return useContext(BookingContext);
-}
+import { BookingContext, useBooking } from '@/hooks/useBooking';
 
 export function BookingProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);

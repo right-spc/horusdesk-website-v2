@@ -24,3 +24,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local tooling/inspection artifacts
+inspect-tools/
+report_data/
+CHAT_WIDGET_REPORT.md

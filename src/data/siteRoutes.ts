@@ -223,7 +223,3 @@ export const siteRoutes: RouteMeta[] = [
     lastmod: '2026-06-12',
   },
 ];
-
-export function getRouteMeta(path: string): RouteMeta | undefined {
-  return siteRoutes.find((route) => route.path === path);
-}

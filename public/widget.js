@@ -11,7 +11,7 @@
   // ============================================
   // CONFIGURATION & STATE
   // ============================================
-  const WIDGET_VERSION = '1.0.0';
+  const WIDGET_VERSION = '1.1.0';
   const STORAGE_PREFIX = 'horus_';
   const CONFIG_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
   const SESSION_MAX_AGE = 24 * 60 * 60 * 1000; // 24 hours
@@ -408,9 +408,39 @@
       }
     }
 
+    async fetchHistory(sessionId) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+      this.abortControllers.push(controller);
+
+      try {
+        const response = await fetch(
+          `${this.apiEndpoint}/widget-chat?apiKey=${encodeURIComponent(this.apiKey)}&sessionId=${encodeURIComponent(sessionId)}`,
+          {
+            method: 'GET',
+            headers: this._getHeaders(),
+            signal: controller.signal,
+          }
+        );
+
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        return { success: true, data };
+      } catch (error) {
+        return { success: false, error: error.message };
+      } finally {
+        this._removeController(controller);
+      }
+    }
+
     async sendChat(sessionId, visitorData, message, metadata) {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+      const timeoutId = setTimeout(() => controller.abort(), 60000); // 60s timeout — AI pipeline (KB lookup + Claude + tool calls) can exceed 15s
       this.abortControllers.push(controller);
 
       try {
@@ -1280,6 +1310,7 @@
       this.isOpen = false;
       this.isDarkMode = false;
       this.isLoading = false;
+      this.isSyncingHistory = false;
       this.messages = [];
       this.sessionId = null;
       this.visitorData = {};
@@ -1779,6 +1810,12 @@
         // Restore messages or show welcome
         this.restoreMessages();
 
+        // Recover any replies that were stored server-side but never
+        // reached this client (lost responses, suspended tabs, etc.)
+        if (this.sessionId) {
+          this.syncHistoryFromServer();
+        }
+
         // Focus input
         const input = this.shadowRoot.querySelector('.horus-input');
         if (input) {
@@ -2094,6 +2131,20 @@
         }
 
         this.showErrorBanner(errorMessage, showRetry ? message : null);
+
+        // The server may still have processed the message and stored a reply
+        // (e.g. the response was lost on a slow connection). Check for stored
+        // replies shortly after — if one arrives, dismiss the error banner.
+        [5000, 15000].forEach((delay) => {
+          setTimeout(() => {
+            this.syncHistoryFromServer().then((recovered) => {
+              if (recovered) {
+                const banner = this.shadowRoot.querySelector('.horus-error-banner');
+                if (banner) banner.remove();
+              }
+            });
+          }, delay);
+        });
       }
 
       // Process pending message
@@ -2101,6 +2152,86 @@
         const pending = this.pendingMessage;
         this.pendingMessage = null;
         this.sendToAPI(pending);
+      }
+    }
+
+    /**
+     * Merge server messages into local message list.
+     * Matches by role+content in order; local-only messages (e.g. the welcome
+     * message, which is never stored server-side) are kept in place.
+     * Returns { merged, added } where added = server messages missing locally.
+     */
+    _mergeMessages(local, server) {
+      const merged = [];
+      const added = [];
+      let li = 0;
+
+      for (const sm of server) {
+        let found = -1;
+        for (let j = li; j < local.length; j++) {
+          if (local[j].role === sm.role && local[j].content === sm.content) {
+            found = j;
+            break;
+          }
+        }
+        if (found >= 0) {
+          for (let k = li; k <= found; k++) merged.push(local[k]);
+          li = found + 1;
+        } else {
+          merged.push(sm);
+          added.push(sm);
+        }
+      }
+      for (let k = li; k < local.length; k++) merged.push(local[k]);
+
+      return { merged, added };
+    }
+
+    /**
+     * Sync conversation history from the server.
+     * Recovers AI responses that were stored server-side but never reached
+     * this client (request timeout, mobile tab suspension, network drop).
+     * Returns true if new messages were recovered.
+     */
+    async syncHistoryFromServer() {
+      if (!this.sessionId || this.isSyncingHistory) return false;
+      this.isSyncingHistory = true;
+
+      try {
+        const result = await this.api.fetchHistory(this.sessionId);
+        if (!result.success || !result.data || !Array.isArray(result.data.messages)) {
+          return false;
+        }
+
+        const serverMessages = result.data.messages.map((m) => ({
+          role: m.role === 'ai' ? 'ai' : 'user',
+          content: m.content,
+          timestamp: m.createdAt || getISOTimestamp(),
+        }));
+
+        const { merged, added } = this._mergeMessages(this.messages, serverMessages);
+
+        if (added.length === 0) return false;
+
+        this.messages = merged;
+        this.storage.set('messages', merged);
+        this.lastMessageTime = this.getLastMessageTime();
+
+        // Re-render the message list if the UI is available
+        if (this.messagesArea) {
+          this.messagesArea.innerHTML = '';
+          this.quickReplySetId++;
+          for (const m of this.messages) {
+            this.renderMessage(m);
+          }
+          this.scrollToBottom();
+        }
+
+        return true;
+      } catch (e) {
+        return false;
+      } finally {
+        this.isSyncingHistory = false;
       }
     }
 
@@ -2526,6 +2657,12 @@
       if (!document.hidden) {
         // Refresh config when page becomes visible
         this.refreshConfig();
+
+        // Mobile browsers suspend tabs — responses that arrived while we were
+        // in the background are lost, so re-sync history when we wake up.
+        if (this.isOpen) {
+          this.syncHistoryFromServer();
+        }
       }
     }
 

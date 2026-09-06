@@ -25,10 +25,6 @@ export function getBlogPostBySlug(slug: string): BlogPostMeta | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export function getAllBlogSlugs(): string[] {
-  return blogPosts.map((post) => post.slug);
-}
-
 export function formatBlogDate(dateString: string): string {
   return new Date(dateString).toLocaleDateString('en-US', {
     year: 'numeric',

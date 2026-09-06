@@ -31,11 +31,3 @@ export const caseStudies: CaseStudyMeta[] = [
     publishedAt: '2026-06-12',
   },
 ];
-
-export function getCaseStudyBySlug(slug: string): CaseStudyMeta | undefined {
-  return caseStudies.find((study) => study.slug === slug);
-}
-
-export function getAllCaseStudySlugs(): string[] {
-  return caseStudies.map((study) => study.slug);
-}

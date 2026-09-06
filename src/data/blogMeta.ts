@@ -34,11 +34,3 @@ export const blogPosts: BlogPostMeta[] = [
     ogImage: 'https://horusdesk.com/og-default.png',
   },
 ];
-
-export function getBlogPostBySlug(slug: string): BlogPostMeta | undefined {
-  return blogPosts.find((post) => post.slug === slug);
-}
-
-export function getAllBlogSlugs(): string[] {
-  return blogPosts.map((post) => post.slug);
-}
