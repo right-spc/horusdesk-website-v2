@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/widget.js", "destination": "https://ctr.horusdesk.com/widget.js", "permanent": true },
     { "source": "/sales-command-center", "destination": "https://thothline.com", "permanent": true },
     { "source": "/thothline", "destination": "https://thothline.com", "permanent": true },
     { "source": "/.well-known/llms.txt", "destination": "/llms.txt", "permanent": true }
